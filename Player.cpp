@@ -3,3 +3,9 @@
 //
 
 #include "Player.h"
+Player::Player(int balance, char pieceLetter, std::string name): balance(balance), pieceLetter(pieceLetter), name(name) {
+  ownedProperties = {};
+  currentSpaceIndex = 0;
+}
+
+
