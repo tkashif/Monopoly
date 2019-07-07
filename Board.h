@@ -4,8 +4,23 @@
 
 #ifndef MONOPOLY_BOARD_H
 #define MONOPOLY_BOARD_H
+#include "Space.h"
+#include <vector>
+#include "GOSpace.h"
+#include "PropertySpace.h"
+#include "IncomeTaxSpace.h"
+#include "RailroadSpace.h"
+#include "JailSpace.h"
 
 class Board {
+ public:
+  Board();
+
+  void displayCurrentState();
+
+ private:
+  std::vector<std::unique_ptr<Space>> spaces;
+
 
 };
 

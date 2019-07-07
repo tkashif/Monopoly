@@ -21,9 +21,10 @@ void Controller::playGame() {
   int currentPlayerIndex = 0;
   int currentSpaceIndex = 0;
   while (!gameIsOver()){
-    attributes->getView()->displayGameStats();
-    int result = dice.roll();
-    attributes->getPlayers()[currentPlayerIndex]->movePiece(result);
+    displayGameStats();
+    int result = dice.roll(); // this function will also do all the displaying
+    attributes->getPlayers()[currentPlayerIndex]->movePiece(result); // should update currentPlayerindex and board
+    attributes->getBoard().displayCurrentState();
     attributes->getBoard()[currentSpaceIndex]->takeAction();
     if (attributes->getPlayers()[currentPlayerIndex].getBalance() <= 0){
       // REMOVE PLAYER
