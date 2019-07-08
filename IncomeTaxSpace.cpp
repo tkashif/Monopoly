@@ -3,3 +3,6 @@
 //
 
 #include "IncomeTaxSpace.h"
+IncomeTaxSpace::IncomeTaxSpace(std::string name) : TaxSpace(name, 200) {
+
+}

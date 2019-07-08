@@ -13,7 +13,7 @@ Board::Board() {
   spaces.push_back(new PropertySpace("Mediterranean Avenue", "Brown", 0, 0, 2, 60));
   spaces.push_back(new PropertySpace("Baltic Avenue", "Brown", 0, 0, 4, 60));
 
-  spaces.push_back(new IncomeTaxSpace("Income Tax Space", 200));
+  spaces.push_back(new IncomeTaxSpace("Income Tax Space"));
 
   spaces.push_back(new RailroadSpace("Reading Railroad", 200));
 
@@ -55,7 +55,7 @@ Board::Board() {
 
   spaces.push_back(new RailroadSpace("Short Line", 200));
 
-  spaces.push_back(new LuxuryTaxSpace("Luxury Tax Space", 100));
+  spaces.push_back(new LuxuryTaxSpace("Luxury Tax Space"));
 
 
 

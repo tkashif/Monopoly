@@ -3,3 +3,6 @@
 //
 
 #include "NonBuyableSpace.h"
+NonBuyableSpace::NonBuyableSpace(std::string name) : Space(name) {
+
+}

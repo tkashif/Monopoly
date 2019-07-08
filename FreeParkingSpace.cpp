@@ -3,3 +3,6 @@
 //
 
 #include "FreeParkingSpace.h"
+FreeParkingSpace::FreeParkingSpace(std::string name) : NonBuyableSpace(name) {
+  benefit = 0;
+}

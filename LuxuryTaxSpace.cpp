@@ -3,3 +3,6 @@
 //
 
 #include "LuxuryTaxSpace.h"
+LuxuryTaxSpace::LuxuryTaxSpace(std::string name) : TaxSpace(name, 100) {
+
+}

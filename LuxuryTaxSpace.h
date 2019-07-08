@@ -4,9 +4,11 @@
 
 #ifndef MONOPOLY_LUXURYTAXSPACE_H
 #define MONOPOLY_LUXURYTAXSPACE_H
+#include "TaxSpace.h"
 
-class LuxuryTaxSpace {
-
+class LuxuryTaxSpace : TaxSpace {
+ public:
+  LuxuryTaxSpace(std::string name);
 };
 
 #endif //MONOPOLY_LUXURYTAXSPACE_H

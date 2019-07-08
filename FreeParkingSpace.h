@@ -4,8 +4,14 @@
 
 #ifndef MONOPOLY_FREEPARKINGSPACE_H
 #define MONOPOLY_FREEPARKINGSPACE_H
+#include "NonBuyableSpace.h"
 
-class FreeParkingSpace {
+class FreeParkingSpace : NonBuyableSpace {
+ public:
+  FreeParkingSpace(std::string name);
+
+ protected:
+  int benefit;
 
 };
 

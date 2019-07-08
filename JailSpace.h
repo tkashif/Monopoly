@@ -4,9 +4,11 @@
 
 #ifndef MONOPOLY_JAILSPACE_H
 #define MONOPOLY_JAILSPACE_H
+#include "NonBuyableSpace.h"
 
-class JailSpace {
-
+class JailSpace : NonBuyableSpace{
+ public:
+  JailSpace(std::string name);
 };
 
 #endif //MONOPOLY_JAILSPACE_H

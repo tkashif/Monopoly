@@ -4,8 +4,11 @@
 
 #ifndef MONOPOLY_INCOMETAXSPACE_H
 #define MONOPOLY_INCOMETAXSPACE_H
+#include "TaxSpace.h"
 
-class IncomeTaxSpace {
+class IncomeTaxSpace : TaxSpace {
+ public:
+  IncomeTaxSpace(std::string name);
 
 };
 

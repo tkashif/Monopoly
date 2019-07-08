@@ -3,3 +3,6 @@
 //
 
 #include "TaxSpace.h"
+TaxSpace::TaxSpace(std::string name, int penalty) : NonBuyableSpace(name), penalty(penalty) {
+
+}

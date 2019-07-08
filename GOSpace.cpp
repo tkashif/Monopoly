@@ -3,3 +3,6 @@
 //
 
 #include "GOSpace.h"
+GOSpace::GOSpace(std::string name) : NonBuyableSpace(name) {
+  benefit = 200;
+}

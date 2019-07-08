@@ -4,9 +4,11 @@
 
 #ifndef MONOPOLY_NONBUYABLESPACE_H
 #define MONOPOLY_NONBUYABLESPACE_H
+#include "Space.h"
 
-class NonBuyableSpace {
-
+class NonBuyableSpace : Space {
+ public:
+  NonBuyableSpace(std::string name);
 };
 
 #endif //MONOPOLY_NONBUYABLESPACE_H

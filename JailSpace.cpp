@@ -3,3 +3,6 @@
 //
 
 #include "JailSpace.h"
+JailSpace::JailSpace(std::string name) : NonBuyableSpace(name) {
+
+}

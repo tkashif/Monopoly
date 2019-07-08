@@ -4,9 +4,14 @@
 
 #ifndef MONOPOLY_GOSPACE_H
 #define MONOPOLY_GOSPACE_H
+#include "NonBuyableSpace.h"
 
-class GOSpace {
+class GOSpace : NonBuyableSpace {
+ public:
+  GOSpace(std::string name);
 
+ protected:
+  int benefit;
 };
 
 #endif //MONOPOLY_GOSPACE_H
