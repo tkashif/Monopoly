@@ -26,14 +26,10 @@ class PropertySpace : BuyableSpace {
  public:
   PropertySpace(std::string name, std::string color, int numberOfHouses, int numberOfHotels, int rent, int price);
 
- private:
-  std::string name;
+ protected:
   std::string color;
   int numberOfHouses;
   int numberOfHotels;
-  Player owner;
-  int rent;
-  int price;
 };
 
 #endif //MONOPOLY_PROPERTYSPACE_H

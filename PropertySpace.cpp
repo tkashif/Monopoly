@@ -9,7 +9,7 @@ PropertySpace::PropertySpace(std::string name,
                              int numberOfHouses,
                              int numberOfHotels,
                              int rent,
-                             int price): name(name), color(color), numberOfHouses(numberOfHouses),
-                             numberOfHotels(numberOfHotels), rent(rent), price(price) {
+                             int price): BuyableSpace(name, price, rent), color(color), numberOfHouses(numberOfHouses),
+                             numberOfHotels(numberOfHotels) {
 
 }
