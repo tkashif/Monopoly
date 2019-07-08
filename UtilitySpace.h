@@ -4,8 +4,12 @@
 
 #ifndef MONOPOLY_UTILITYSPACE_H
 #define MONOPOLY_UTILITYSPACE_H
+#include "BuyableSpace.h"
 
-class UtilitySpace {
+class UtilitySpace : BuyableSpace {
+
+ public:
+  UtilitySpace(std::string name, int rent, int price);
 
 };
 
