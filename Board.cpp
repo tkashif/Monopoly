@@ -7,21 +7,6 @@ void Board::displayCurrentState() {
 
 }
 
-/*
- * Name (1)
-Color (2)
-Houses (3)
-Hotels (4)
-Owner (- NULL)
-Rent (5)
-Starting Price (6)
-Price one house (- * 10 prev)
-Price two house (- * 10 prev)
-Price three house (- * 10 prev)
-Price four house (- * 10 prev)
-Price hotel (- * 10 prev)
- *
- */
 Board::Board() {
   spaces.push_back(new GOSpace("GO"));
 

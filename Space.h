@@ -4,8 +4,17 @@
 
 #ifndef MONOPOLY_SPACE_H
 #define MONOPOLY_SPACE_H
+#include <iostream>
 
 class Space {
+ public:
+  Space(std::string name);
+
+ protected:
+  std::string name;
+  bool occupied;
+  bool free;
+
 
 };
 

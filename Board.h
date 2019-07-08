@@ -6,6 +6,7 @@
 #define MONOPOLY_BOARD_H
 #include "Space.h"
 #include <vector>
+#include <memory>
 #include "GOSpace.h"
 #include "PropertySpace.h"
 #include "IncomeTaxSpace.h"

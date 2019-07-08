@@ -3,3 +3,6 @@
 //
 
 #include "Space.h"
+Space::Space(std::string name): name(name) {
+
+}
