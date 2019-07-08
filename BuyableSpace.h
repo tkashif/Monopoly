@@ -4,8 +4,18 @@
 
 #ifndef MONOPOLY_BUYABLESPACE_H
 #define MONOPOLY_BUYABLESPACE_H
+#include "Space.h"
+#include "Player.h"
 
-class BuyableSpace {
+class BuyableSpace : Space {
+ public:
+  BuyableSpace(std::string name, int price, int rent);
+
+ protected:
+  int price;
+  Player owner;
+  int rent;
+
 
 };
 

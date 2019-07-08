@@ -3,3 +3,6 @@
 //
 
 #include "BuyableSpace.h"
+BuyableSpace::BuyableSpace(std::string name, int price, int rent) : Space(name), price(price), rent(rent) {
+
+}
