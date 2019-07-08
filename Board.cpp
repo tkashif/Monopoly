@@ -21,7 +21,7 @@ Board::Board() {
   spaces.push_back(new PropertySpace("Vermont Avenue", "Light Blue", 0, 0, 6, 100));
   spaces.push_back(new PropertySpace("Connecticut Avenue", "Light Blue", 0, 0, 8, 120));
 
-  spaces.push_back(new JailSpace("Jail", true));
+  spaces.push_back(new JailSpace("Jail"));
 
   spaces.push_back(new PropertySpace("St. Charles Place", "Pink", 0, 0, 10, 140));
   spaces.push_back(new UtilitySpace("Electric Company", 0, 150));
