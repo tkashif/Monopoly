@@ -11,6 +11,10 @@
 #include "IncomeTaxSpace.h"
 #include "RailroadSpace.h"
 #include "JailSpace.h"
+#include "UtilitySpace.h"
+#include "FreeParkingSpace.h"
+#include "GoToJailSpace.h"
+#include "LuxuryTaxSpace.h"
 
 class Board {
  public:

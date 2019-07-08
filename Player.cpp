@@ -3,7 +3,7 @@
 //
 
 #include "Player.h"
-Player::Player(int balance, char pieceLetter, std::string name): balance(balance), pieceLetter(pieceLetter), name(name) {
+Player::Player(int balance, char pieceLetter, std::string name, bool inJail): balance(balance), pieceLetter(pieceLetter), name(name), inJail(inJail) {
   ownedProperties = {};
   currentSpaceIndex = 0;
 }

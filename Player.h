@@ -9,7 +9,7 @@
 
 class Player {
  public:
-  Player(int balance, char pieceLetter, std::string name);
+  Player(int balance, char pieceLetter, std::string name, bool inJail);
 
  private:
   int balance;
@@ -17,6 +17,7 @@ class Player {
   std::vector<std::unique_ptr<BuyableSpace>> ownedProperties;
   std::string name;
   int currentSpaceIndex; // i.e. position on board
+  bool inJail;
 
 
 };
