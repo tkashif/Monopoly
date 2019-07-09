@@ -4,5 +4,5 @@
 
 #include "Dice.h"
 int Dice::roll() {
-  rand() % 6 + 1;
+  return rand() % 6 + 1;
 }

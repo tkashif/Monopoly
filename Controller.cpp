@@ -24,9 +24,11 @@ void Controller::playGame() {
 
     displayGameStats();
 
-    attributes.getPlayers()[currentPlayerIndex].takeTurn(attributes.getDice());
+    attributes.getPlayers()[currentPlayerIndex].takeTurn(attributes);
 
     attributes.getBoard().displayCurrentState();
+
+    attributes.getPlayers()[currentPlayerIndex].displayInfoAboutSpotLandedOn(attributes);
 
     attributes.getBoard()[currentSpaceIndex]->takeAction();
 

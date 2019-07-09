@@ -5,6 +5,7 @@
 #ifndef MONOPOLY_DICE_H
 #define MONOPOLY_DICE_H
 #include <cstdlib>
+#include <iostream>
 
 class Dice {
  public:
