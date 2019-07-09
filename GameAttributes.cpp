@@ -7,7 +7,7 @@ GameAttributes::GameAttributes(int numberOfPlayers, View view, Board board, Dice
   usedLetters = {};
   for (int i = 0; i < numberOfPlayers; i++){
     std::string name = getPlayerName(i);
-    players[i] = Player(0, generateRandomLetter(), name);
+    players[i] = Player(0, generateRandomLetter(), name, false);
   }
 }
 std::string GameAttributes::getPlayerName(int i) const {
@@ -16,7 +16,7 @@ std::string GameAttributes::getPlayerName(int i) const {
   std::cin >> name;
   return name;
 }
-std::string GameAttributes::generateRandomLetter() const {
+char GameAttributes::generateRandomLetter() const {
   char playerSymbol = 97 + rand() % 26;
   while (isInUsedLetters(playerSymbol)){
     playerSymbol = 97 + rand() % 26;

@@ -5,7 +5,9 @@
 int askHowManyPlayers();
 
 int main() {
+  
   int numPlayers = askHowManyPlayers();
+  
   View view;
   Board board;
   Dice dice;

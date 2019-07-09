@@ -17,7 +17,7 @@ class GameAttributes {
 
  private:
     std::string getPlayerName(int i) const;
-    std::string generateRandomLetter() const;
+    char generateRandomLetter() const;
     bool isInUsedLetters(char letter) const;
 
     View view;
