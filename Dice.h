@@ -4,8 +4,13 @@
 
 #ifndef MONOPOLY_DICE_H
 #define MONOPOLY_DICE_H
+#include <cstdlib>
 
 class Dice {
+ public:
+  Dice() = default;
+
+  int roll();
 
 };
 

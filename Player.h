@@ -6,10 +6,14 @@
 #define MONOPOLY_PLAYER_H
 #include <iostream>
 #include "BuyableSpace.h"
+#include "Dice.h"
 
 class Player {
  public:
   Player(int balance, char pieceLetter, std::string name, bool inJail);
+
+  void takeTurn(Dice dice);
+  void movePiece(int amount);
 
  private:
   int balance;

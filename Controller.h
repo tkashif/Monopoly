@@ -13,10 +13,12 @@ class Controller {
  public:
   Controller(GameAttributes attributes);
 
+  void setUpGame();
   void playGame();
 
   bool gameIsOver() const;
   void switchPlayer(int& currentPlayerIndex, int& currentSpaceIndex);
+  void displayGameStats();
 
  private:
   GameAttributes attributes;

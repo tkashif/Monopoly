@@ -3,3 +3,6 @@
 //
 
 #include "Dice.h"
+int Dice::roll() {
+  rand() % 6 + 1;
+}

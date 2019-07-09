@@ -21,15 +21,30 @@ void Controller::playGame() {
   int currentPlayerIndex = 0;
   int currentSpaceIndex = 0;
   while (!gameIsOver()){
+
     displayGameStats();
-    int result = dice.roll(); // this function will also do all the displaying
-    attributes->getPlayers()[currentPlayerIndex]->movePiece(result); // should update currentPlayerindex and board
-    attributes->getBoard().displayCurrentState();
-    attributes->getBoard()[currentSpaceIndex]->takeAction();
-    if (attributes->getPlayers()[currentPlayerIndex].getBalance() <= 0){
+
+    attributes.getPlayers()[currentPlayerIndex].takeTurn(attributes.getDice());
+
+    attributes.getBoard().displayCurrentState();
+
+    attributes.getBoard()[currentSpaceIndex]->takeAction();
+
+    if (attributes.getPlayers()[currentPlayerIndex].getBalance() <= 0){
       // REMOVE PLAYER
     }
     switchPlayer(currentPlayerIndex, currentSpaceIndex);
 
+  }
+}
+void Controller::setUpGame() {
+
+
+
+}
+void Controller::displayGameStats() {
+  for (int i = 0; i < attributes.getPlayers().size(); i++){
+    std::cout << attributes.getPlayers()[i].getName() << " owns " << attributes.getPlayers()[i].listPlayerProperties()
+    << " and has balance " << attributes.getPlayers()[i].getPlayerBalance() << std::endl;
   }
 }
