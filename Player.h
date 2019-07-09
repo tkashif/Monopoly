@@ -13,12 +13,15 @@ class Player {
  public:
   Player(int balance, char pieceLetter, std::string name, bool inJail);
 
-  void takeTurn(Dice dice);
-  void movePiece(int amount);
+  void takeTurn(GameAttributes& attributes);
+  void movePiece(int amount, GameAttributes& attributes);
   void rollDie(int& result, GameAttributes gameAttributes);
 
-  void updateCurrentSpaceIndex(int amount);
-  void updateCurrentSpaceOn();
+  void updateCurrentSpaceIndex(int amount, GameAttributes& attributes);
+  void updateCurrentSpaceOn(GameAttributes& attributes);
+
+  bool atEndOfBoard(GameAttributes& attributes);
+
 
  private:
   int balance;

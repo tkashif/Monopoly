@@ -23,6 +23,9 @@ class Board {
 
   void displayCurrentState();
 
+  std::vector<std::unique_ptr<Space>> &getSpaces() const;
+
+
  private:
   std::vector<std::unique_ptr<Space>> spaces;
 

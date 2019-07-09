@@ -67,3 +67,6 @@ Board::Board() {
 
 
 }
+std::vector<std::unique_ptr<Space>> &Board::getSpaces() const {
+  return spaces;
+}

@@ -32,3 +32,12 @@ bool GameAttributes::isInUsedLetters(char letter) const{
   }
   return false;
 }
+std::vector<Player> &GameAttributes::getPlayers() const {
+  return players;
+}
+Board &GameAttributes::getBoard() const {
+  return board;
+}
+Dice &GameAttributes::getDice() const {
+  return dice;
+}

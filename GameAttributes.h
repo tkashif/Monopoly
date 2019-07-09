@@ -15,6 +15,10 @@ class GameAttributes {
  public:
   GameAttributes(int numberOfPlayers, View view, Board board, Dice dice);
 
+  std::vector<Player> &getPlayers() const;
+  Board &getBoard() const;
+  Dice &getDice() const;
+
  private:
     std::string getPlayerName(int i) const;
     char generateRandomLetter() const;
