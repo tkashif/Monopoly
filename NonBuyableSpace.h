@@ -9,6 +9,10 @@
 class NonBuyableSpace : Space {
  public:
   NonBuyableSpace(std::string name);
+
+  virtual void displayIfOwned() override;
+  virtual void displayPrice() override;
+  virtual void displayRents() override;
 };
 
 #endif //MONOPOLY_NONBUYABLESPACE_H
