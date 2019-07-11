@@ -22,6 +22,7 @@ class Player {
 
   bool atEndOfBoard(GameAttributes& attributes);
 
+  void displayInfoAboutSpotLandedOn(const GameAttributes& attributes);
 
  private:
   int balance;
