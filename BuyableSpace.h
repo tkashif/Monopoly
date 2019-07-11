@@ -11,6 +11,12 @@ class BuyableSpace : Space {
  public:
   BuyableSpace(std::string name, int price, int rent);
 
+  virtual void displayIfOwned() override;
+  virtual void displayPrice() override;
+  virtual void displayRents() override;
+
+  bool noOwner();
+
  protected:
   int price;
   Player owner;

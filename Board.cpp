@@ -70,3 +70,6 @@ Board::Board() {
 std::vector<std::unique_ptr<Space>> &Board::getSpaces() const {
   return spaces;
 }
+std::unique_ptr<Space>& Board::operator[](int index) {
+  return spaces[index];
+}

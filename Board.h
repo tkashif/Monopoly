@@ -25,6 +25,8 @@ class Board {
 
   std::vector<std::unique_ptr<Space>> &getSpaces() const;
 
+  std::unique_ptr<Space>& operator[](int index);
+
 
  private:
   std::vector<std::unique_ptr<Space>> spaces;

@@ -10,6 +10,22 @@ class Space {
  public:
   Space(std::string name);
 
+  /*attributes.getBoard()[currentSpaceIndex].displayName();
+  attributes.getBoard()[currentSpaceIndex].displayIfOwned();
+  attributes.getBoard()[currentSpaceIndex].displayPrice();
+  attributes.getBoard()[currentSpaceIndex].displayRents();
+   */
+
+  void displayName();
+
+  virtual void displayIfOwned() = 0;
+  virtual void displayPrice() = 0;
+  virtual void displayRents() = 0;
+
+
+
+
+
  protected:
   std::string name;
   bool occupied;

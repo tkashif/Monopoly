@@ -11,6 +11,9 @@
 
 class Player {
  public:
+
+  Player();
+
   Player(int balance, char pieceLetter, std::string name, bool inJail);
 
   void takeTurn(GameAttributes& attributes);
@@ -23,6 +26,10 @@ class Player {
   bool atEndOfBoard(GameAttributes& attributes);
 
   void displayInfoAboutSpotLandedOn(const GameAttributes& attributes);
+
+  std::string getName();
+
+
 
  private:
   int balance;

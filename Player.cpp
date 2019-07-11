@@ -4,6 +4,16 @@
 
 #include "Player.h"
 #include "GameAttributes.h"
+
+Player::Player() {
+  balance = 0;
+  pieceLetter = ' ';
+  name = "";
+  inJail = false;
+  ownedProperties = {};
+  currentSpaceIndex = 0;
+}
+
 Player::Player(int balance, char pieceLetter, std::string name, bool inJail): balance(balance), pieceLetter(pieceLetter), name(name), inJail(inJail) {
   ownedProperties = {};
   currentSpaceIndex = 0;
@@ -74,12 +84,17 @@ bool Player::atEndOfBoard(GameAttributes& attributes) {
 void Player::displayInfoAboutSpotLandedOn(const GameAttributes &attributes) {
    std::cout << "And here is the information about where you landed" << std::endl;
 
-   attributes.getBoard()[currentSpaceIndex].displayName();
-   attributes.getBoard()[currentSpaceIndex].displayIfOwned();
-  attributes.getBoard()[currentSpaceIndex].displayPrice();
-  attributes.getBoard()[currentSpaceIndex].displayRents();
+   attributes.getBoard()[currentSpaceIndex]->displayName();
+   attributes.getBoard()[currentSpaceIndex]->displayIfOwned();
+  attributes.getBoard()[currentSpaceIndex]->displayPrice();
+  attributes.getBoard()[currentSpaceIndex]->displayRents();
 
 
 }
+std::string Player::getName() {
+  return name;
+}
+
+
 
 

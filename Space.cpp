@@ -6,3 +6,6 @@
 Space::Space(std::string name): name(name) {
 
 }
+void Space::displayName() {
+  std::cout << "NAME: " << name << std::endl;
+}
