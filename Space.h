@@ -16,7 +16,7 @@ class Space {
   attributes.getBoard()[currentSpaceIndex].displayRents();
    */
 
-  void displayName();
+  virtual void displayName();
 
   virtual void displayIfOwned() = 0;
   virtual void displayPrice() = 0;

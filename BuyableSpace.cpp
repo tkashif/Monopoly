@@ -17,7 +17,7 @@ void BuyableSpace::displayPrice() {
   std::cout << "Price: $" << price << std::endl;
 }
 void BuyableSpace::displayRents() {
-  std::cout << "Rent: " << rent << std::endl;
+  std::cout << "Rent: $" << rent << std::endl;
 }
 bool BuyableSpace::noOwner() {
   return (owner.getName() == "");

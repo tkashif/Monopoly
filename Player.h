@@ -28,6 +28,7 @@ class Player {
   void displayInfoAboutSpotLandedOn(const GameAttributes& attributes);
 
   std::string getName();
+  int getNumberOfRailroadsOwned();
 
 
 

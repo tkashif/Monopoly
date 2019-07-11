@@ -94,6 +94,20 @@ void Player::displayInfoAboutSpotLandedOn(const GameAttributes &attributes) {
 std::string Player::getName() {
   return name;
 }
+int Player::getNumberOfRailroadsOwned() {
+  int counter = 0;
+
+  // for each property
+  for (int i = 0; i < ownedProperties.size(); i++){
+    // check if the property is a railroad
+    RailroadSpace* railroadPointer = dynamic_cast<RailroadSpace*>(ownedProperties[i].get());
+    // if railroadpointer is not null
+    if (railroadPointer){
+      counter++;
+    }
+  }
+  return counter;
+}
 
 
 

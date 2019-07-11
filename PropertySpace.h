@@ -6,6 +6,8 @@
 #define MONOPOLY_PROPERTYSPACE_H
 #include <iostream>
 #include "Player.h"
+#include <cmath>
+
 /*
  * Name (1)
 Color (2)
@@ -25,6 +27,9 @@ Price hotel (- * 10 prev)
 class PropertySpace : BuyableSpace {
  public:
   PropertySpace(std::string name, std::string color, int numberOfHouses, int numberOfHotels, int rent, int price);
+
+  virtual void displayName() override;
+  virtual void displayRents() override;
 
  protected:
   std::string color;

@@ -10,6 +10,8 @@
 class RailroadSpace : BuyableSpace {
  public:
   RailroadSpace(std::string name, int price);
+
+  virtual void displayRents() override;
 };
 
 #endif //MONOPOLY_RAILROADSPACE_H

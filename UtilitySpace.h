@@ -11,6 +11,8 @@ class UtilitySpace : BuyableSpace {
  public:
   UtilitySpace(std::string name, int rent, int price);
 
+  virtual void displayRents() override;
+
 };
 
 #endif //MONOPOLY_UTILITYSPACE_H
