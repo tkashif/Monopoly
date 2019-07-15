@@ -6,7 +6,7 @@
 #define MONOPOLY_NONBUYABLESPACE_H
 #include "Space.h"
 
-class NonBuyableSpace : Space {
+class NonBuyableSpace : public Space {
  public:
   NonBuyableSpace(std::string name);
 

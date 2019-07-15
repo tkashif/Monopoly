@@ -9,6 +9,8 @@
 #include "Dice.h"
 #include "GameAttributes.h"
 
+class BuyableSpace;
+
 class Player {
  public:
 
@@ -29,6 +31,8 @@ class Player {
 
   std::string getName();
   int getNumberOfRailroadsOwned();
+  int getBalance();
+  void listProperties();
 
 
 

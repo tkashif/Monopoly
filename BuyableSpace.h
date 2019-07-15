@@ -7,7 +7,9 @@
 #include "Space.h"
 #include "Player.h"
 
-class BuyableSpace : Space {
+class Player;
+
+class BuyableSpace : public Space {
  public:
   BuyableSpace(std::string name, int price, int rent);
 

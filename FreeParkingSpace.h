@@ -6,7 +6,7 @@
 #define MONOPOLY_FREEPARKINGSPACE_H
 #include "NonBuyableSpace.h"
 
-class FreeParkingSpace : NonBuyableSpace {
+class FreeParkingSpace : public NonBuyableSpace {
  public:
   FreeParkingSpace(std::string name);
 

@@ -7,7 +7,7 @@
 #include <iostream>
 #include "BuyableSpace.h"
 
-class RailroadSpace : BuyableSpace {
+class RailroadSpace : public BuyableSpace {
  public:
   RailroadSpace(std::string name, int price);
 

@@ -6,7 +6,7 @@
 #define MONOPOLY_TAXSPACE_H
 #include "NonBuyableSpace.h"
 
-class TaxSpace : NonBuyableSpace {
+class TaxSpace : public NonBuyableSpace {
  public:
   TaxSpace(std::string name, int penalty);
 

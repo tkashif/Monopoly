@@ -6,7 +6,7 @@
 #define MONOPOLY_LUXURYTAXSPACE_H
 #include "TaxSpace.h"
 
-class LuxuryTaxSpace : TaxSpace {
+class LuxuryTaxSpace : public TaxSpace {
  public:
   LuxuryTaxSpace(std::string name);
 };

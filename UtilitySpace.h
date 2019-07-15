@@ -6,7 +6,7 @@
 #define MONOPOLY_UTILITYSPACE_H
 #include "BuyableSpace.h"
 
-class UtilitySpace : BuyableSpace {
+class UtilitySpace : public BuyableSpace {
 
  public:
   UtilitySpace(std::string name, int rent, int price);

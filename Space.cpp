@@ -3,9 +3,15 @@
 //
 
 #include "Space.h"
-Space::Space(std::string name): name(name) {
+Space::Space(const std::string& name): name(name) {
+  free = true;
+  occupied = false;
 
 }
 void Space::displayName() {
   std::cout << "NAME: " << name << std::endl;
 }
+const std::string &Space::getName(){
+  return name;
+}
+

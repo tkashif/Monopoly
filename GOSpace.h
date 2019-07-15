@@ -6,7 +6,7 @@
 #define MONOPOLY_GOSPACE_H
 #include "NonBuyableSpace.h"
 
-class GOSpace : NonBuyableSpace {
+class GOSpace : public NonBuyableSpace {
  public:
   GOSpace(std::string name);
 

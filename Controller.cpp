@@ -42,7 +42,8 @@ void Controller::playGame() {
 
 void Controller::displayGameStats() {
   for (int i = 0; i < attributes.getPlayers().size(); i++){
-    std::cout << attributes.getPlayers()[i].getName() << " owns " << attributes.getPlayers()[i].listPlayerProperties()
-    << " and has balance " << attributes.getPlayers()[i].getPlayerBalance() << std::endl;
+    std::cout << attributes.getPlayers()[i].getName() << " owns ";
+    attributes.getPlayers()[i].listProperties();
+    std::cout << " and has balance " << attributes.getPlayers()[i].getBalance() << std::endl;
   }
 }

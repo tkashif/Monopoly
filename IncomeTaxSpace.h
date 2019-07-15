@@ -6,7 +6,7 @@
 #define MONOPOLY_INCOMETAXSPACE_H
 #include "TaxSpace.h"
 
-class IncomeTaxSpace : TaxSpace {
+class IncomeTaxSpace : public TaxSpace {
  public:
   IncomeTaxSpace(std::string name);
 

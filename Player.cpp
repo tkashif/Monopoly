@@ -3,7 +3,6 @@
 //
 
 #include "Player.h"
-#include "GameAttributes.h"
 
 Player::Player() {
   balance = 0;
@@ -85,9 +84,19 @@ void Player::displayInfoAboutSpotLandedOn(const GameAttributes &attributes) {
    std::cout << "And here is the information about where you landed" << std::endl;
 
    attributes.getBoard()[currentSpaceIndex]->displayName();
-   attributes.getBoard()[currentSpaceIndex]->displayIfOwned();
-  attributes.getBoard()[currentSpaceIndex]->displayPrice();
-  attributes.getBoard()[currentSpaceIndex]->displayRents();
+
+  // if the space is buyable..
+   BuyableSpace* buyableSpace = dynamic_cast<BuyableSpace*>(attributes.getBoard()[currentSpaceIndex].get());
+   if (buyableSpace) { // if this doesn't work just add functions to space and leave empty
+     buyableSpace->displayIfOwned();
+     buyableSpace->displayPrice();
+     buyableSpace->displayRents();
+
+     // Previously what it was with functions declared in Space.h
+     /*attributes.getBoard()[currentSpaceIndex]->displayIfOwned();
+     attributes.getBoard()[currentSpaceIndex]->displayPrice();
+     attributes.getBoard()[currentSpaceIndex]->displayRents();*/
+   }
 
 
 }
@@ -107,6 +116,15 @@ int Player::getNumberOfRailroadsOwned() {
     }
   }
   return counter;
+}
+int Player::getBalance() {
+  return balance;
+}
+void Player::listProperties() {
+  for (int i = 0; i < ownedProperties.size(); i++){
+    std::cout << ownedProperties[i]->getName() << std::endl;
+  }
+
 }
 
 

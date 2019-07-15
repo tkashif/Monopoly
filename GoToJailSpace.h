@@ -6,7 +6,7 @@
 #define MONOPOLY_GOTOJAILSPACE_H
 #include "NonBuyableSpace.h"
 
-class GoToJailSpace : NonBuyableSpace {
+class GoToJailSpace : public NonBuyableSpace {
  public:
   GoToJailSpace(std::string name);
 };

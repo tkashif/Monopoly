@@ -8,7 +8,7 @@
 
 class Space {
  public:
-  Space(std::string name);
+  Space(const std::string& name);
 
   /*attributes.getBoard()[currentSpaceIndex].displayName();
   attributes.getBoard()[currentSpaceIndex].displayIfOwned();
@@ -18,13 +18,11 @@ class Space {
 
   virtual void displayName();
 
-  virtual void displayIfOwned() = 0;
+/*  virtual void displayIfOwned() = 0;
   virtual void displayPrice() = 0;
-  virtual void displayRents() = 0;
+  virtual void displayRents() = 0; --> DONT MAKE SENSE TO HAVE HERE */
 
-
-
-
+  virtual const std::string &getName();
 
  protected:
   std::string name;
