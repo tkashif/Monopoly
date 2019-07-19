@@ -17,12 +17,13 @@ class Space {
    */
 
   virtual void displayName();
+  virtual void doAction() = 0;
 
 /*  virtual void displayIfOwned() = 0;
   virtual void displayPrice() = 0;
   virtual void displayRents() = 0; --> DONT MAKE SENSE TO HAVE HERE */
 
-  virtual const std::string &getName();
+  std::string getName();
 
  protected:
   std::string name;

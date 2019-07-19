@@ -30,7 +30,9 @@ void Controller::playGame() {
 
     attributes.getPlayers()[currentPlayerIndex].displayInfoAboutSpotLandedOn(attributes);
 
-    attributes.getBoard()[currentSpaceIndex]->takeAction();
+    attributes.getPlayers()[currentPlayerIndex].takeAction();
+
+    //attributes.getBoard()[currentSpaceIndex]->takeAction();
 
     if (attributes.getPlayers()[currentPlayerIndex].getBalance() <= 0){
       // REMOVE PLAYER

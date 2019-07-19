@@ -13,9 +13,9 @@ class BuyableSpace : public Space {
  public:
   BuyableSpace(std::string name, int price, int rent);
 
-  virtual void displayIfOwned() override;
-  virtual void displayPrice() override;
-  virtual void displayRents() override;
+  void displayIfOwned();
+  void displayPrice();
+  virtual void displayRents();
 
   bool noOwner();
 

@@ -15,6 +15,7 @@ PropertySpace::PropertySpace(std::string name,
 }
 void PropertySpace::displayRents() {
   BuyableSpace::displayRents();
+
   std::cout << "Rent with color set: $" << rent * 2 << std::endl;
   std::cout << "Rent with 1 house: $" << rent * 2 * 3 << std::endl;
   std::cout << "Rent with 2 houses: $" << rent * 2 * pow(3, 2) << std::endl;
@@ -25,5 +26,6 @@ void PropertySpace::displayRents() {
 }
 void PropertySpace::displayName() {
   Space::displayName();
+
   std::cout << "COLOR: " << color << std::endl;
 }
