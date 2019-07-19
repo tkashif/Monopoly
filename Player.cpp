@@ -18,6 +18,8 @@ Player::Player(int balance, char pieceLetter, std::string name, bool inJail): ba
   currentSpaceIndex = 0;
 }
 void Player::movePiece(int amount, GameAttributes& attributes) {
+  // will take out player from occupied players on space (ALWAYS HAVE TO REMOVE FIRST ONE AS THEY WILL BE FIRST TO GO)
+  removePieceFromCurrentSpot(attributes);
   // updates where in board vector you are on (just index)
   updateCurrentSpaceIndex(amount, attributes);
   // goes and updates currentSpaceOn from board vector
@@ -28,7 +30,7 @@ void Player::takeTurn(GameAttributes& attributes) {
   int result;
   rollDie(result, attributes);
 
-  movePiece(result, attributes); // should update currentPlayerindex and board
+  movePiece(result, attributes); // should update currentPlayerindex and board (NOTE: will also add player to spot they are moving to)
 
 }
 void Player::rollDie(int& result, GameAttributes attributes) {
@@ -76,6 +78,9 @@ void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes) {
 void Player::updateCurrentSpaceOn(GameAttributes& attributes) {
   // Space * = whereever you have landed // NOT SURE IF THIS WORKS AS I AM TRYING TO COPY SPACE I AM ON TO CURRENT SPACE ON by accessing underlying dumb pointer
   currentSpaceOn = (attributes.getBoard().getSpaces()[currentSpaceIndex].get());
+
+  // update so that the space knows which player is on (add to occupiers vector)
+  attributes.getBoard().getSpaces()[currentSpaceIndex]->addOccupier(*this);
 }
 bool Player::atEndOfBoard(GameAttributes& attributes) {
   return attributes.getBoard().getSpaces().size() - 1 == currentSpaceIndex;
@@ -125,6 +130,19 @@ void Player::listProperties() {
     std::cout << ownedProperties[i]->getName() << std::endl;
   }
 
+}
+int Player::getCurrentPosition() {
+  return currentSpaceIndex;
+}
+void Player::takeAction() {
+  currentSpaceOn->doAction();
+}
+void Player::removePieceFromCurrentSpot(GameAttributes& attributes) {
+  attributes.getBoard().getSpaces()[currentSpaceIndex]->removeFirstOccupier();
+}
+void Player::setSpace(Space *space, int indexOfSpace) {
+  currentSpaceOn= space;
+  currentSpaceIndex = indexOfSpace;
 }
 
 

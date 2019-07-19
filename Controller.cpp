@@ -20,6 +20,10 @@ void Controller::switchPlayer(int& currentPlayerIndex, int& currentSpaceIndex) {
 void Controller::playGame() {
   int currentPlayerIndex = 0;
   int currentSpaceIndex = 0;
+
+  // put everyone on GO
+  placePlayersOnGO();
+
   while (!gameIsOver()){
 
     displayGameStats();
@@ -47,5 +51,14 @@ void Controller::displayGameStats() {
     std::cout << attributes.getPlayers()[i].getName() << " owns ";
     attributes.getPlayers()[i].listProperties();
     std::cout << " and has balance " << attributes.getPlayers()[i].getBalance() << std::endl;
+  }
+}
+void Controller::placePlayersOnGO() {
+  for (int i = 0; i < attributes.getPlayers().size(); i++){
+    // at index 0 of spaces is GO
+    // add each player to GO
+    attributes.getBoard().getSpaces()[0]->addOccupier(attributes.getPlayers()[i]);
+    // for each player, set their space to GO
+    attributes.getPlayers()[i].setSpace(attributes.getBoard().getSpaces()[0].get(), 0);
   }
 }

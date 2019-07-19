@@ -24,15 +24,19 @@ class Player {
 
   void updateCurrentSpaceIndex(int amount, GameAttributes& attributes);
   void updateCurrentSpaceOn(GameAttributes& attributes);
+  void removePieceFromCurrentSpot(GameAttributes& attributes);
 
   bool atEndOfBoard(GameAttributes& attributes);
 
   void displayInfoAboutSpotLandedOn(const GameAttributes& attributes);
+  void takeAction();
 
+  int getCurrentPosition();
   std::string getName();
   int getNumberOfRailroadsOwned();
   int getBalance();
   void listProperties();
+  void setSpace(Space* space, int indexOfSpace);
 
 
 

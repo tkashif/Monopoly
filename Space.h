@@ -5,6 +5,7 @@
 #ifndef MONOPOLY_SPACE_H
 #define MONOPOLY_SPACE_H
 #include <iostream>
+#include "Player.h"
 
 class Space {
  public:
@@ -19,6 +20,10 @@ class Space {
   virtual void displayName();
   virtual void doAction() = 0;
 
+  void addOccupier(const Player& personWhoLanded);
+
+  void removeFirstOccupier();
+
 /*  virtual void displayIfOwned() = 0;
   virtual void displayPrice() = 0;
   virtual void displayRents() = 0; --> DONT MAKE SENSE TO HAVE HERE */
@@ -28,6 +33,7 @@ class Space {
  protected:
   std::string name;
   bool occupied;
+  std::vector<Player> occupiers;
   bool free;
 
 

@@ -9,6 +9,7 @@
 #include "BuyableSpace.h"
 #include <cmath>
 
+
 /*
  * Name (1)
 Color (2)
@@ -31,6 +32,8 @@ class PropertySpace : public BuyableSpace {
 
   virtual void displayName() override;
   virtual void displayRents() override;
+
+  virtual void doAction() override;
 
  protected:
   std::string color;

@@ -19,6 +19,7 @@ class Controller {
   bool gameIsOver() const;
   void switchPlayer(int& currentPlayerIndex, int& currentSpaceIndex);
   void displayGameStats();
+  void placePlayersOnGO();
 
  private:
   GameAttributes attributes;

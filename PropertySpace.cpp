@@ -29,3 +29,10 @@ void PropertySpace::displayName() {
 
   std::cout << "COLOR: " << color << std::endl;
 }
+void PropertySpace::doAction() {
+  std::cout <<
+
+  std::cout << "Would you like to buy " << this->getName() << "?" << std::endl;
+
+
+}
