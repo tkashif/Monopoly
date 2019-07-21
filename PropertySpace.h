@@ -33,11 +33,6 @@ class PropertySpace : public BuyableSpace {
   virtual void displayName() override;
   virtual void displayRents() override;
 
-  virtual void doAction(Player& player) override;
-
-  void displayOwnedProperties();
-  void displayCurrentBalance();
-
   int getRent() const override;
 
  protected:
