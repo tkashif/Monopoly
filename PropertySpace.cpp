@@ -56,4 +56,18 @@ void PropertySpace::displayOwnedProperties() {
 void PropertySpace::displayCurrentBalance() {
   std::cout << "Your current balance is $" << occupiers.back().getBalance() << std::endl;
 }
+int PropertySpace::getRent() const {
+  if (numberOfHouses == 1){
+    return rent * 2 * 3;
+  } else if (numberOfHouses == 2){
+    return rent * 2 * pow(3, 2);
+  } else if (numberOfHouses == 3){
+    return rent * 2 * pow(3, 3);
+  } else if (numberOfHouses == 4){
+    return rent * 2 * pow(3, 4);
+  } else if (numberOfHotels == 1){
+    return rent * 2 * pow(3, 5);
+  }
+  return rent;
+}
 

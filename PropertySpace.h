@@ -38,6 +38,8 @@ class PropertySpace : public BuyableSpace {
   void displayOwnedProperties();
   void displayCurrentBalance();
 
+  int getRent() const override;
+
  protected:
   std::string color;
   int numberOfHouses;

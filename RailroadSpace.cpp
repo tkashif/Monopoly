@@ -12,5 +12,6 @@ void RailroadSpace::displayRents() {
     BuyableSpace::displayRents();
   } else {
     rent *= owner.getNumberOfRailroadsOwned();
+    BuyableSpace::displayRents();
   }
 }
