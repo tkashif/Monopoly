@@ -18,7 +18,7 @@ class Space {
    */
 
   virtual void displayName();
-  virtual void doAction() = 0;
+  virtual void doAction(Player& player) = 0;
 
   void addOccupier(const Player& personWhoLanded);
 

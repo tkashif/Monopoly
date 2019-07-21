@@ -22,5 +22,21 @@ void BuyableSpace::displayRents() {
 bool BuyableSpace::noOwner() {
   return (owner.getName() == "");
 }
+void BuyableSpace::promptIfWantToBuy(char &decision) {
+  std::cout << "Would you like to buy " << this->getName() << "?" << std::endl;
+  std::cout << "Please enter Y/N: ";
+  std::cin >> decision;
+  while ((decision != 'Y' || decision != 'y') && (decision != 'N' || decision != 'n') ){
+    std::cin.clear();
+    std::cin.ignore(10000, '\n');
+    std::cin >> decision;
+  }
+  std::cin.clear();
+  std::cin.ignore(10000, '\n');
+}
+void BuyableSpace::assignOwner(Player &player) {
+  owner = player;
+}
+
 
 

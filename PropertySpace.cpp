@@ -29,10 +29,32 @@ void PropertySpace::displayName() {
 
   std::cout << "COLOR: " << color << std::endl;
 }
-void PropertySpace::doAction() {
-  std::cout <<
+void PropertySpace::doAction(Player& player) {
 
-  std::cout << "Would you like to buy " << this->getName() << "?" << std::endl;
+  if (noOwner()){
+    char decision;
+    displayOwnedProperties();
+    promptIfWantToBuy(decision);
+    assignOwner(player);
+  } else{
+  }
 
 
+
+
+
+  
+
+
+}
+void PropertySpace::displayOwnedProperties() {
+  displayCurrentBalance();
+  std::cout << "You current own: " << std::endl;
+  occupiers.back().listProperties();
+}
+void PropertySpace::promptIfWantToBuy(char &decision) {
+
+}
+void PropertySpace::displayCurrentBalance() {
+  std::cout << "Your current balance is $" << occupiers.back().getBalance() << std::endl;
 }

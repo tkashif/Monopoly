@@ -29,6 +29,7 @@ class Player {
   bool atEndOfBoard(GameAttributes& attributes);
 
   void displayInfoAboutSpotLandedOn(const GameAttributes& attributes);
+
   void takeAction();
 
   int getCurrentPosition();

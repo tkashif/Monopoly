@@ -18,6 +18,8 @@ class BuyableSpace : public Space {
   virtual void displayRents();
 
   bool noOwner();
+  virtual void promptIfWantToBuy(char& decision);
+  virtual void assignOwner(Player& player);
 
  protected:
   int price;
