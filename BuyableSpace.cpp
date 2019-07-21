@@ -41,9 +41,10 @@ void BuyableSpace::assignOwner(Player &player) {
 Player &BuyableSpace::getOwner() const {
   return owner;
 }
-int BuyableSpace::getPrice() const {
-  return price;
+int BuyableSpace::getRent() const {
+  return rent;
 }
+
 
 
 

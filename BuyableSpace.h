@@ -22,7 +22,7 @@ class BuyableSpace : public Space {
   virtual void assignOwner(Player& player);
 
   Player& getOwner() const;
-  virtual int getPrice() const;
+  virtual int getRent() const;
 
 
  protected:

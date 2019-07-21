@@ -56,3 +56,4 @@ void PropertySpace::displayOwnedProperties() {
 void PropertySpace::displayCurrentBalance() {
   std::cout << "Your current balance is $" << occupiers.back().getBalance() << std::endl;
 }
+
