@@ -157,6 +157,101 @@ void Player::addToBalance(int amount) {
 void Player::subtractFromBalance(int amount) {
   balance -= amount;
 }
+void Player::promptAboutPlacingHouses() {
+  std::vector<PropertySpace> options = {};
+
+  for (int i = 0; i < ownedProperties.size(); i++){
+    // cast to a property space
+    PropertySpace* property = dynamic_cast<PropertySpace*>(ownedProperties[i].get());
+    // if space is a property space
+    if (property){
+      options.push_back(*property);
+    }
+  }
+
+  for (int i = 0; i < options.size(); i++){
+    std::cout << "Would you like to place house(s)/hotel on one of the following?:" << std::endl;
+    listHouseOptions(options);
+  }
+
+  selectWhichOnesToPlaceHouses(options);
+}
+void Player::listHouseOptions(std::vector<PropertySpace>& options) {
+  for (int i = 0; i < options.size(); i++){
+    std::cout << (i + 1) << ". " << options[i].getName() << std::endl;
+  }
+}
+void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace> &options) {
+  std::cout << "Enter the number of the property for which you would like to place house(s) / a hotel (enter -1 to exit): ";
+  int input;
+  std::cin >> input;
+
+  while (input != -1){
+    if (input >= 1 && input <= options.size()){
+      placeHousesOrHotelOnProperty(options[input - 1]);
+    }
+    std::cout << "Enter the number of the property for which you would like to place house(s) / a hotel (enter -1 to exit): ";
+    std::cin >> input;
+  }
+
+}
+void Player::placeHousesOrHotelOnProperty(PropertySpace& property) {
+  bool houseDesired;
+  getInputAboutHouseDesired(houseDesired);
+  if(houseDesired){
+    int numberOfHousesDesired;
+    getInputAboutHowManyHousesDesired(numberOfHousesDesired);
+    placeHousesOnProperty(property, numberOfHousesDesired);
+  } else {
+    if(canAffordHotel()){
+      placeHotelOnPropertyAndGetRidOfHouses(property);
+    }
+  }
+}
+void Player::getInputAboutHouseDesired(bool& houseDesired) {
+  std::cout << "Do you want to place a house (enter h) or a hotel (enter H):";
+  char input;
+  std::cin >> input;
+  if (input == 'h'){
+    houseDesired = true;
+  } else if (input == 'H'){
+    houseDesired = false;
+  }
+}
+void Player::getInputAboutHowManyHousesDesired(int &numberOfHousesDesired) {
+  std::cout << "With your balance of " << this->getBalance() << ", you can currently afford: ";
+
+  int numberOfAffordableHouses;
+  getAffordableNumberOfHouses(numberOfAffordableHouses);
+
+  std::cout << "How many houses would you like to have? ";
+  int input;
+  std::cin >> input;
+
+  while (input > numberOfAffordableHouses){
+    std::cout << "Sorry, you cannot afford that." << std::endl;
+    std::cout << "How many houses would you like to have? ";
+    std::cin >> input;
+  }
+
+  numberOfHousesDesired = input;
+
+}
+void Player::getAffordableNumberOfHouses(int &numberOfAffordableHouses) {
+  numberOfAffordableHouses = this->getBalance() / 200;
+}
+void Player::placeHousesOnProperty(PropertySpace &property, int numberOfHousesDesired) {
+  property.addHouses(numberOfHousesDesired);
+}
+void Player::placeHotelOnPropertyAndGetRidOfHouses(PropertySpace &property) {
+  property.addHotel();
+  property.setHouses(0);
+}
+bool Player::canAffordHotel() {
+  return (this->getBalance() / 1000 > 0);
+}
+
+
 
 
 

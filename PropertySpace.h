@@ -33,6 +33,10 @@ class PropertySpace : public BuyableSpace {
   virtual void displayName() override;
   virtual void displayRents() override;
 
+  void addHouses(int number);
+  void setHouses(int number);
+  void addHotel();
+
   int getRent() const override;
 
  protected:

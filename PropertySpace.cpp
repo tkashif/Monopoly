@@ -43,4 +43,14 @@ int PropertySpace::getRent() const {
   }
   return rent;
 }
+void PropertySpace::addHouses(int number) {
+  numberOfHouses+=number;
+}
+void PropertySpace::setHouses(int number) {
+  numberOfHouses = 0;
+}
+void PropertySpace::addHotel() {
+  setHouses(0);
+  numberOfHotels++;
+}
 
