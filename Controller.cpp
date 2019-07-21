@@ -28,6 +28,8 @@ void Controller::playGame() {
 
     displayGameStats();
 
+    attributes.getPlayers()[currentPlayerIndex].promptAboutPlacingHouses();
+
     attributes.getPlayers()[currentPlayerIndex].takeTurn(attributes);
 
     attributes.getBoard().displayCurrentState();
