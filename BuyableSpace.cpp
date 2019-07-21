@@ -44,6 +44,23 @@ Player &BuyableSpace::getOwner() const {
 int BuyableSpace::getRent() const {
   return rent;
 }
+void BuyableSpace::doAction(Player& player) {
+  if (noOwner()){
+    char decision;
+    displayOwnedProperties();
+    promptIfWantToBuy(decision);
+    if (decision == 'Y' || decision == 'y'){
+      assignOwner(player);
+    }
+  } else{
+    player.payOwner(*this);
+  }
+}
+void BuyableSpace::displayOwnedProperties() {
+  std::cout << "Your current balance is $" << occupiers.back().getBalance() << std::endl;
+  std::cout << "You current own: " << std::endl;
+  occupiers.back().listProperties();
+}
 
 
 

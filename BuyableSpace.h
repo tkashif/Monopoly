@@ -17,9 +17,12 @@ class BuyableSpace : public Space {
   void displayPrice();
   virtual void displayRents();
 
+  virtual void doAction(Player& player) override;
+
   bool noOwner();
   virtual void promptIfWantToBuy(char& decision);
   virtual void assignOwner(Player& player);
+  virtual void displayOwnedProperties();
 
   Player& getOwner() const;
   virtual int getRent() const;
