@@ -36,6 +36,13 @@ void BuyableSpace::promptIfWantToBuy(char &decision) {
 }
 void BuyableSpace::assignOwner(Player &player) {
   owner = player;
+  player.addOwnedProperty(*this);
+}
+Player &BuyableSpace::getOwner() const {
+  return owner;
+}
+int BuyableSpace::getPrice() const {
+  return price;
 }
 
 

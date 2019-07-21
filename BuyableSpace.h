@@ -21,6 +21,10 @@ class BuyableSpace : public Space {
   virtual void promptIfWantToBuy(char& decision);
   virtual void assignOwner(Player& player);
 
+  Player& getOwner() const;
+  virtual int getPrice() const;
+
+
  protected:
   int price;
   Player owner;

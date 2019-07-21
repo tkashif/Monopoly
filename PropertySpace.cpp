@@ -37,6 +37,7 @@ void PropertySpace::doAction(Player& player) {
     promptIfWantToBuy(decision);
     assignOwner(player);
   } else{
+    player.payOwner(*this);
   }
 
 
@@ -51,9 +52,6 @@ void PropertySpace::displayOwnedProperties() {
   displayCurrentBalance();
   std::cout << "You current own: " << std::endl;
   occupiers.back().listProperties();
-}
-void PropertySpace::promptIfWantToBuy(char &decision) {
-
 }
 void PropertySpace::displayCurrentBalance() {
   std::cout << "Your current balance is $" << occupiers.back().getBalance() << std::endl;

@@ -39,6 +39,12 @@ class Player {
   void listProperties();
   void setSpace(Space* space, int indexOfSpace);
 
+  void payOwner(const BuyableSpace& space);
+  void addOwnedProperty(const Space& space);
+
+  void addToBalance(int amount);
+  void subtractFromBalance(int amount);
+
 
 
  private:
