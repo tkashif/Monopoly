@@ -9,6 +9,8 @@
 class JailSpace : public NonBuyableSpace{
  public:
   JailSpace(std::string name);
+
+  virtual void doAction(Player& player, GameAttributes& attributes) override;
 };
 
 #endif //MONOPOLY_JAILSPACE_H

@@ -64,7 +64,7 @@ class Player {
   int getCurrentSpaceIndex();
 
   void setCurrentSpace(GameAttributes& attributes);
-
+  void setInJail(bool ifInJail);
 
 
  private:

@@ -273,7 +273,10 @@ int Player::getCurrentSpaceIndex() {
 }
 void Player::setCurrentSpace(GameAttributes& attributes) {
   currentSpaceIndex = attributes.getJailIndex();
-  currentSpaceOn = attributes.getBoard()[index].get();
+  currentSpaceOn = attributes.getBoard()[currentSpaceIndex].get();
+}
+void Player::setInJail(bool ifInJail) {
+  inJail = ifInJail;
 }
 
 
