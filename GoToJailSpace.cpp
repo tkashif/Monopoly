@@ -6,3 +6,6 @@
 GoToJailSpace::GoToJailSpace(std::string name) : NonBuyableSpace(name) {
 
 }
+void GoToJailSpace::doAction(Player &player, GameAttributes &attributes) {
+  player.setCurrentSpace(attributes);
+}

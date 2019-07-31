@@ -16,9 +16,11 @@ class GameAttributes {
  public:
   GameAttributes(int numberOfPlayers, View view, Board board, Dice dice, MiddleSpace middle);
 
-  std::vector<Player> &getPlayers() const;
-  Board &getBoard() const;
-  Dice &getDice() const;
+  std::vector<Player> &getPlayers();
+  Board &getBoard();
+  Dice &getDice();
+  MiddleSpace& getMiddle();
+  int getJailIndex();
 
  private:
     std::string getPlayerName(int i) const;
@@ -31,6 +33,7 @@ class GameAttributes {
     std::vector<Player> players;
     std::vector<char> usedLetters;
     MiddleSpace middle;
+    int jailIndex;
 
 
 };

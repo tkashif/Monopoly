@@ -9,7 +9,14 @@ GameAttributes::GameAttributes(int numberOfPlayers, View view, Board board, Dice
     std::string name = getPlayerName(i);
     players[i] = Player(0, generateRandomLetter(), name, false);
   }
-}
+
+  for (int i = 0; i < board.getSpaces().size(); i++) {
+   if (board.getSpaces()[i]->getName() == "Jail"){
+     jailIndex = i;
+   }
+  }
+
+};
 std::string GameAttributes::getPlayerName(int i) const {
   std::string name;
   std::cout << "Player " << i + 1 << ", please enter your name: ";
@@ -32,12 +39,18 @@ bool GameAttributes::isInUsedLetters(char letter) const{
   }
   return false;
 }
-std::vector<Player> &GameAttributes::getPlayers() const {
+std::vector<Player> &GameAttributes::getPlayers()  {
   return players;
 }
-Board &GameAttributes::getBoard() const {
+Board &GameAttributes::getBoard()  {
   return board;
 }
-Dice &GameAttributes::getDice() const {
+Dice &GameAttributes::getDice()  {
   return dice;
+}
+MiddleSpace &GameAttributes::getMiddle()  {
+  return middle;
+}
+int GameAttributes::getJailIndex() {
+  return jailIndex;
 }

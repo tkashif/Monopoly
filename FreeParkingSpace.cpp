@@ -4,8 +4,8 @@
 
 #include "FreeParkingSpace.h"
 FreeParkingSpace::FreeParkingSpace(std::string name) : NonBuyableSpace(name) {
-  benefit = 0;
 }
 void FreeParkingSpace::doAction(Player &player, GameAttributes& attributes) {
-
+  player.addToBalance(attributes.getMiddle().getMoney());
+  attributes.getMiddle().resetMoneyToZero();
 }

@@ -10,6 +10,8 @@ class TaxSpace : public NonBuyableSpace {
  public:
   TaxSpace(std::string name, int penalty);
 
+  virtual void doAction(Player& player, GameAttributes& attributes) override;
+
  protected:
   int penalty;
 };
