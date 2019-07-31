@@ -44,7 +44,7 @@ Player &BuyableSpace::getOwner() const {
 int BuyableSpace::getRent() const {
   return rent;
 }
-void BuyableSpace::doAction(Player& player) {
+void BuyableSpace::doAction(Player& player, GameAttributes& attributes) {
   if (noOwner()){
     char decision;
     displayOwnedProperties();

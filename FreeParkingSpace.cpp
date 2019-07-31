@@ -6,3 +6,6 @@
 FreeParkingSpace::FreeParkingSpace(std::string name) : NonBuyableSpace(name) {
   benefit = 0;
 }
+void FreeParkingSpace::doAction(Player &player, GameAttributes& attributes) {
+
+}

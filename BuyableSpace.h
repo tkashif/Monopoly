@@ -17,7 +17,7 @@ class BuyableSpace : public Space {
   void displayPrice();
   virtual void displayRents();
 
-  virtual void doAction(Player& player) override;
+  virtual void doAction(Player& player, GameAttributes& attributes) override;
 
   bool noOwner();
   virtual void promptIfWantToBuy(char& decision);

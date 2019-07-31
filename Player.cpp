@@ -134,8 +134,8 @@ void Player::listProperties() {
 int Player::getCurrentPosition() {
   return currentSpaceIndex;
 }
-void Player::takeAction() {
-  currentSpaceOn->doAction(*this); // passing in player in case I need to do something with player
+void Player::takeAction(GameAttributes& attributes) {
+  currentSpaceOn->doAction(*this, attributes); // passing in player in case I need to do something with player
 }
 void Player::removePieceFromCurrentSpot(GameAttributes& attributes) {
   attributes.getBoard().getSpaces()[currentSpaceIndex]->removeFirstOccupier();

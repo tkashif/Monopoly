@@ -36,7 +36,7 @@ void Controller::playGame() {
 
     attributes.getPlayers()[currentPlayerIndex].displayInfoAboutSpotLandedOn(attributes);
 
-    attributes.getPlayers()[currentPlayerIndex].takeAction();
+    attributes.getPlayers()[currentPlayerIndex].takeAction(attributes);
 
     //attributes.getBoard()[currentSpaceIndex]->takeAction();
 

@@ -30,7 +30,7 @@ class Player {
 
   void displayInfoAboutSpotLandedOn(const GameAttributes& attributes);
 
-  void takeAction();
+  void takeAction(GameAttributes& attributes);
 
   int getCurrentPosition();
   std::string getName();

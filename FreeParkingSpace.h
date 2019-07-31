@@ -10,6 +10,8 @@ class FreeParkingSpace : public NonBuyableSpace {
  public:
   FreeParkingSpace(std::string name);
 
+  virtual void doAction(Player& player, GameAttributes& attributes) override;
+
  protected:
   int benefit;
 
