@@ -23,7 +23,7 @@ std::string GameAttributes::getPlayerName(int i) const {
   std::cin >> name;
   return name;
 }
-char GameAttributes::generateRandomLetter() const {
+char GameAttributes::generateRandomLetter() {
   char playerSymbol = 97 + rand() % 26;
   while (isInUsedLetters(playerSymbol)){
     playerSymbol = 97 + rand() % 26;
