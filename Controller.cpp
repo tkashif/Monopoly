@@ -41,7 +41,7 @@ void Controller::playGame() {
     //attributes.getBoard()[currentSpaceIndex]->takeAction();
 
     if (attributes.getPlayers()[currentPlayerIndex].getBalance() <= 0){
-      // REMOVE PLAYER
+      removePlayer(attributes.getPlayers()[currentPlayerIndex]);
     }
     switchPlayer(currentPlayerIndex, currentSpaceIndex);
 
@@ -62,5 +62,13 @@ void Controller::placePlayersOnGO() {
     attributes.getBoard().getSpaces()[0]->addOccupier(attributes.getPlayers()[i]);
     // for each player, set their space to GO
     attributes.getPlayers()[i].setSpace(attributes.getBoard().getSpaces()[0].get(), 0);
+  }
+}
+void Controller::removePlayer(Player &player) {
+  auto itr = attributes.getPlayers().begin();
+  for (; itr < attributes.getPlayers().end(); itr++){
+    if (*itr == player){
+      attributes.getPlayers().erase(itr);
+    }
   }
 }

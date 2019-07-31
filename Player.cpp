@@ -250,6 +250,27 @@ void Player::placeHotelOnPropertyAndGetRidOfHouses(PropertySpace &property) {
 bool Player::canAffordHotel() {
   return (this->getBalance() / 1000 > 0);
 }
+bool Player::operator==(Player &player) {
+
+  /*int balance;
+  char pieceLetter;
+  std::vector<std::unique_ptr<BuyableSpace>> ownedProperties;
+  std::string name;
+  int currentSpaceIndex; // i.e. position on board
+  Space* currentSpaceOn;
+  bool inJail;*/
+  return (balance == player.getBalance()) && (pieceLetter == player.getPieceLetter()) && (ownedProperties == player.getOwnedProperties())
+          && (name == player.getName()) && (currentSpaceIndex == player.getCurrentSpaceIndex());
+}
+char Player::getPieceLetter() {
+  return pieceLetter;
+}
+std::vector<std::unique_ptr<BuyableSpace>> &Player::getOwnedProperties() {
+  return ownedProperties;
+}
+int Player::getCurrentSpaceIndex() {
+  return currentSpaceIndex;
+}
 
 
 

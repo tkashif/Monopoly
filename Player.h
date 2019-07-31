@@ -47,7 +47,7 @@ class Player {
 
   void promptAboutPlacingHouses();
   void listHouseOptions(std::vector<PropertySpace>& options);
-  void selectWhichOnesToPlaceHouses(std::vector<PropertySpace>& options;
+  void selectWhichOnesToPlaceHouses(std::vector<PropertySpace>& options);
   void placeHousesOrHotelOnProperty(PropertySpace& property);
 
   void getInputAboutHouseDesired(bool& houseDesired);
@@ -56,6 +56,13 @@ class Player {
   void placeHousesOnProperty(PropertySpace& property, int numberOfHousesDesired);
   void placeHotelOnPropertyAndGetRidOfHouses(PropertySpace& property);
   bool canAffordHotel();
+
+  bool operator==(Player& player);
+
+  char getPieceLetter();
+  std::vector<std::unique_ptr<BuyableSpace>>& getOwnedProperties();
+  int getCurrentSpaceIndex();
+
 
 
 

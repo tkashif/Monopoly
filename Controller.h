@@ -20,6 +20,7 @@ class Controller {
   void switchPlayer(int& currentPlayerIndex, int& currentSpaceIndex);
   void displayGameStats();
   void placePlayersOnGO();
+  void removePlayer(Player& player);
 
  private:
   GameAttributes attributes;
