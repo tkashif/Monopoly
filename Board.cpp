@@ -4,7 +4,49 @@
 
 #include "Board.h"
 void Board::displayCurrentState() {
+  // print top row
+  for (int i = 17; i <= 25; i++){
+    // do checking and place * or pieceLetter
+    if (spaces[i]->hasOccupier()){
+      std::cout << spaces[i]->getOccupier().getPieceLetter();
+    } else{
+      std::cout << '*';
+    }
+  }
 
+  // doing middle of board printing
+  int startingLeftCol = 16;
+  int endingLeftCol = 10;
+  int startingRightCol = 26;
+  int endingRightCol = 32;
+  for (int i = startingLeftCol, j = startingRightCol; (i >= endingLeftCol) && (j<= endingRightCol); i--, j++){
+    for (int k = i; k <= j; k++){
+      // if it is one of the end ones (i.e not a blank space)
+      if (k == i || k == j){
+        // do checking and place * or pieceLetter
+        if (spaces[k]->hasOccupier()){
+          std::cout << spaces[k]->getOccupier().getPieceLetter();
+        } else{
+          std::cout << '*';
+        }
+      } else { // if just a blank space, print a blank
+        std::cout << ' ';
+      }
+    }
+  }
+
+  // printing bottom row
+  for (int i = 9; i >= 1; i--){
+    // do checking and place * or pieceLetter
+    if (spaces[i]->hasOccupier()){
+      std::cout << spaces[i]->getOccupier().getPieceLetter();
+    } else{
+      std::cout << '*';
+    }
+  }
+
+  // couple of enters
+  std::cout << std::endl << std::endl;
 }
 
 Board::Board() {

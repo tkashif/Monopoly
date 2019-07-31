@@ -16,7 +16,7 @@ class Controller {
   void setUpGame();
   void playGame();
 
-  bool gameIsOver() const;
+  bool gameIsOver();
   void switchPlayer(int& currentPlayerIndex, int& currentSpaceIndex);
   void displayGameStats();
   void placePlayersOnGO();

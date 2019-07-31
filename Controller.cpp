@@ -7,7 +7,7 @@
 Controller::Controller(GameAttributes attributes): attributes(attributes) {
 
 }
-bool Controller::gameIsOver() const {
+bool Controller::gameIsOver(){
   return attributes.getPlayers().size() == 1;
 }
 void Controller::switchPlayer(int& currentPlayerIndex, int& currentSpaceIndex) {
@@ -38,7 +38,7 @@ void Controller::playGame() {
 
     attributes.getPlayers()[currentPlayerIndex].takeAction(attributes);
 
-    //attributes.getBoard()[currentSpaceIndex]->takeAction();
+    //attributes.getBoard()[currentSpaceIndex]->takeAction(); ignore
 
     if (attributes.getPlayers()[currentPlayerIndex].getBalance() <= 0){
       removePlayer(attributes.getPlayers()[currentPlayerIndex]);
