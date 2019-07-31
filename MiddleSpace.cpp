@@ -9,3 +9,6 @@ void MiddleSpace::addMoney(int amount) {
 void MiddleSpace::resetMoneyToZero() {
   money = 0;
 }
+int MiddleSpace::getMoney() {
+  return money;
+}

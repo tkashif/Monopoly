@@ -11,6 +11,7 @@ class MiddleSpace {
 
   void addMoney(int amount);
   void resetMoneyToZero();
+  int getMoney();
 
  private:
   int money;
