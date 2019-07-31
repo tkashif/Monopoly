@@ -28,7 +28,7 @@ class Player {
 
   bool atEndOfBoard(GameAttributes& attributes);
 
-  void displayInfoAboutSpotLandedOn(const GameAttributes& attributes);
+  void displayInfoAboutSpotLandedOn(GameAttributes& attributes);
 
   void takeAction(GameAttributes& attributes);
 

@@ -24,6 +24,10 @@ class Space {
 
   void removeFirstOccupier();
 
+  bool hasOccupier();
+
+  Player& getOccupier();
+
 /*  virtual void displayIfOwned() = 0;
   virtual void displayPrice() = 0;
   virtual void displayRents() = 0; --> DONT MAKE SENSE TO HAVE HERE */
@@ -32,9 +36,7 @@ class Space {
 
  protected:
   std::string name;
-  bool occupied;
   std::vector<Player> occupiers;
-  bool free;
 
 
 };

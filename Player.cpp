@@ -85,7 +85,7 @@ void Player::updateCurrentSpaceOn(GameAttributes& attributes) {
 bool Player::atEndOfBoard(GameAttributes& attributes) {
   return attributes.getBoard().getSpaces().size() - 1 == currentSpaceIndex;
 }
-void Player::displayInfoAboutSpotLandedOn(const GameAttributes &attributes) {
+void Player::displayInfoAboutSpotLandedOn(GameAttributes &attributes) {
    std::cout << "And here is the information about where you landed" << std::endl;
 
    attributes.getBoard()[currentSpaceIndex]->displayName();

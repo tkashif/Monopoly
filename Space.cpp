@@ -21,4 +21,10 @@ void Space::addOccupier(const Player& personWhoLanded) {
 void Space::removeFirstOccupier() {
   occupiers.erase(occupiers.begin());
 }
+bool Space::hasOccupier() {
+  return (occupiers.size() != 0);
+}
+Player &Space::getOccupier() {
+  return occupiers.back();
+}
 
