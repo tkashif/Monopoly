@@ -63,6 +63,7 @@ class Player {
   std::vector<std::unique_ptr<BuyableSpace>>& getOwnedProperties();
   int getCurrentSpaceIndex();
 
+  void setCurrentSpace(GameAttributes& attributes);
 
 
 

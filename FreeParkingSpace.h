@@ -12,9 +12,6 @@ class FreeParkingSpace : public NonBuyableSpace {
 
   virtual void doAction(Player& player, GameAttributes& attributes) override;
 
- protected:
-  int benefit;
-
 };
 
 #endif //MONOPOLY_FREEPARKINGSPACE_H

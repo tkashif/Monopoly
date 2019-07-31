@@ -10,6 +10,8 @@ class GOSpace : public NonBuyableSpace {
  public:
   GOSpace(std::string name);
 
+  virtual void doAction(Player& player, GameAttributes& attributes) override;
+
  protected:
   int benefit;
 };

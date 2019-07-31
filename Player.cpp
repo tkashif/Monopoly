@@ -271,6 +271,10 @@ std::vector<std::unique_ptr<BuyableSpace>> &Player::getOwnedProperties() {
 int Player::getCurrentSpaceIndex() {
   return currentSpaceIndex;
 }
+void Player::setCurrentSpace(GameAttributes& attributes) {
+  currentSpaceIndex = attributes.getJailIndex();
+  currentSpaceOn = attributes.getBoard()[index].get();
+}
 
 
 
