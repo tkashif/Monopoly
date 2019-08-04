@@ -163,3 +163,4 @@ std::vector<std::unique_ptr<Space>> &Board::getSpaces() const {
 std::unique_ptr<Space>& Board::operator[](int index) {
   return spaces[index];
 }
+

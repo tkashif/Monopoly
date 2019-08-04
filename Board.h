@@ -29,7 +29,7 @@ class Board {
 
 
  private:
-  std::vector<std::unique_ptr<Space>> spaces;
+  std::vector<std::unique_ptr<Space>>& spaces;
 
 
 };

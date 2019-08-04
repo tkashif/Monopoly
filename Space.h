@@ -21,7 +21,7 @@ class Space {
   attributes.getBoard()[currentSpaceIndex].displayRents();
    */
 
-  virtual ~Space();
+  virtual ~Space() = default;
 
   virtual void displayName();
   virtual void doAction(Player& player, GameAttributes& attributes) = 0;

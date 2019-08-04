@@ -73,7 +73,7 @@ class Player {
  private:
   int balance;
   char pieceLetter;
-  std::vector<std::unique_ptr<BuyableSpace>> ownedProperties;
+  std::vector<std::unique_ptr<BuyableSpace>>& ownedProperties;
   std::string name;
   int currentSpaceIndex; // i.e. position on board
   Space* currentSpaceOn;
