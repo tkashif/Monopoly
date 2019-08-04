@@ -27,4 +27,7 @@ bool Space::hasOccupier() {
 Player &Space::getOccupier() {
   return occupiers.back();
 }
+Space::~Space() {
+
+}
 

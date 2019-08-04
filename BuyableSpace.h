@@ -5,9 +5,6 @@
 #ifndef MONOPOLY_BUYABLESPACE_H
 #define MONOPOLY_BUYABLESPACE_H
 #include "Space.h"
-#include "Player.h"
-
-class Player;
 
 class BuyableSpace : public Space {
  public:
@@ -30,7 +27,7 @@ class BuyableSpace : public Space {
 
  protected:
   int price;
-  Player owner;
+  Player& owner;
   int rent;
 
 

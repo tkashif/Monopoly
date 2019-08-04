@@ -6,6 +6,10 @@
 #define MONOPOLY_SPACE_H
 #include <iostream>
 #include "Player.h"
+#include <vector>
+
+class Player;
+class GameAttributes;
 
 class Space {
  public:
@@ -16,6 +20,8 @@ class Space {
   attributes.getBoard()[currentSpaceIndex].displayPrice();
   attributes.getBoard()[currentSpaceIndex].displayRents();
    */
+
+  virtual ~Space();
 
   virtual void displayName();
   virtual void doAction(Player& player, GameAttributes& attributes) = 0;

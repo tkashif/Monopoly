@@ -8,8 +8,11 @@
 #include "BuyableSpace.h"
 #include "Dice.h"
 #include "GameAttributes.h"
+#include "Space.h"
+#include "PropertySpace.h"
 
-class BuyableSpace;
+class Space;
+class PropertySpace;
 
 class Player {
  public:

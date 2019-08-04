@@ -145,7 +145,7 @@ void Player::setSpace(Space *space, int indexOfSpace) {
   currentSpaceIndex = indexOfSpace;
 }
 void Player::addOwnedProperty(const Space &space) {
-  ownedProperties.push_back(space);
+  ownedProperties.emplace_back(space);
 }
 void Player::payOwner(const BuyableSpace &space) {
   space.getOwner().addToBalance(space.getRent());

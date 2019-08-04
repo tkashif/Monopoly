@@ -11,7 +11,8 @@ int main() {
   View view;
   Board board;
   Dice dice;
-  GameAttributes gameAttributes(numPlayers, view, board, dice);
+  MiddleSpace middle;
+  GameAttributes gameAttributes(numPlayers, view, board, dice, middle);
   Controller controller(gameAttributes);
 
   controller.playGame();
