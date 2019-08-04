@@ -6,6 +6,8 @@
 #define MONOPOLY_BUYABLESPACE_H
 #include "Space.h"
 
+class Space;
+
 class BuyableSpace : public Space {
  public:
 

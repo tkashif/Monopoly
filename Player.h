@@ -63,7 +63,7 @@ class Player {
   bool operator==(Player& player);
 
   char getPieceLetter();
-  std::vector<std::unique_ptr<BuyableSpace>>& getOwnedProperties();
+  std::vector<std::unique_ptr<BuyableSpace>>* getOwnedProperties();
   int getCurrentSpaceIndex();
 
   void setCurrentSpace(GameAttributes& attributes);
