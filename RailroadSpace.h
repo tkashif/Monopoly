@@ -9,6 +9,9 @@
 
 class RailroadSpace : public BuyableSpace {
  public:
+
+  RailroadSpace() = default;
+
   RailroadSpace(std::string name, int price);
 
   virtual void displayRents() override;

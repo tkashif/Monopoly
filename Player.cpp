@@ -4,18 +4,18 @@
 
 #include "Player.h"
 
-Player::Player() {
+/*Player::Player() : balance(0), pieceLetter(), name(""), inJail(false), ownedProperties({}) currentSpaceIndex(0) {
   balance = 0;
   pieceLetter = ' ';
   name = "";
   inJail = false;
   ownedProperties = {};
   currentSpaceIndex = 0;
-}
+}*/
 
-Player::Player(int balance, char pieceLetter, std::string name, bool inJail): balance(balance), pieceLetter(pieceLetter), name(name), inJail(inJail) {
+Player::Player(int balance, char pieceLetter, std::string name, bool inJail): balance(balance), pieceLetter(pieceLetter), name(name), inJail(inJail)
+                                                                              currentSpaceIndex(0){
   ownedProperties = {};
-  currentSpaceIndex = 0;
 }
 void Player::movePiece(int amount, GameAttributes& attributes) {
   // will take out player from occupied players on space (ALWAYS HAVE TO REMOVE FIRST ONE AS THEY WILL BE FIRST TO GO)

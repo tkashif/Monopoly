@@ -28,6 +28,9 @@ Price hotel (- * 10 prev)
 
 class PropertySpace : public BuyableSpace {
  public:
+
+  PropertySpace() = default;
+
   PropertySpace(std::string name, std::string color, int numberOfHouses, int numberOfHotels, int rent, int price);
 
   virtual void displayName() override;

@@ -13,6 +13,9 @@ class GameAttributes;
 
 class Space {
  public:
+
+  Space() = default;
+
   Space(const std::string& name);
 
   /*attributes.getBoard()[currentSpaceIndex].displayName();

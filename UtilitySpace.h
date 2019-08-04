@@ -9,6 +9,9 @@
 class UtilitySpace : public BuyableSpace {
 
  public:
+
+  UtilitySpace() = default;
+
   UtilitySpace(std::string name, int rent, int price);
 
   virtual void displayRents() override;

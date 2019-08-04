@@ -8,6 +8,9 @@
 
 class BuyableSpace : public Space {
  public:
+
+  BuyableSpace() = default;
+
   BuyableSpace(std::string name, int price, int rent);
 
   void displayIfOwned();
