@@ -5,6 +5,8 @@
 #ifndef MONOPOLY_GOSPACE_H
 #define MONOPOLY_GOSPACE_H
 #include "NonBuyableSpace.h"
+#include "Player.h"
+#include "GameAttributes.h"
 
 class GOSpace : public NonBuyableSpace {
  public:

@@ -4,17 +4,20 @@
 
 #ifndef MONOPOLY_GAMEATTRIBUTES_H
 #define MONOPOLY_GAMEATTRIBUTES_H
+#include <vector>
+#include <iostream>
 #include "Player.h"
 #include "View.h"
 #include "Board.h"
 #include "Dice.h"
 #include "MiddleSpace.h"
-#include <vector>
-#include <iostream>
+
+class Player;
+class Board; // added this without include thing
 
 class GameAttributes {
  public:
-  GameAttributes(int numberOfPlayers, View view, Board board, Dice dice, MiddleSpace middle);
+  GameAttributes(int numberOfPlayers, View view, Board& board, Dice dice, MiddleSpace middle);
 
   std::vector<Player> &getPlayers();
   Board &getBoard();
@@ -28,7 +31,7 @@ class GameAttributes {
     bool isInUsedLetters(char letter) const;
 
     View view;
-    Board board;
+    Board& board;
     Dice dice;
     std::vector<Player> players;
     std::vector<char> usedLetters;

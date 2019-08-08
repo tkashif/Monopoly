@@ -4,9 +4,11 @@
 
 #ifndef MONOPOLY_BUYABLESPACE_H
 #define MONOPOLY_BUYABLESPACE_H
-
+#include "Player.h"
 #include "Space.h"
 #include "GameAttributes.h"
+
+class Player;
 
 class BuyableSpace : public Space {
  public:

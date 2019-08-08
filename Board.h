@@ -4,18 +4,9 @@
 
 #ifndef MONOPOLY_BOARD_H
 #define MONOPOLY_BOARD_H
-#include "Space.h"
 #include <vector>
 #include <memory>
-#include "GOSpace.h"
-#include "PropertySpace.h"
-#include "IncomeTaxSpace.h"
-#include "RailroadSpace.h"
-#include "JailSpace.h"
-#include "UtilitySpace.h"
-#include "FreeParkingSpace.h"
-#include "GoToJailSpace.h"
-#include "LuxuryTaxSpace.h"
+#include "Space.h"
 
 class Board {
  public:

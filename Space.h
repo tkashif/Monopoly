@@ -5,11 +5,11 @@
 #ifndef MONOPOLY_SPACE_H
 #define MONOPOLY_SPACE_H
 #include <iostream>
-#include "Player.h"
 #include <vector>
+#include "Player.h"
 
 class Player;
-class GameAttributes;
+class GameAttributes; // added this without include thing
 
 class Space {
  public:

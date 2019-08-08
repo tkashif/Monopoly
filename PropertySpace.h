@@ -5,9 +5,8 @@
 #ifndef MONOPOLY_PROPERTYSPACE_H
 #define MONOPOLY_PROPERTYSPACE_H
 #include <iostream>
-#include "Player.h"
-#include "BuyableSpace.h"
 #include <cmath>
+#include "BuyableSpace.h"
 
 
 /*

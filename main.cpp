@@ -1,6 +1,9 @@
 #include <iostream>
+#include "View.h"
+#include "Board.h"
+#include "MiddleSpace.h"
+#include "Dice.h"
 #include "Controller.h"
-#include "GameAttributes.h"
 
 int askHowManyPlayers();
 

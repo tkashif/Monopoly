@@ -5,6 +5,7 @@
 #ifndef MONOPOLY_INCOMETAXSPACE_H
 #define MONOPOLY_INCOMETAXSPACE_H
 #include "TaxSpace.h"
+#include <iostream>
 
 class IncomeTaxSpace : public TaxSpace {
  public:
