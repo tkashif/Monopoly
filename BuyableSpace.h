@@ -27,7 +27,7 @@ class BuyableSpace : public Space {
   virtual void assignOwner(Player& player);
   virtual void displayOwnedProperties();
 
-  Player& getOwner() const;
+  Player* getOwner() const;
   virtual int getRent() const;
 
   virtual ~BuyableSpace() = default;
@@ -35,7 +35,7 @@ class BuyableSpace : public Space {
 
  protected:
   int price;
-  Player& owner;
+  Player* owner;
   int rent;
 
 

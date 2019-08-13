@@ -6,7 +6,7 @@
 #include "Player.h" // need to dereference so can't have incomplete type
 
 BuyableSpace::BuyableSpace(std::string name, int price, int rent) : Space(name), price(price), rent(rent) {
-  owner = {};
+  owner = nullptr;
 }
 void BuyableSpace::displayIfOwned() {
   if (noOwner()){
@@ -22,7 +22,7 @@ void BuyableSpace::displayRents() {
   std::cout << "Rent: $" << rent << std::endl;
 }
 bool BuyableSpace::noOwner() {
-  return (owner.getName() == "");
+  return (owner->getName() == "");
 }
 void BuyableSpace::promptIfWantToBuy(char &decision) {
   std::cout << "Would you like to buy " << this->getName() << "?" << std::endl;
@@ -37,10 +37,10 @@ void BuyableSpace::promptIfWantToBuy(char &decision) {
   std::cin.ignore(10000, '\n');
 }
 void BuyableSpace::assignOwner(Player &player) {
-  owner = player;
+  owner = &player; // owner is the address of this player that is passed in (& of reference)
   player.addOwnedProperty(*this);
 }
-Player &BuyableSpace::getOwner() const {
+Player* BuyableSpace::getOwner() const {
   return owner;
 }
 int BuyableSpace::getRent() const {
