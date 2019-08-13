@@ -13,6 +13,7 @@
 #include "FreeParkingSpace.h"
 #include "GoToJailSpace.h"
 #include "LuxuryTaxSpace.h"
+#include "Player.h"
 
 void Board::displayCurrentState() {
   // print top row
@@ -168,10 +169,10 @@ Board::Board() {
 
 
 }
-std::vector<std::unique_ptr<Space&>> &Board::getSpaces() const {
+std::vector<std::unique_ptr<Space>>& Board::getSpaces(){
   return spaces;
 }
-std::unique_ptr<Space&>& Board::operator[](int index) {
+std::unique_ptr<Space>& Board::operator[](int index) {
   return spaces[index];
 }
 

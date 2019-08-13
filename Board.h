@@ -15,13 +15,13 @@ class Board {
 
   void displayCurrentState();
 
-  std::vector<std::unique_ptr<Space&>> &getSpaces() const;
+  std::vector<std::unique_ptr<Space>> &getSpaces();
 
-  std::unique_ptr<Space&>& operator[](int index);
+  std::unique_ptr<Space>& operator[](int index);
 
 
  private:
-  std::vector<std::unique_ptr<Space&>>& spaces;
+  std::vector<std::unique_ptr<Space>> spaces;
 
 
 };
