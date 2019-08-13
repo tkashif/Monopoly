@@ -4,7 +4,8 @@
 
 #ifndef MONOPOLY_UTILITYSPACE_H
 #define MONOPOLY_UTILITYSPACE_H
-
+#include "BuyableSpace.h" // base class
+#include <iostream>
 
 class UtilitySpace : public BuyableSpace {
 

@@ -3,6 +3,10 @@
 //
 
 #include "TaxSpace.h"
+#include "Player.h" // need full type
+#include "GameAttributes.h" // need full type
+#include "MiddleSpace.h" // need full type
+
 TaxSpace::TaxSpace(std::string name, int penalty) : NonBuyableSpace(name), penalty(penalty) {
 
 }

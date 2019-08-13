@@ -7,9 +7,8 @@
 #include <iostream>
 #include <vector>
 
-
-class Player;
-class GameAttributes; // added this without include thing
+class Player; // only &'s
+class GameAttributes; // only &'s
 
 class Space {
  public:
@@ -45,7 +44,7 @@ class Space {
 
  protected:
   std::string name;
-  std::vector<Player> occupiers;
+  std::vector<Player&> occupiers;
 
 
 };

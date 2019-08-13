@@ -5,7 +5,7 @@
 #ifndef MONOPOLY_RAILROADSPACE_H
 #define MONOPOLY_RAILROADSPACE_H
 #include <iostream>
-
+#include "BuyableSpace.h" // base class
 
 class RailroadSpace : public BuyableSpace {
  public:

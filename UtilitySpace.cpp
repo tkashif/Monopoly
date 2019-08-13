@@ -3,6 +3,8 @@
 //
 
 #include "UtilitySpace.h"
+#include "Dice.h" // need full type
+
 UtilitySpace::UtilitySpace(std::string name, int rent, int price) : BuyableSpace(name, rent, price) {
 
 }
