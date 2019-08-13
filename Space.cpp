@@ -4,8 +4,6 @@
 
 #include "Space.h"
 Space::Space(const std::string& name): name(name) {
-  free = true;
-  occupied = false;
   occupiers = {};
 
 }
