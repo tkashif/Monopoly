@@ -5,6 +5,7 @@
 #include "GameAttributes.h"
 #include "Player.h" // need complete type
 #include "Board.h" // need complete type
+#include "Space.h"
 
 GameAttributes::GameAttributes(int numberOfPlayers, Board& board, Dice& dice, MiddleSpace& middle): board(board), dice(dice), middle(middle) {
   usedLetters = {};

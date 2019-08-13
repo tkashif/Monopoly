@@ -3,6 +3,8 @@
 //
 
 #include "GoToJailSpace.h"
+#include "Player.h"
+
 GoToJailSpace::GoToJailSpace(std::string name) : NonBuyableSpace(name) {
 
 }
