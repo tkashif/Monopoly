@@ -3,6 +3,10 @@
 //
 
 #include "FreeParkingSpace.h"
+#include "Player.h"
+#include "GameAttributes.h"
+#include "MiddleSpace.h"
+
 FreeParkingSpace::FreeParkingSpace(std::string name) : NonBuyableSpace(name) {
 }
 void FreeParkingSpace::doAction(Player &player, GameAttributes& attributes) {
