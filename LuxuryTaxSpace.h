@@ -4,7 +4,8 @@
 
 #ifndef MONOPOLY_LUXURYTAXSPACE_H
 #define MONOPOLY_LUXURYTAXSPACE_H
-
+#include "TaxSpace.h" // base class
+#include <iostream>
 
 class LuxuryTaxSpace : public TaxSpace {
  public:

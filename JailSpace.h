@@ -4,7 +4,11 @@
 
 #ifndef MONOPOLY_JAILSPACE_H
 #define MONOPOLY_JAILSPACE_H
+#include "NonBuyableSpace.h" // base class
+#include <iostream>
 
+class Player; // only &'s
+class GameAttributes; // only &'s
 
 class JailSpace : public NonBuyableSpace{
  public:
