@@ -5,11 +5,13 @@
 #ifndef MONOPOLY_CONTROLLER_H
 #define MONOPOLY_CONTROLLER_H
 
+class GameAttributes; // only &'s
+class Player; // only &'s
 
 class Controller {
 
  public:
-  Controller(GameAttributes attributes);
+  Controller(GameAttributes& attributes);
 
   void setUpGame();
   void playGame();
@@ -21,7 +23,7 @@ class Controller {
   void removePlayer(Player& player);
 
  private:
-  GameAttributes attributes;
+  GameAttributes& attributes;
 
 
 

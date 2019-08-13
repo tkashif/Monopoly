@@ -3,8 +3,11 @@
 //
 
 #include "Controller.h"
+#include "GameAttributes.h" // need to dereference
+#include "Board.h" // need to dereference
+#include "Player.h" // need to dereference
 
-Controller::Controller(GameAttributes attributes): attributes(attributes) {
+Controller::Controller(GameAttributes& attributes): attributes(attributes) {
 
 }
 bool Controller::gameIsOver(){
