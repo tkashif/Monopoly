@@ -3,6 +3,17 @@
 //
 
 #include "Board.h"
+#include "Space.h"
+#include "GOSpace.h"
+#include "PropertySpace.h"
+#include "IncomeTaxSpace.h"
+#include "RailroadSpace.h"
+#include "JailSpace.h"
+#include "UtilitySpace.h"
+#include "FreeParkingSpace.h"
+#include "GoToJailSpace.h"
+#include "LuxuryTaxSpace.h"
+
 void Board::displayCurrentState() {
   // print top row
   for (int i = 17; i <= 25; i++){
@@ -157,10 +168,10 @@ Board::Board() {
 
 
 }
-std::vector<std::unique_ptr<Space>> &Board::getSpaces() const {
+std::vector<std::unique_ptr<Space&>> &Board::getSpaces() const {
   return spaces;
 }
-std::unique_ptr<Space>& Board::operator[](int index) {
+std::unique_ptr<Space&>& Board::operator[](int index) {
   return spaces[index];
 }
 
