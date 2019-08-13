@@ -171,7 +171,7 @@ void Player::subtractFromBalance(int amount) {
   balance -= amount;
 }
 void Player::promptAboutPlacingHouses() {
-  std::vector<PropertySpace> options = {};
+  std::vector<PropertySpace&> options = {};
 
   for (int i = 0; i < (*ownedProperties).size(); i++){
     // cast to a property space
@@ -278,7 +278,7 @@ bool Player::operator==(Player &player) {
 char Player::getPieceLetter() {
   return pieceLetter;
 }
-std::vector<std::unique_ptr<BuyableSpace&>>* Player::getOwnedProperties() {
+std::vector<std::unique_ptr<BuyableSpace>>* Player::getOwnedProperties() {
   return ownedProperties;
 }
 int Player::getCurrentSpaceIndex() {
