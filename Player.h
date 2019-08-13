@@ -6,6 +6,10 @@
 #define MONOPOLY_PLAYER_H
 #include <iostream>
 
+class GameAttributes; // only &'s
+class PropertySpace; // only &'s
+class Space; // only &'s and *'s
+class BuyableSpace; // only &'s
 
 class Player {
  public:
@@ -16,7 +20,7 @@ class Player {
 
   void takeTurn(GameAttributes& attributes);
   void movePiece(int amount, GameAttributes& attributes);
-  void rollDie(int& result, GameAttributes gameAttributes);
+  void rollDie(int& result, GameAttributes& gameAttributes);
 
   void updateCurrentSpaceIndex(int amount, GameAttributes& attributes);
   void updateCurrentSpaceOn(GameAttributes& attributes);
@@ -42,8 +46,8 @@ class Player {
   void subtractFromBalance(int amount);
 
   void promptAboutPlacingHouses();
-  void listHouseOptions(std::vector<PropertySpace>& options);
-  void selectWhichOnesToPlaceHouses(std::vector<PropertySpace>& options);
+  void listHouseOptions(std::vector<PropertySpace&>& options);
+  void selectWhichOnesToPlaceHouses(std::vector<PropertySpace&>& options);
   void placeHousesOrHotelOnProperty(PropertySpace& property);
 
   void getInputAboutHouseDesired(bool& houseDesired);
@@ -56,7 +60,7 @@ class Player {
   bool operator==(Player& player);
 
   char getPieceLetter();
-  std::vector<std::unique_ptr<BuyableSpace>>* getOwnedProperties();
+  std::vector<std::unique_ptr<BuyableSpace&>>* getOwnedProperties();
   int getCurrentSpaceIndex();
 
   void setCurrentSpace(GameAttributes& attributes);
@@ -66,7 +70,7 @@ class Player {
  private:
   int balance;
   char pieceLetter;
-  std::vector<std::unique_ptr<BuyableSpace>>* ownedProperties;
+  std::vector<std::unique_ptr<BuyableSpace&>>* ownedProperties;
   std::string name;
   int currentSpaceIndex; // i.e. position on board
   Space* currentSpaceOn;

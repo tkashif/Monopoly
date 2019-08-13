@@ -3,6 +3,19 @@
 //
 
 #include "Player.h"
+#include "GameAttributes.h" // need full type
+#include "Dice.h" // need full type
+#include "Board.h" // need full type
+#include "BuyableSpace.h" // need full type
+#include "RailroadSpace.h" // need full type
+#include "PropertySpace.h" // need full type
+
+/*
+ * class GameAttributes; // only &'s
+class PropertySpace; // only &'s
+class Space; // only &'s and *'s
+class BuyableSpace; // only &'s
+ */
 
 /*Player::Player() : balance(0), pieceLetter(), name(""), inJail(false), ownedProperties({}) currentSpaceIndex(0) {
   balance = 0;
@@ -33,7 +46,7 @@ void Player::takeTurn(GameAttributes& attributes) {
   movePiece(result, attributes); // should update currentPlayerindex and board (NOTE: will also add player to spot they are moving to)
 
 }
-void Player::rollDie(int& result, GameAttributes attributes) {
+void Player::rollDie(int& result, GameAttributes& attributes) {
 
   std::cout << "Press any key to roll: ";
   char input;
@@ -176,12 +189,12 @@ void Player::promptAboutPlacingHouses() {
 
   selectWhichOnesToPlaceHouses(options);
 }
-void Player::listHouseOptions(std::vector<PropertySpace>& options) {
+void Player::listHouseOptions(std::vector<PropertySpace&>& options) {
   for (int i = 0; i < options.size(); i++){
     std::cout << (i + 1) << ". " << options[i].getName() << std::endl;
   }
 }
-void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace> &options) {
+void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace&> &options) {
   std::cout << "Enter the number of the property for which you would like to place house(s) / a hotel (enter -1 to exit): ";
   int input;
   std::cin >> input;
@@ -265,7 +278,7 @@ bool Player::operator==(Player &player) {
 char Player::getPieceLetter() {
   return pieceLetter;
 }
-std::vector<std::unique_ptr<BuyableSpace>>* Player::getOwnedProperties() {
+std::vector<std::unique_ptr<BuyableSpace&>>* Player::getOwnedProperties() {
   return ownedProperties;
 }
 int Player::getCurrentSpaceIndex() {

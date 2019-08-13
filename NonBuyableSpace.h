@@ -4,7 +4,8 @@
 
 #ifndef MONOPOLY_NONBUYABLESPACE_H
 #define MONOPOLY_NONBUYABLESPACE_H
-
+#include "Space.h" // base class
+#include <iostream>
 
 class NonBuyableSpace : public Space {
  public:
