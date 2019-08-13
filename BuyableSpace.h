@@ -4,9 +4,10 @@
 
 #ifndef MONOPOLY_BUYABLESPACE_H
 #define MONOPOLY_BUYABLESPACE_H
+#include "Space.h" // need because base class
 
-
-class Player;
+class GameAttributes; // only &'s
+class Player; // only &'s
 
 class BuyableSpace : public Space {
  public:

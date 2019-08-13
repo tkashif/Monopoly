@@ -3,6 +3,8 @@
 //
 
 #include "BuyableSpace.h"
+#include "Player.h" // need to dereference so can't have incomplete type
+
 BuyableSpace::BuyableSpace(std::string name, int price, int rent) : Space(name), price(price), rent(rent) {
   owner = {};
 }
