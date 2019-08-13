@@ -4,7 +4,7 @@
 
 #ifndef MONOPOLY_NONBUYABLESPACE_H
 #define MONOPOLY_NONBUYABLESPACE_H
-#include "Space.h"
+
 
 class NonBuyableSpace : public Space {
  public:

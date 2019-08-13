@@ -5,15 +5,7 @@
 #ifndef MONOPOLY_PLAYER_H
 #define MONOPOLY_PLAYER_H
 #include <iostream>
-#include "GameAttributes.h"
-#include "Space.h"
-#include "PropertySpace.h"
-#include "BuyableSpace.h"
-#include "RailroadSpace.h"
 
-class BuyableSpace;
-class GameAttributes;
-class Space;
 
 class Player {
  public:

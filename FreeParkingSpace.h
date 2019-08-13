@@ -4,9 +4,7 @@
 
 #ifndef MONOPOLY_FREEPARKINGSPACE_H
 #define MONOPOLY_FREEPARKINGSPACE_H
-#include "NonBuyableSpace.h"
-#include "Player.h"
-#include "GameAttributes.h"
+
 
 class FreeParkingSpace : public NonBuyableSpace {
  public:

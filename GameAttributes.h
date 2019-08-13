@@ -6,11 +6,7 @@
 #define MONOPOLY_GAMEATTRIBUTES_H
 #include <vector>
 #include <iostream>
-#include "Player.h"
-#include "View.h"
-#include "Board.h"
-#include "Dice.h"
-#include "MiddleSpace.h"
+
 
 class Player;
 class Board; // added this without include thing

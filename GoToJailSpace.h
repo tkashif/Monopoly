@@ -4,9 +4,7 @@
 
 #ifndef MONOPOLY_GOTOJAILSPACE_H
 #define MONOPOLY_GOTOJAILSPACE_H
-#include "NonBuyableSpace.h"
-#include "Player.h"
-#include "GameAttributes.h"
+
 
 class GoToJailSpace : public NonBuyableSpace {
  public:

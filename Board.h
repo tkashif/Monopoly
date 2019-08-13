@@ -6,7 +6,7 @@
 #define MONOPOLY_BOARD_H
 #include <vector>
 #include <memory>
-#include "Space.h"
+
 
 class Board {
  public:

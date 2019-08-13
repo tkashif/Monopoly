@@ -4,8 +4,7 @@
 
 #ifndef MONOPOLY_CONTROLLER_H
 #define MONOPOLY_CONTROLLER_H
-#include "GameAttributes.h"
-#include "Player.h"
+
 
 class Controller {
 

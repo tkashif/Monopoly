@@ -6,7 +6,7 @@
 #define MONOPOLY_SPACE_H
 #include <iostream>
 #include <vector>
-#include "Player.h"
+
 
 class Player;
 class GameAttributes; // added this without include thing
