@@ -3,7 +3,10 @@
 //
 
 #include "GameAttributes.h"
-GameAttributes::GameAttributes(int numberOfPlayers, View view, Board& board, Dice dice, MiddleSpace middle): view(view), board(board), dice(dice), middle(middle) {
+#include "Player.h" // need complete type
+#include "Board.h" // need complete type
+
+GameAttributes::GameAttributes(int numberOfPlayers, Board& board, Dice& dice, MiddleSpace& middle): board(board), dice(dice), middle(middle) {
   usedLetters = {};
   for (int i = 0; i < numberOfPlayers; i++){
     std::string name = getPlayerName(i);

@@ -9,11 +9,13 @@
 
 
 class Player;
-class Board; // added this without include thing
+class Board;
+class Dice; // only &'s
+class MiddleSpace; // only &'s
 
 class GameAttributes {
  public:
-  GameAttributes(int numberOfPlayers, View view, Board& board, Dice dice, MiddleSpace middle);
+  GameAttributes(int numberOfPlayers, Board& board, Dice& dice, MiddleSpace& middle);
 
   std::vector<Player> &getPlayers();
   Board &getBoard();
@@ -26,12 +28,11 @@ class GameAttributes {
     char generateRandomLetter();
     bool isInUsedLetters(char letter) const;
 
-    View view;
     Board& board;
-    Dice dice;
-    std::vector<Player> players;
+    Dice& dice;
+    std::vector<Player&> players;
     std::vector<char> usedLetters;
-    MiddleSpace middle;
+    MiddleSpace& middle;
     int jailIndex;
 
 
