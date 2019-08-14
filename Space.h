@@ -44,7 +44,7 @@ class Space {
 
  protected:
   std::string name;
-  std::vector<Player&> occupiers;
+  std::vector<Player*> occupiers;
 
 
 };

@@ -30,7 +30,7 @@ class GameAttributes {
 
     Board& board;
     Dice& dice;
-    std::vector<Player&> players;
+    std::vector<Player*> players;
     std::vector<char> usedLetters;
     MiddleSpace& middle;
     int jailIndex;
