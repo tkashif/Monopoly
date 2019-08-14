@@ -187,8 +187,9 @@ void Player::promptAboutPlacingHouses() {
     std::cout << "Would you like to place house(s)/hotel on one of the following?:" << std::endl;
     listHouseOptions(options);
   }
-
-  selectWhichOnesToPlaceHouses(options);
+  if (!options.empty()) {
+    selectWhichOnesToPlaceHouses(options);
+  }
 }
 void Player::listHouseOptions(std::vector<PropertySpace>& options) {
   for (int i = 0; i < options.size(); i++){

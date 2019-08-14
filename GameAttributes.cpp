@@ -34,6 +34,7 @@ char GameAttributes::generateRandomLetter() {
   }
   usedLetters.push_back(playerSymbol);
   std::cout << "Your symbol is: " << playerSymbol;
+  return playerSymbol;
 }
 bool GameAttributes::isInUsedLetters(char letter) const{
   for (int i = 0; i < usedLetters.size(); i++){
