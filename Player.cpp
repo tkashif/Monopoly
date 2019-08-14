@@ -29,7 +29,7 @@ class BuyableSpace; // only &'s
 
 Player::Player(int balance, char pieceLetter, std::string name, bool inJail): balance(balance), pieceLetter(pieceLetter), name(name), inJail(inJail),
                                                                               currentSpaceIndex(0){
-  ownedProperties = {};
+  //ownedProperties = {};
 }
 void Player::movePiece(int amount, GameAttributes& attributes) {
   // will take out player from occupied players on space (ALWAYS HAVE TO REMOVE FIRST ONE AS THEY WILL BE FIRST TO GO)
@@ -126,9 +126,9 @@ int Player::getNumberOfRailroadsOwned() {
   int counter = 0;
 
   // for each property
-  for (int i = 0; i < ownedProperties->size(); i++){
+  for (int i = 0; i < ownedProperties.size(); i++){
     // check if the property is a railroad
-    RailroadSpace* railroadPointer = dynamic_cast<RailroadSpace*>((*ownedProperties)[i].get());
+    RailroadSpace* railroadPointer = dynamic_cast<RailroadSpace*>(ownedProperties[i].get());
     // if railroadpointer is not null
     if (railroadPointer){
       counter++;
@@ -140,8 +140,8 @@ int Player::getBalance() {
   return balance;
 }
 void Player::listProperties() {
-  for (int i = 0; i < ownedProperties->size(); i++){
-    std::cout << (*ownedProperties)[i]->getName() << std::endl;
+  for (int i = 0; i < ownedProperties.size(); i++){
+    std::cout << (ownedProperties)[i]->getName() << std::endl;
   }
 
 }
@@ -159,7 +159,7 @@ void Player::setSpace(Space *space, int indexOfSpace) {
   currentSpaceIndex = indexOfSpace;
 }
 void Player::addOwnedProperty(const Space &space) {
-  (*ownedProperties).emplace_back(space);
+  ownedProperties.emplace_back(space);
 }
 void Player::payOwner(const BuyableSpace &space) {
   space.getOwner()->addToBalance(space.getRent());
@@ -174,9 +174,9 @@ void Player::subtractFromBalance(int amount) {
 void Player::promptAboutPlacingHouses() {
   std::vector<PropertySpace> options = {};
 
-  for (int i = 0; i < (*ownedProperties).size(); i++){
+  for (int i = 0; i < ownedProperties.size(); i++){
     // cast to a property space
-    PropertySpace* property = dynamic_cast<PropertySpace*>((*ownedProperties)[i].get());
+    PropertySpace* property = dynamic_cast<PropertySpace*>(ownedProperties[i].get());
     // if space is a property space
     if (property){
       options.push_back(*property);
@@ -279,7 +279,7 @@ bool Player::operator==(Player &player) {
 char Player::getPieceLetter() {
   return pieceLetter;
 }
-std::vector<std::unique_ptr<BuyableSpace>>* Player::getOwnedProperties() {
+std::vector<std::unique_ptr<BuyableSpace>>& Player::getOwnedProperties() {
   return ownedProperties;
 }
 int Player::getCurrentSpaceIndex() {

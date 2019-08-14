@@ -5,6 +5,7 @@
 #ifndef MONOPOLY_PLAYER_H
 #define MONOPOLY_PLAYER_H
 #include <iostream>
+#include <vector>
 
 class GameAttributes; // only &'s
 class PropertySpace; // only &'s
@@ -60,7 +61,7 @@ class Player {
   bool operator==(Player& player);
 
   char getPieceLetter();
-  std::vector<std::unique_ptr<BuyableSpace>>* getOwnedProperties();
+  std::vector<std::unique_ptr<BuyableSpace>>& getOwnedProperties();
   int getCurrentSpaceIndex();
 
   void setCurrentSpace(GameAttributes& attributes);
@@ -70,7 +71,7 @@ class Player {
  private:
   int balance;
   char pieceLetter;
-  std::vector<std::unique_ptr<BuyableSpace>>* ownedProperties;
+  std::vector<std::unique_ptr<BuyableSpace>> ownedProperties;
   std::string name;
   int currentSpaceIndex; // i.e. position on board
   Space* currentSpaceOn;

@@ -7,7 +7,8 @@
 #include <vector>
 #include <memory>
 
-class Space;
+#include "Space.h" // not sure if i need this
+//class Space;
 
 class Board {
  public:
