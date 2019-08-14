@@ -61,7 +61,7 @@ void BuyableSpace::doAction(Player& player, GameAttributes& attributes) {
 void BuyableSpace::displayOwnedProperties() {
   std::cout << "Your current balance is $" << occupiers.back().getBalance() << std::endl;
   std::cout << "You current own: " << std::endl;
-  occupiers.back().listProperties();
+  occupiers.back()->listProperties();
 }
 
 

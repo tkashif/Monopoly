@@ -13,8 +13,8 @@ void Space::displayName() {
 std::string Space::getName(){
   return name;
 }
-void Space::addOccupier(const Player& personWhoLanded) {
-  occupiers.push_back(personWhoLanded);
+void Space::addOccupier(Player& personWhoLanded) {
+  occupiers.push_back(&personWhoLanded);
 }
 void Space::removeFirstOccupier() {
   occupiers.erase(occupiers.begin());
@@ -23,7 +23,7 @@ bool Space::hasOccupier() {
   return (occupiers.size() != 0);
 }
 Player &Space::getOccupier() {
-  return occupiers.back();
+  return *(occupiers.back());
 }
 
 

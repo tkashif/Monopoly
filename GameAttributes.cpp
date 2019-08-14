@@ -11,7 +11,7 @@ GameAttributes::GameAttributes(int numberOfPlayers, Board& board, Dice& dice, Mi
   usedLetters = {};
   for (int i = 0; i < numberOfPlayers; i++){
     std::string name = getPlayerName(i);
-    players[i] = Player(0, generateRandomLetter(), name, false);
+    *(players[i]) = Player(0, generateRandomLetter(), name, false);
   }
 
   for (int i = 0; i < board.getSpaces().size(); i++) {
@@ -43,7 +43,7 @@ bool GameAttributes::isInUsedLetters(char letter) const{
   }
   return false;
 }
-std::vector<Player> &GameAttributes::getPlayers(){
+std::vector<Player*> &GameAttributes::getPlayers(){
   return players;
 }
 Board &GameAttributes::getBoard()  {

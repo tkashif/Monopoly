@@ -13,7 +13,7 @@ void RailroadSpace::displayRents() {
   if (noOwner()){
     BuyableSpace::displayRents();
   } else {
-    rent *= owner.getNumberOfRailroadsOwned();
+    rent *= owner->getNumberOfRailroadsOwned();
     BuyableSpace::displayRents();
   }
 }

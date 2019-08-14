@@ -17,7 +17,7 @@ class GameAttributes {
  public:
   GameAttributes(int numberOfPlayers, Board& board, Dice& dice, MiddleSpace& middle);
 
-  std::vector<Player> &getPlayers();
+  std::vector<Player*> &getPlayers();
   Board &getBoard();
   Dice &getDice();
   MiddleSpace& getMiddle();

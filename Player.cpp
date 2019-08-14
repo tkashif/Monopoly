@@ -171,7 +171,7 @@ void Player::subtractFromBalance(int amount) {
   balance -= amount;
 }
 void Player::promptAboutPlacingHouses() {
-  std::vector<PropertySpace&> options = {};
+  std::vector<PropertySpace> options = {};
 
   for (int i = 0; i < (*ownedProperties).size(); i++){
     // cast to a property space
@@ -189,12 +189,12 @@ void Player::promptAboutPlacingHouses() {
 
   selectWhichOnesToPlaceHouses(options);
 }
-void Player::listHouseOptions(std::vector<PropertySpace&>& options) {
+void Player::listHouseOptions(std::vector<PropertySpace>& options) {
   for (int i = 0; i < options.size(); i++){
     std::cout << (i + 1) << ". " << options[i].getName() << std::endl;
   }
 }
-void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace&> &options) {
+void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace> &options) {
   std::cout << "Enter the number of the property for which you would like to place house(s) / a hotel (enter -1 to exit): ";
   int input;
   std::cin >> input;

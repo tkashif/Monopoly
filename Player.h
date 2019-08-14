@@ -46,8 +46,8 @@ class Player {
   void subtractFromBalance(int amount);
 
   void promptAboutPlacingHouses();
-  void listHouseOptions(std::vector<PropertySpace&>& options);
-  void selectWhichOnesToPlaceHouses(std::vector<PropertySpace&>& options);
+  void listHouseOptions(std::vector<PropertySpace>& options);
+  void selectWhichOnesToPlaceHouses(std::vector<PropertySpace>& options);
   void placeHousesOrHotelOnProperty(PropertySpace& property);
 
   void getInputAboutHouseDesired(bool& houseDesired);
