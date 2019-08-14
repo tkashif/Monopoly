@@ -41,7 +41,7 @@ class Player {
   void setSpace(Space* space, int indexOfSpace);
 
   void payOwner(const BuyableSpace& space);
-  void addOwnedProperty(const Space& space);
+  void addOwnedProperty(BuyableSpace& space);
 
   void addToBalance(int amount);
   void subtractFromBalance(int amount);
@@ -61,7 +61,7 @@ class Player {
   bool operator==(Player& player);
 
   char getPieceLetter();
-  std::vector<std::unique_ptr<BuyableSpace>>& getOwnedProperties();
+  std::vector<BuyableSpace*>& getOwnedProperties();
   int getCurrentSpaceIndex();
 
   void setCurrentSpace(GameAttributes& attributes);
@@ -71,7 +71,7 @@ class Player {
  private:
   int balance;
   char pieceLetter;
-  std::vector<std::unique_ptr<BuyableSpace>> ownedProperties;
+  std::vector<BuyableSpace*> ownedProperties;
   std::string name;
   int currentSpaceIndex; // i.e. position on board
   Space* currentSpaceOn;
