@@ -9,6 +9,7 @@
 #include "BuyableSpace.h" // need full type
 #include "RailroadSpace.h" // need full type
 #include "PropertySpace.h" // need full type
+#include "Space.h" // need full type for .size()
 
 /*
  * class GameAttributes; // only &'s

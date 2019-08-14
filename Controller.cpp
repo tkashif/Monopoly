@@ -19,7 +19,7 @@ void Controller::switchPlayer(int& currentPlayerIndex, int& currentSpaceIndex) {
   if (currentPlayerIndex == attributes.getPlayers().size()){
     currentPlayerIndex = 0;
   }
-  currentSpaceIndex = attributes.getPlayers()[currentPlayerIndex].getCurrentPosition();
+  currentSpaceIndex = attributes.getPlayers()[currentPlayerIndex]->getCurrentPosition();
 }
 void Controller::playGame() {
   int currentPlayerIndex = 0;

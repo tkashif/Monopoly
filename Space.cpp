@@ -20,7 +20,7 @@ void Space::removeFirstOccupier() {
   occupiers.erase(occupiers.begin());
 }
 bool Space::hasOccupier() {
-  return (occupiers.size() != 0);
+  return (!occupiers.empty());
 }
 Player &Space::getOccupier() {
   return *(occupiers.back());
