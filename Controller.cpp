@@ -32,20 +32,20 @@ void Controller::playGame() {
 
     displayGameStats();
 
-    attributes.getPlayers()[currentPlayerIndex].promptAboutPlacingHouses();
+    attributes.getPlayers()[currentPlayerIndex]->promptAboutPlacingHouses();
 
-    attributes.getPlayers()[currentPlayerIndex].takeTurn(attributes);
+    attributes.getPlayers()[currentPlayerIndex]->takeTurn(attributes);
 
     attributes.getBoard().displayCurrentState();
 
-    attributes.getPlayers()[currentPlayerIndex].displayInfoAboutSpotLandedOn(attributes);
+    attributes.getPlayers()[currentPlayerIndex]->displayInfoAboutSpotLandedOn(attributes);
 
-    attributes.getPlayers()[currentPlayerIndex].takeAction(attributes);
+    attributes.getPlayers()[currentPlayerIndex]->takeAction(attributes);
 
     //attributes.getBoard()[currentSpaceIndex]->takeAction(); ignore
 
-    if (attributes.getPlayers()[currentPlayerIndex].getBalance() <= 0){
-      removePlayer(attributes.getPlayers()[currentPlayerIndex]);
+    if (attributes.getPlayers()[currentPlayerIndex]->getBalance() <= 0){
+      removePlayer(*(attributes.getPlayers()[currentPlayerIndex]));
     }
     switchPlayer(currentPlayerIndex, currentSpaceIndex);
 
@@ -54,24 +54,24 @@ void Controller::playGame() {
 
 void Controller::displayGameStats() {
   for (int i = 0; i < attributes.getPlayers().size(); i++){
-    std::cout << attributes.getPlayers()[i].getName() << " owns ";
-    attributes.getPlayers()[i].listProperties();
-    std::cout << " and has balance " << attributes.getPlayers()[i].getBalance() << std::endl;
+    std::cout << attributes.getPlayers()[i]->getName() << " owns ";
+    attributes.getPlayers()[i]->listProperties();
+    std::cout << " and has balance " << attributes.getPlayers()[i]->getBalance() << std::endl;
   }
 }
 void Controller::placePlayersOnGO() {
   for (int i = 0; i < attributes.getPlayers().size(); i++){
     // at index 0 of spaces is GO
     // add each player to GO
-    attributes.getBoard().getSpaces()[0]->addOccupier(attributes.getPlayers()[i]);
+    attributes.getBoard().getSpaces()[0]->addOccupier(*(attributes.getPlayers()[i]));
     // for each player, set their space to GO
-    attributes.getPlayers()[i].setSpace(attributes.getBoard().getSpaces()[0].get(), 0);
+    attributes.getPlayers()[i]->setSpace(attributes.getBoard().getSpaces()[0].get(), 0);
   }
 }
 void Controller::removePlayer(Player &player) {
   auto itr = attributes.getPlayers().begin();
   for (; itr < attributes.getPlayers().end(); itr++){
-    if (*itr == player){
+    if (*itr == &player){
       attributes.getPlayers().erase(itr);
     }
   }
