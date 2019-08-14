@@ -161,7 +161,7 @@ void Player::addOwnedProperty(const Space &space) {
   (*ownedProperties).emplace_back(space);
 }
 void Player::payOwner(const BuyableSpace &space) {
-  space.getOwner().addToBalance(space.getRent());
+  space.getOwner()->addToBalance(space.getRent());
   this->subtractFromBalance(space.getRent());
 }
 void Player::addToBalance(int amount) {

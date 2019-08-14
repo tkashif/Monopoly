@@ -12,7 +12,7 @@ void BuyableSpace::displayIfOwned() {
   if (noOwner()){
     std::cout << "Owned?: NO" << std::endl;
   } else{
-    std::cout << "Owned?: YES, by " << owner.getName() << std::endl;
+    std::cout << "Owned?: YES, by " << owner->getName() << std::endl;
   }
 }
 void BuyableSpace::displayPrice() {
@@ -22,7 +22,7 @@ void BuyableSpace::displayRents() {
   std::cout << "Rent: $" << rent << std::endl;
 }
 bool BuyableSpace::noOwner() {
-  return (owner->getName() == "");
+  return (owner == nullptr);   //(owner->getName() == "");
 }
 void BuyableSpace::promptIfWantToBuy(char &decision) {
   std::cout << "Would you like to buy " << this->getName() << "?" << std::endl;

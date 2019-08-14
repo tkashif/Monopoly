@@ -33,6 +33,7 @@ class BuyableSpace : public Space {
   virtual ~BuyableSpace() = default;
 
 
+
  protected:
   int price;
   Player* owner;
