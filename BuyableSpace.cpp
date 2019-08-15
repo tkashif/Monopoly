@@ -28,7 +28,7 @@ void BuyableSpace::promptIfWantToBuy(char &decision) {
   std::cout << "Would you like to buy " << this->getName() << "?" << std::endl;
   std::cout << "Please enter Y/N: ";
   std::cin >> decision;
-  while ((decision != 'Y' || decision != 'y') && (decision != 'N' || decision != 'n') ){
+  while ((decision != 'Y' && decision != 'y') && (decision != 'N' && decision != 'n')){
     std::cin.clear();
     std::cin.ignore(10000, '\n');
     std::cin >> decision;

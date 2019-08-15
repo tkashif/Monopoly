@@ -17,7 +17,7 @@
 
 void Board::displayCurrentState() {
   // print top row
-  for (int i = 17; i <= 25; i++){
+  for (int i = 16; i <= 24; i++){
     // do checking and place * or pieceLetter
     if (spaces[i]->hasOccupier()){
       std::cout << spaces[i]->getOccupier().getPieceLetter();
@@ -27,10 +27,10 @@ void Board::displayCurrentState() {
   }
 
   // doing middle of board printing
-  int startingLeftCol = 16;
-  int endingLeftCol = 10;
-  int startingRightCol = 26;
-  int endingRightCol = 32;
+  int startingLeftCol = 15;
+  int endingLeftCol = 9;
+  int startingRightCol = 25;
+  int endingRightCol = 31;
   for (int i = startingLeftCol, j = startingRightCol; (i >= endingLeftCol) && (j<= endingRightCol); i--, j++){
     for (int k = i; k <= j; k++){
       // if it is one of the end ones (i.e not a blank space)
@@ -48,7 +48,7 @@ void Board::displayCurrentState() {
   }
 
   // printing bottom row
-  for (int i = 9; i >= 1; i--){
+  for (int i = 8; i >= 0; i--){
     // do checking and place * or pieceLetter
     if (spaces[i]->hasOccupier()){
       std::cout << spaces[i]->getOccupier().getPieceLetter();

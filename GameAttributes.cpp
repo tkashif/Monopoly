@@ -11,7 +11,7 @@ GameAttributes::GameAttributes(int numberOfPlayers, Board& board, Dice& dice, Mi
   usedLetters = {};
   for (int i = 0; i < numberOfPlayers; i++){
     std::string name = getPlayerName(i);
-    players.push_back(new Player(0, generateRandomLetter(), name, false));
+    players.push_back(new Player(50000, generateRandomLetter(), name, false));
   }
 
   for (int i = 0; i < board.getSpaces().size(); i++) {
