@@ -26,5 +26,6 @@ int askHowManyPlayers(){
   std::cout << "Enter how many players you would like to be in game: ";
   int number;
   std::cin >> number;
+  std::cout << std::endl;
   return number;
 }

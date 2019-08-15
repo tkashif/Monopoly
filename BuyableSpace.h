@@ -29,6 +29,7 @@ class BuyableSpace : public Space {
 
   Player* getOwner() const;
   virtual int getRent() const;
+  int getPrice() const;
 
   virtual ~BuyableSpace() = default;
 

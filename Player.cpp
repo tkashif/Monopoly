@@ -53,12 +53,12 @@ void Player::rollDie(int& result, GameAttributes& attributes) {
   char input;
   std::cin >> input; // eat up input
   int resultDice1 = attributes.getDice().roll();
-  std::cout << name << " rolled a " << resultDice1 << " " << std::endl;
+  std::cout << name << " rolled a " << resultDice1 << " " << std::endl << std::endl;
 
   std::cout << "Press any key to roll: ";
   std::cin >> input; // eat up input
   int resultDice2 = attributes.getDice().roll();
-  std::cout << name << " rolled a " << resultDice2 << " " << std::endl;
+  std::cout << name << " rolled a " << resultDice2 << " " << std::endl << std::endl;
 
   result = resultDice1 + resultDice2;
 
@@ -110,12 +110,12 @@ void Player::displayInfoAboutSpotLandedOn(GameAttributes &attributes) {
      buyableSpace->displayIfOwned();
      buyableSpace->displayPrice();
      buyableSpace->displayRents();
-
      // Previously what it was with functions declared in Space.h
      /*attributes.getBoard()[currentSpaceIndex]->displayIfOwned();
      attributes.getBoard()[currentSpaceIndex]->displayPrice();
      attributes.getBoard()[currentSpaceIndex]->displayRents();*/
    }
+  std::cout << std::endl;
 
 
 }
@@ -292,6 +292,9 @@ void Player::setCurrentSpace(GameAttributes& attributes) {
 }
 void Player::setInJail(bool ifInJail) {
   inJail = ifInJail;
+}
+void Player::payBank(int amount) {
+  balance-=amount;
 }
 
 
