@@ -16,6 +16,9 @@
 #include "Player.h"
 
 void Board::displayCurrentState() {
+
+  std::cout << "CURRENT BOARD STATE" << std::endl;
+
   // print top row
   for (int i = 16; i <= 24; i++){
     // do checking and place * or pieceLetter
@@ -26,13 +29,35 @@ void Board::displayCurrentState() {
     }
   }
 
+  std::cout << std::endl;
+
   // doing middle of board printing
   int startingLeftCol = 15;
   int endingLeftCol = 9;
   int startingRightCol = 25;
   int endingRightCol = 31;
   for (int i = startingLeftCol, j = startingRightCol; (i >= endingLeftCol) && (j<= endingRightCol); i--, j++){
-    for (int k = i; k <= j; k++){
+    for (int k = 0; k <= 8; k++){
+      // if at left edge
+      if (k == 0){
+        // do checking and place * or pieceLetter
+        if (spaces[i]->hasOccupier()){
+          std::cout << spaces[i]->getOccupier().getPieceLetter();
+        } else{
+          std::cout << '*';
+        }
+      } else if (k == 8){ // if at right edge
+        // do checking and place * or pieceLetter
+        if (spaces[j]->hasOccupier()){
+          std::cout << spaces[j]->getOccupier().getPieceLetter();
+        } else{
+          std::cout << '*';
+        }
+      } else { // if just a blank space, print a blank
+        std::cout << ' ';
+      }
+    }
+    /* for (int k = i; k <= j; k++){
       // if it is one of the end ones (i.e not a blank space)
       if (k == i || k == j){
         // do checking and place * or pieceLetter
@@ -44,8 +69,11 @@ void Board::displayCurrentState() {
       } else { // if just a blank space, print a blank
         std::cout << ' ';
       }
-    }
+    }*/
+
+    std::cout << std::endl;
   }
+
 
   // printing bottom row
   for (int i = 8; i >= 0; i--){
