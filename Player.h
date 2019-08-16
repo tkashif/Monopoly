@@ -55,7 +55,7 @@ class Player {
 
   void getInputAboutHouseDesired(bool& houseDesired);
   void getInputAboutHowManyHousesDesired(int& numberOfHousesDesired);
-  void getAffordableNumberOfHouses(int& numberOfAffordableHouses);
+  int getAffordableNumberOfHouses();
   void placeHousesOnProperty(PropertySpace& property, int numberOfHousesDesired);
   void placeHotelOnPropertyAndGetRidOfHouses(PropertySpace& property);
   bool canAffordHotel();

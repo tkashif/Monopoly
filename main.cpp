@@ -10,12 +10,13 @@ int askHowManyPlayers();
 int main() {
   
   int numPlayers = askHowManyPlayers();
-
   Board board;
   Dice dice;
   MiddleSpace middle;
   GameAttributes gameAttributes(numPlayers, board, dice, middle);
   Controller controller(gameAttributes);
+
+  controller.displayTurnSeperator();
 
   controller.playGame();
 

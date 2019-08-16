@@ -49,6 +49,8 @@ void Controller::playGame() {
     }
     switchPlayer(currentPlayerIndex, currentSpaceIndex);
 
+    displayTurnSeperator();
+
   }
 }
 
@@ -75,4 +77,7 @@ void Controller::removePlayer(Player &player) {
       attributes.getPlayers().erase(itr);
     }
   }
+}
+void Controller::displayTurnSeperator() {
+  std::cout << "------------------------------------------------------------------------" << std::endl << std::endl;
 }

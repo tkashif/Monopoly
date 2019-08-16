@@ -21,6 +21,7 @@ class Controller {
   void displayGameStats();
   void placePlayersOnGO();
   void removePlayer(Player& player);
+  void displayTurnSeperator();
 
  private:
   GameAttributes& attributes;
