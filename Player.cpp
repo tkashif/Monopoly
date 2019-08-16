@@ -28,7 +28,7 @@ class BuyableSpace; // only &'s
 }*/
 
 Player::Player(int balance, char pieceLetter, std::string name, bool inJail): balance(balance), pieceLetter(pieceLetter), name(name), inJail(inJail),
-                                                                              currentSpaceIndex(0){
+                                                                              currentSpaceIndex(0), turnsInJail(0){
   //ownedProperties = {};
 }
 void Player::movePiece(int amount, GameAttributes& attributes) {
@@ -40,14 +40,48 @@ void Player::movePiece(int amount, GameAttributes& attributes) {
   updateCurrentSpaceOn(attributes);
 }
 void Player::takeTurn(GameAttributes& attributes) {
-
+  int rolledDoubleCount = 0;
   int result;
-  rollDie(result, attributes);
 
-  movePiece(result, attributes); // should update currentPlayerindex and board (NOTE: will also add player to spot they are moving to)
+  while (true){
+    bool rolledDouble = rollDie(result, attributes);
+    // if you rolled a double, increase the rolled double count
+    if (rolledDouble){
+      rolledDoubleCount++;
+      if (rolledDoubleCount < 3){
+        movePiece(result, attributes);
+      } else { // if the rolled double count is not less than 3, move the piece to jail
+        movePieceTo(attributes.getJailIndex(), attributes);
+        setInJail(true);
+        break;
+      }
+    } else{ // you have not rolled a double
+      if (!inJail) { // if not in jail
+        movePiece(result, attributes); // move your piece
+      }
+      break; // exit
+    }
+
+  }
+
+
+  /*(bool rolledDouble = rollDie(result, attributes);
+
+  // if the player is in jail and rolled a double, move the piece OR if the player is not in jail, move the piece
+  if (!inJail || (inJail && rolledDouble)){
+    movePiece(result, attributes);
+  }
+
+  // as long as they keep rolling double keep turn going. Once they roll 3 doubles, put them in jail.
+  while (rolledDouble){
+    rolledDoubleCount++; // increase how many times you rolled double
+    rollDie(result, attributes);
+    movePiece(result, attributes); // should update currentPlayerindex and board (NOTE: will also add player to spot they are moving to)
+  } */
+
 
 }
-void Player::rollDie(int& result, GameAttributes& attributes) {
+bool Player::rollDie(int& result, GameAttributes& attributes) {
 
   std::cout << "Press any key to roll: ";
   char input;
@@ -61,22 +95,24 @@ void Player::rollDie(int& result, GameAttributes& attributes) {
   std::cout << name << " rolled a " << resultDice2 << " " << std::endl << std::endl;
 
   result = resultDice1 + resultDice2;
+  bool rolledDouble = (resultDice1 == resultDice2);
 
-  while (resultDice1 == resultDice2){
+  /*while (resultDice1 == resultDice2) {
 
-    std::cout << "Press any key to roll: ";
-    char input;
-    std::cin >> input; // eat up input
-    int resultDice1 = attributes.getDice().roll();
-    std::cout << name << " rolled a " << resultDice1 << " " << std::endl;
+      std::cout << "Press any key to roll: ";
+      char input;
+      std::cin >> input; // eat up input
+      int resultDice1 = attributes.getDice().roll();
+      std::cout << name << " rolled a " << resultDice1 << " " << std::endl;
 
-    std::cout << "Press any key to roll: ";
-    std::cin >> input; // eat up input
-    int resultDice2 = attributes.getDice().roll();
-    std::cout << name << " rolled a " << resultDice2 << " " << std::endl;
+      std::cout << "Press any key to roll: ";
+      std::cin >> input; // eat up input
+      int resultDice2 = attributes.getDice().roll();
+      std::cout << name << " rolled a " << resultDice2 << " " << std::endl;
 
-    result += resultDice1 + resultDice2;
-  }
+      result += resultDice1 + resultDice2;
+    }*/
+  return rolledDouble;
 }
 void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes) {
   for (int i = 0; i < amount; i++){
@@ -295,6 +331,16 @@ void Player::setInJail(bool ifInJail) {
 }
 void Player::payBank(int amount) {
   balance-=amount;
+}
+void Player::increaseTurnsInJail() {
+  turnsInJail++;
+}
+void Player::movePieceTo(int index, GameAttributes& attributes) {
+  currentSpaceIndex = index;
+  currentSpaceOn = attributes.getBoard()[currentSpaceIndex].get();
+}
+void Player::setJustVisitingJail(bool justVisiting) {
+  justVisitingJail = justVisiting;
 }
 
 

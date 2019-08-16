@@ -21,7 +21,8 @@ class Player {
 
   void takeTurn(GameAttributes& attributes);
   void movePiece(int amount, GameAttributes& attributes);
-  void rollDie(int& result, GameAttributes& gameAttributes);
+  void movePieceTo(int index, GameAttributes& attributes);
+  bool rollDie(int& result, GameAttributes& gameAttributes);
 
   void updateCurrentSpaceIndex(int amount, GameAttributes& attributes);
   void updateCurrentSpaceOn(GameAttributes& attributes);
@@ -67,6 +68,8 @@ class Player {
 
   void setCurrentSpace(GameAttributes& attributes);
   void setInJail(bool ifInJail);
+  void setJustVisitingJail(bool justVisiting);
+  void increaseTurnsInJail();
 
 
  private:
@@ -77,7 +80,8 @@ class Player {
   int currentSpaceIndex; // i.e. position on board
   Space* currentSpaceOn;
   bool inJail;
-
+  int turnsInJail;
+  bool justVisitingJail;
 
 };
 
