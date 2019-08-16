@@ -33,6 +33,7 @@ void BuyableSpace::promptIfWantToBuy(char &decision) {
     std::cin.ignore(10000, '\n');
     std::cin >> decision;
   }
+  std::cout << std::endl;
   std::cin.clear();
   std::cin.ignore(10000, '\n');
 }
@@ -53,6 +54,7 @@ void BuyableSpace::doAction(Player& player, GameAttributes& attributes) {
     promptIfWantToBuy(decision);
     if (decision == 'Y' || decision == 'y'){
       assignOwner(player);
+      player.payBank(this->getPrice());
     }
   } else{
     player.payOwner(*this);
@@ -62,6 +64,9 @@ void BuyableSpace::displayOwnedProperties() {
   std::cout << "Your current balance is $" << occupiers.back()->getBalance() << std::endl;
   std::cout << "You current own: " << std::endl;
   occupiers.back()->listProperties();
+}
+int BuyableSpace::getPrice() const {
+  return price;
 }
 
 
