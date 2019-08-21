@@ -30,6 +30,8 @@ void Controller::playGame() {
 
   while (!gameIsOver()){
 
+    displayWhosTurn(currentPlayerIndex);
+
     displayGameStats();
 
     attributes.getPlayers()[currentPlayerIndex]->promptAboutPlacingHouses();
@@ -56,8 +58,13 @@ void Controller::playGame() {
 
 void Controller::displayGameStats() {
   for (int i = 0; i < attributes.getPlayers().size(); i++){
+    // if the current player owns nothing
     std::cout << attributes.getPlayers()[i]->getName() << " owns ";
-    attributes.getPlayers()[i]->listProperties();
+    if (attributes.getPlayers()[i]->getOwnedProperties().empty()){
+      std::cout << "nothing";
+    } else {
+      attributes.getPlayers()[i]->listProperties();
+    }
     std::cout << " and has balance " << attributes.getPlayers()[i]->getBalance() << std::endl << std::endl;
   }
 }
@@ -80,4 +87,7 @@ void Controller::removePlayer(Player &player) {
 }
 void Controller::displayTurnSeperator() {
   std::cout << "------------------------------------------------------------------------" << std::endl << std::endl;
+}
+void Controller::displayWhosTurn(const int& currentPlayerIndex) {
+  std::cout << "It is " << attributes.getPlayers()[currentPlayerIndex]->getName() << "'s turn!" << std::endl << std::endl;
 }

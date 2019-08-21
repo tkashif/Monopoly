@@ -219,7 +219,7 @@ void Player::promptAboutPlacingHouses() {
     }
   }
   if (!options.empty()){
-    std::cout << "Would you like to place house(s)/hotel on one of the following?:" << std::endl;
+    std::cout << "Would you, " << getName() << " like to place house(s)/hotel on one of the following?:" << std::endl;
   }
   //for (int i = 0; i < options.size(); i++){
     listHouseOptions(options);

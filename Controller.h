@@ -22,6 +22,7 @@ class Controller {
   void placePlayersOnGO();
   void removePlayer(Player& player);
   void displayTurnSeperator();
+  void displayWhosTurn(const int& currentPlayerIndex);
 
  private:
   GameAttributes& attributes;
