@@ -20,6 +20,12 @@ GameAttributes::GameAttributes(int numberOfPlayers, Board& board, Dice& dice, Mi
    }
   }
 
+  for (int i = 0; i < board.getSpaces().size(); i++) {
+    if (board.getSpaces()[i]->getName() == "Go To Jail"){
+      goToJailIndex = i;
+    }
+  }
+
 };
 std::string GameAttributes::getPlayerName(int i) const {
   std::string name;
@@ -60,4 +66,7 @@ MiddleSpace &GameAttributes::getMiddle()  {
 }
 int GameAttributes::getJailIndex() {
   return jailIndex;
+}
+int GameAttributes::getGoToJailIndex() {
+  return goToJailIndex;
 }

@@ -22,6 +22,7 @@ class GameAttributes {
   Dice &getDice();
   MiddleSpace& getMiddle();
   int getJailIndex();
+  int getGoToJailIndex();
 
  private:
     std::string getPlayerName(int i) const;
@@ -34,6 +35,7 @@ class GameAttributes {
     std::vector<char> usedLetters;
     MiddleSpace& middle;
     int jailIndex;
+    int goToJailIndex;
 
 
 };

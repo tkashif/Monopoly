@@ -20,11 +20,11 @@ class Player {
   Player(int balance, char pieceLetter, std::string name, bool inJail);
 
   void takeTurn(GameAttributes& attributes);
-  void movePiece(int amount, GameAttributes& attributes);
+  void movePiece(int amount, GameAttributes& attributes, bool rolledDouble);
   void movePieceTo(int index, GameAttributes& attributes);
   bool rollDie(int& result, GameAttributes& gameAttributes);
 
-  void updateCurrentSpaceIndex(int amount, GameAttributes& attributes);
+  void updateCurrentSpaceIndex(int amount, GameAttributes& attributes, bool rolledDouble);
   void updateCurrentSpaceOn(GameAttributes& attributes);
   void removePieceFromCurrentSpot(GameAttributes& attributes);
 
@@ -70,6 +70,7 @@ class Player {
   void setInJail(bool ifInJail);
   void setJustVisitingJail(bool justVisiting);
   void increaseTurnsInJail();
+  bool landOnGoToJail(int index, GameAttributes& attributes);
 
 
  private:

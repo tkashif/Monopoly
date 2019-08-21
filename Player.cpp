@@ -31,11 +31,11 @@ Player::Player(int balance, char pieceLetter, std::string name, bool inJail): ba
                                                                               currentSpaceIndex(0), turnsInJail(0){
   //ownedProperties = {};
 }
-void Player::movePiece(int amount, GameAttributes& attributes) {
+void Player::movePiece(int amount, GameAttributes& attributes, bool rolledDouble) {
   // will take out player from occupied players on space (ALWAYS HAVE TO REMOVE FIRST ONE AS THEY WILL BE FIRST TO GO)
   removePieceFromCurrentSpot(attributes);
   // updates where in board vector you are on (just index)
-  updateCurrentSpaceIndex(amount, attributes);
+  updateCurrentSpaceIndex(amount, attributes, rolledDouble);
   // goes and updates currentSpaceOn from board vector
   updateCurrentSpaceOn(attributes);
 }
@@ -49,7 +49,7 @@ void Player::takeTurn(GameAttributes& attributes) {
     if (rolledDouble){
       rolledDoubleCount++;
       if (rolledDoubleCount < 3){
-        movePiece(result, attributes);
+        movePiece(result, attributes, rolledDouble);
       } else { // if the rolled double count is not less than 3, move the piece to jail
         movePieceTo(attributes.getJailIndex(), attributes);
         setInJail(true);
@@ -57,7 +57,7 @@ void Player::takeTurn(GameAttributes& attributes) {
       }
     } else{ // you have not rolled a double
       if (!inJail) { // if not in jail
-        movePiece(result, attributes); // move your piece
+        movePiece(result, attributes, false); // move your piece. false attribute there because you did not roll a double
       }
       break; // exit
     }
@@ -114,14 +114,29 @@ bool Player::rollDie(int& result, GameAttributes& attributes) {
     }*/
   return rolledDouble;
 }
-void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes) {
-  for (int i = 0; i < amount; i++){
-    // if you are at the end of the board vector, go back to the beginning (GO)
-    if (atEndOfBoard(attributes)){
-      currentSpaceIndex = 0;
-      // **** FIGURE OUT HOW TO ADD 200 FOR PASSING GO **** - otherwise just do manually
-    } else{
-      currentSpaceIndex++; // increase where you are
+void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes, bool rolledDouble) {
+
+  // first check if you are allowed to move (i.e. if you are in jail, you cannot move)
+  if ((inJail && !rolledDouble) || (inJail && turnsInJail < 3)){
+      // you must stay in jail and cannot move
+      // TODO : ADD functionality of how to pay your way out of jail
+
+  } else { // otherwise, you can move
+    for (int i = 0; i < amount; i++) {
+      // if you are at the end of the board vector, go back to the beginning (GO)
+      if (atEndOfBoard(attributes)) {
+        currentSpaceIndex = 0;
+        // TODO: **** FIGURE OUT HOW TO ADD 200 FOR PASSING GO **** - otherwise just do manually
+      } else {
+        currentSpaceIndex++; // increase where you are
+      }
+    }
+    // check if you land on go to jail
+    if (landOnGoToJail(currentSpaceIndex, attributes)) {
+      // set current space index to jail index
+      currentSpaceIndex = attributes.getJailIndex();
+      // signify that the player has been sent to jail and isn't just visiting
+      setInJail(true);
     }
   }
 }
@@ -138,7 +153,12 @@ bool Player::atEndOfBoard(GameAttributes& attributes) {
 void Player::displayInfoAboutSpotLandedOn(GameAttributes &attributes) {
    std::cout << "And here is the information about where you landed" << std::endl;
 
+
    attributes.getBoard()[currentSpaceIndex]->displayName();
+   // if player is not in jail, but landed on spot, mention that they are just visiting
+   if (!inJail && (currentSpaceIndex == attributes.getJailIndex())){
+     std::cout << " (just visiting)";
+   }
 
   // if the space is buyable..
    BuyableSpace* buyableSpace = dynamic_cast<BuyableSpace*>(attributes.getBoard()[currentSpaceIndex].get());
@@ -342,6 +362,9 @@ void Player::movePieceTo(int index, GameAttributes& attributes) {
 }
 void Player::setJustVisitingJail(bool justVisiting) {
   justVisitingJail = justVisiting;
+}
+bool Player::landOnGoToJail(int index, GameAttributes& attributes) {
+  return index == attributes.getGoToJailIndex();
 }
 
 
