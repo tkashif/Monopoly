@@ -208,14 +208,14 @@ void Player::subtractFromBalance(int amount) {
   balance -= amount;
 }
 void Player::promptAboutPlacingHouses() {
-  std::vector<PropertySpace> options = {};
+  std::vector<PropertySpace*> options = {};
 
   for (int i = 0; i < ownedProperties.size(); i++){
     // cast to a property space
     PropertySpace* property = dynamic_cast<PropertySpace*>(ownedProperties[i]);
     // if space is a property space
     if (property){
-      options.push_back(*property);
+      options.push_back(property);
     }
   }
   if (!options.empty()){
@@ -228,12 +228,12 @@ void Player::promptAboutPlacingHouses() {
     selectWhichOnesToPlaceHouses(options);
   }
 }
-void Player::listHouseOptions(std::vector<PropertySpace>& options) {
+void Player::listHouseOptions(std::vector<PropertySpace*>& options) {
   for (int i = 0; i < options.size(); i++){
-    std::cout << (i + 1) << ". " << options[i].getName() << std::endl;
+    std::cout << (i + 1) << ". " << options[i]->getName() << std::endl;
   }
 }
-void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace> &options) {
+void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace*> &options) {
   std::cout << "Enter the number of the property for which you would like to place house(s) / a hotel (enter -1 to exit): ";
   int input;
   std::cin >> input;
@@ -247,7 +247,7 @@ void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace> &options) {
   }
 
 }
-void Player::placeHousesOrHotelOnProperty(PropertySpace& property) {
+void Player::placeHousesOrHotelOnProperty(PropertySpace*& property) {
   bool houseDesired;
   getInputAboutHouseDesired(houseDesired);
   if(houseDesired){
@@ -292,12 +292,12 @@ void Player::getInputAboutHowManyHousesDesired(int &numberOfHousesDesired) {
 int Player::getAffordableNumberOfHouses() {
   return this->getBalance() / 200;
 }
-void Player::placeHousesOnProperty(PropertySpace &property, int numberOfHousesDesired) {
-  property.addHouses(numberOfHousesDesired);
+void Player::placeHousesOnProperty(PropertySpace*& property, int numberOfHousesDesired) {
+  property->addHouses(numberOfHousesDesired);
 }
-void Player::placeHotelOnPropertyAndGetRidOfHouses(PropertySpace &property) {
-  property.addHotel();
-  property.setHouses(0);
+void Player::placeHotelOnPropertyAndGetRidOfHouses(PropertySpace*& property) {
+  property->addHotel();
+  property->setHouses(0);
 }
 bool Player::canAffordHotel() {
   return (this->getBalance() / 1000 > 0);
