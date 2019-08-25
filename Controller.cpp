@@ -65,7 +65,7 @@ void Controller::displayGameStats() {
     } else {
       attributes.getPlayers()[i]->listProperties();
     }
-    std::cout << " and has balance " << attributes.getPlayers()[i]->getBalance() << std::endl << std::endl;
+    std::cout << " and has balance $" << attributes.getPlayers()[i]->getBalance() << std::endl << std::endl;
   }
 }
 void Controller::placePlayersOnGO() {
