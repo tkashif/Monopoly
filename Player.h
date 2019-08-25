@@ -20,11 +20,11 @@ class Player {
   Player(int balance, char pieceLetter, std::string name, bool inJail);
 
   void takeTurn(GameAttributes& attributes);
-  void movePiece(int amount, GameAttributes& attributes, bool rolledDouble);
+  void movePiece(int amount, GameAttributes& attributes);
   void movePieceTo(int index, GameAttributes& attributes);
   bool rollDie(int& result, GameAttributes& gameAttributes);
 
-  void updateCurrentSpaceIndex(int amount, GameAttributes& attributes, bool rolledDouble);
+  void updateCurrentSpaceIndex(int amount, GameAttributes& attributes);
   void updateCurrentSpaceOn(GameAttributes& attributes);
   void removePieceFromCurrentSpot(GameAttributes& attributes);
 

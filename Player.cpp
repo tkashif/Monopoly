@@ -11,6 +11,8 @@
 #include "PropertySpace.h" // need full type
 #include "Space.h" // need full type for .size()
 
+const int MAX_DOUBLES_IN_A_ROW = 3;
+
 /*
  * class GameAttributes; // only &'s
 class PropertySpace; // only &'s
@@ -31,38 +33,49 @@ Player::Player(int balance, char pieceLetter, std::string name, bool inJail): ba
                                                                               currentSpaceIndex(0), turnsInJail(0){
   //ownedProperties = {};
 }
-void Player::movePiece(int amount, GameAttributes& attributes, bool rolledDouble) {
+void Player::movePiece(int amount, GameAttributes& attributes) {
   // will take out player from occupied players on space (ALWAYS HAVE TO REMOVE FIRST ONE AS THEY WILL BE FIRST TO GO)
   removePieceFromCurrentSpot(attributes);
   // updates where in board vector you are on (just index)
-  updateCurrentSpaceIndex(amount, attributes, rolledDouble);
+  updateCurrentSpaceIndex(amount, attributes);
   // goes and updates currentSpaceOn from board vector
   updateCurrentSpaceOn(attributes);
 }
 void Player::takeTurn(GameAttributes& attributes) {
   int rolledDoubleCount = 0;
-  int result;
+  int result = 0; // initialize amount to move to 0 to start
+  bool startedInJail = inJail; // check if you started turn in jail
+  bool rolledDoubleToEscapeJail = false; // check if you rolled a double, allowing you to escape jail
 
-  while (true){
+  while (true) {
+    // roll the die
     bool rolledDouble = rollDie(result, attributes);
-    // if you rolled a double, increase the rolled double count
-    if (rolledDouble){
+    // if you rolled a double
+    if (rolledDouble) {
+      // since you rolled a double, if you are in jail, you can escape
+      rolledDoubleToEscapeJail = true;
+      // increase the rolledDoubleCount. need to keep track in case you roll three doubles (go to jail then)
       rolledDoubleCount++;
-      if (rolledDoubleCount < 3){
-        movePiece(result, attributes, rolledDouble);
-      } else { // if the rolled double count is not less than 3, move the piece to jail
+      // if you have not rolled 3 doubles in a row (which would send you to jail)
+      if (rolledDoubleCount < MAX_DOUBLES_IN_A_ROW) {
+        continue; // go back to the top and roll again
+      } else { // if you have cross MAX_DOUBLES_IN_A_ROW
+        // move piece to jail place
         movePieceTo(attributes.getJailIndex(), attributes);
+        // set them in jail
         setInJail(true);
+        // do not roll again
         break;
       }
-    } else{ // you have not rolled a double
-      if (!inJail) { // if not in jail
-        movePiece(result, attributes, false); // move your piece. false attribute there because you did not roll a double
-      }
-      break; // exit
+    } else { // you have not rolled a double at all
+      break; // exit out of loop
     }
-
   }
+
+    if (!inJail || (startedInJail && rolledDoubleToEscapeJail)) { // if not in jail (only way you moved in the while loop is if you went to jail) OR you started in jail but rolled a double.
+        // move the piece to the desired place
+        movePiece(result, attributes);
+      }
 
 
   /*(bool rolledDouble = rollDie(result, attributes);
@@ -94,7 +107,7 @@ bool Player::rollDie(int& result, GameAttributes& attributes) {
   int resultDice2 = attributes.getDice().roll();
   std::cout << name << " rolled a " << resultDice2 << " " << std::endl << std::endl;
 
-  result = resultDice1 + resultDice2;
+  result += (resultDice1 + resultDice2); // add to the current result (in case there was a double rolled earlier and this is another turn)
   bool rolledDouble = (resultDice1 == resultDice2);
 
   /*while (resultDice1 == resultDice2) {
@@ -114,14 +127,8 @@ bool Player::rollDie(int& result, GameAttributes& attributes) {
     }*/
   return rolledDouble;
 }
-void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes, bool rolledDouble) {
+void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes) {
 
-  // first check if you are allowed to move (i.e. if you are in jail, you cannot move)
-  if ((inJail && !rolledDouble) || (inJail && turnsInJail < 3)){
-      // you must stay in jail and cannot move
-      // TODO : ADD functionality of how to pay your way out of jail
-
-  } else { // otherwise, you can move
     for (int i = 0; i < amount; i++) {
       // if you are at the end of the board vector, go back to the beginning (GO)
       if (atEndOfBoard(attributes)) {
@@ -138,8 +145,8 @@ void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes, boo
       // signify that the player has been sent to jail and isn't just visiting
       setInJail(true);
     }
-  }
 }
+
 void Player::updateCurrentSpaceOn(GameAttributes& attributes) {
   // Space * = whereever you have landed // NOT SURE IF THIS WORKS AS I AM TRYING TO COPY SPACE I AM ON TO CURRENT SPACE ON by accessing underlying dumb pointer
   currentSpaceOn = (attributes.getBoard().getSpaces()[currentSpaceIndex].get());
