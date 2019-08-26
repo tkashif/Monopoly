@@ -72,6 +72,9 @@ class Player {
   void increaseTurnsInJail();
   bool landOnGoToJail(int index, GameAttributes& attributes);
 
+  void payForHouses(int numberOfHouses);
+  void payForHotel();
+
 
  private:
   int balance;

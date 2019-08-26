@@ -28,6 +28,9 @@ Price hotel (- * 10 prev)
 class PropertySpace : public BuyableSpace {
  public:
 
+  const static int PRICE_OF_HOUSE;
+  const static int PRICE_OF_HOTEL;
+
   PropertySpace() = default;
 
   PropertySpace(std::string name, std::string color, int numberOfHouses, int numberOfHotels, int rent, int price);

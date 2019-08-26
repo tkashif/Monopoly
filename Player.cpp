@@ -295,9 +295,11 @@ void Player::placeHousesOrHotelOnProperty(PropertySpace*& property) {
     int numberOfHousesDesired;
     getInputAboutHowManyHousesDesired(numberOfHousesDesired);
     placeHousesOnProperty(property, numberOfHousesDesired);
+    payForHouses(numberOfHousesDesired);
   } else {
     if(canAffordHotel()){
       placeHotelOnPropertyAndGetRidOfHouses(property);
+      payForHotel();
     }
   }
 }
@@ -312,7 +314,7 @@ void Player::getInputAboutHouseDesired(bool& houseDesired) {
   }
 }
 void Player::getInputAboutHowManyHousesDesired(int &numberOfHousesDesired) {
-  std::cout << "With your balance of " << this->getBalance() << ", you can currently afford a total of " << getAffordableNumberOfHouses() << " houses." << std::endl;
+  std::cout << "With your balance of " << this->getBalance() << ", you can currently afford" << getAffordableNumberOfHouses() << " more houses." << std::endl;
 
   /*int numberOfAffordableHouses;
   getAffordableNumberOfHouses(numberOfAffordableHouses);*/
@@ -331,7 +333,7 @@ void Player::getInputAboutHowManyHousesDesired(int &numberOfHousesDesired) {
 
 }
 int Player::getAffordableNumberOfHouses() {
-  return this->getBalance() / 200;
+  return this->getBalance() / PropertySpace::PRICE_OF_HOUSE;
 }
 void Player::placeHousesOnProperty(PropertySpace*& property, int numberOfHousesDesired) {
   property->addHouses(numberOfHousesDesired);
@@ -386,6 +388,12 @@ void Player::setJustVisitingJail(bool justVisiting) {
 }
 bool Player::landOnGoToJail(int index, GameAttributes& attributes) {
   return index == attributes.getGoToJailIndex();
+}
+void Player::payForHouses(int numberOfHouses) {
+  payBank(numberOfHouses * PropertySpace::PRICE_OF_HOUSE);
+}
+void Player::payForHotel() {
+  payBank(PropertySpace::PRICE_OF_HOTEL);
 }
 
 

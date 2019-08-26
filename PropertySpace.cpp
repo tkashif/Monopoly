@@ -4,6 +4,9 @@
 
 #include "PropertySpace.h"
 
+const int PropertySpace::PRICE_OF_HOUSE = 200;
+const int PropertySpace::PRICE_OF_HOTEL = PRICE_OF_HOUSE * 5;
+
 PropertySpace::PropertySpace(std::string name,
                              std::string color,
                              int numberOfHouses,
