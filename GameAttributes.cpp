@@ -7,6 +7,8 @@
 #include "Board.h" // need complete type
 #include "Space.h" // need complete type for size()
 
+std::mt19937 GameAttributes::randomNumGenerator(time(nullptr));
+
 GameAttributes::GameAttributes(int numberOfPlayers, Board& board, Dice& dice, MiddleSpace& middle): board(board), dice(dice), middle(middle) {
   usedLetters = {};
   for (int i = 0; i < numberOfPlayers; i++){
@@ -34,9 +36,10 @@ std::string GameAttributes::getPlayerName(int i) const {
   return name;
 }
 char GameAttributes::generateRandomLetter() {
-  char playerSymbol = 97 + rand() % 26;
+  std::uniform_int_distribution<char> uid(97,122);
+  char playerSymbol = uid(randomNumGenerator);
   while (isInUsedLetters(playerSymbol)){
-    playerSymbol = 97 + rand() % 26;
+    playerSymbol = uid(randomNumGenerator);
   }
   usedLetters.push_back(playerSymbol);
   std::cout << "Your symbol is: " << playerSymbol;

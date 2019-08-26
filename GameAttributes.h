@@ -6,6 +6,7 @@
 #define MONOPOLY_GAMEATTRIBUTES_H
 #include <vector>
 #include <iostream>
+#include <random>
 
 
 class Player;
@@ -15,6 +16,9 @@ class MiddleSpace; // only &'s
 
 class GameAttributes {
  public:
+
+  static std::mt19937 randomNumGenerator;
+
   GameAttributes(int numberOfPlayers, Board& board, Dice& dice, MiddleSpace& middle);
 
   std::vector<Player*> &getPlayers();
