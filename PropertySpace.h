@@ -39,6 +39,9 @@ class PropertySpace : public BuyableSpace {
   void setHouses(int number);
   void addHotel();
 
+  int getNumberHouses();
+  int getNumberHotels();
+
   int getRent() const override;
 
  protected:

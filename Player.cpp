@@ -278,6 +278,9 @@ void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace*> &options) 
 
   while (input != -1){
     if (input >= 1 && input <= options.size()){
+      PropertySpace* propertySpace = dynamic_cast<PropertySpace*>(currentSpaceOn); // convert to property space
+      std::cout << "On this property, you currently have " << propertySpace->getNumberHouses() << " houses and " << propertySpace->getNumberHotels() <<
+                      " hotels" << std::endl;
       placeHousesOrHotelOnProperty(options[input - 1]);
     }
     std::cout << "Enter the number of the property for which you would like to place house(s) / a hotel (enter -1 to exit): ";
@@ -309,18 +312,18 @@ void Player::getInputAboutHouseDesired(bool& houseDesired) {
   }
 }
 void Player::getInputAboutHowManyHousesDesired(int &numberOfHousesDesired) {
-  std::cout << "With your balance of " << this->getBalance() << ", you can currently afford: " << getAffordableNumberOfHouses();
+  std::cout << "With your balance of " << this->getBalance() << ", you can currently afford a total of " << getAffordableNumberOfHouses() << " houses." << std::endl;
 
   /*int numberOfAffordableHouses;
   getAffordableNumberOfHouses(numberOfAffordableHouses);*/
 
-  std::cout << "How many houses would you like to have? ";
+  std::cout << "How many houses would you like to add? ";
   int input;
   std::cin >> input;
 
   while (input > getAffordableNumberOfHouses()){
     std::cout << "Sorry, you cannot afford that." << std::endl;
-    std::cout << "How many houses would you like to have? ";
+    std::cout << "How many houses would you like to add? ";
     std::cin >> input;
   }
 

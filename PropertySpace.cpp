@@ -53,4 +53,10 @@ void PropertySpace::addHotel() {
   setHouses(0);
   numberOfHotels++;
 }
+int PropertySpace::getNumberHouses() {
+  return numberOfHouses;
+}
+int PropertySpace::getNumberHotels() {
+  return numberOfHotels;
+}
 
