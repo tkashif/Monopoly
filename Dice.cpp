@@ -3,6 +3,10 @@
 //
 
 #include "Dice.h"
+
+std::mt19937 Dice::randomNumGenerator(time(nullptr));
+
 int Dice::roll() {
-  return rand() % 6 + 1;
+  std::uniform_int_distribution<int> uid(1,6);
+  return uid(randomNumGenerator);
 }

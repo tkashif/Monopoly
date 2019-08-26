@@ -6,9 +6,12 @@
 #define MONOPOLY_DICE_H
 #include <cstdlib>
 #include <iostream>
+#include <random>
 
 class Dice {
  public:
+  static std::mt19937 randomNumGenerator;
+
   Dice() = default;
 
   int roll();
