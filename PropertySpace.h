@@ -50,6 +50,7 @@ class PropertySpace : public BuyableSpace {
   bool hasHotel();
 
   int getRent() const override;
+  std::string getColor();
 
   bool wouldBeTooManyHouses(int numberToAdd);
 

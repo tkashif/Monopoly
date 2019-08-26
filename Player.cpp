@@ -252,12 +252,12 @@ void Player::promptAboutPlacingHouses() {
     // cast to a property space
     PropertySpace* property = dynamic_cast<PropertySpace*>(ownedProperties[i]);
     // if space is a property space
-    if (property){
+    if (property && haveFullColorSet(property, ownedProperties)){
       options.push_back(property);
     }
   }
   if (!options.empty()){
-    std::cout << "Would you, " << getName() << " like to place house(s)/hotel on one of the following?: " << std::endl;
+    std::cout << "Would you, " << getName() << ", like to place house(s)/hotel on one of the following?: " << std::endl;
   }
   //for (int i = 0; i < options.size(); i++){
     listHouseOptions(options);
@@ -416,6 +416,32 @@ void Player::payForHouses(int numberOfHouses) {
 void Player::payForHotel() {
   payBank(PropertySpace::PRICE_OF_HOTEL);
 }
+bool Player::haveFullColorSet(PropertySpace *&propertySpace, const std::vector<BuyableSpace*> &ownedProperties) {
+    // Brown color has only two properties, rest have 3
+    int numberOfPropsWithColor = 0;
+    const int NUMBER_OF_BROWNS = 2;
+    const int NUMBER_OF_COLOR_EXCEPT_BROWN = 3;
+
+    for (int i = 0; i < ownedProperties.size(); i++) {
+      PropertySpace *testingProperty = dynamic_cast<PropertySpace *>(ownedProperties[i]);
+      if (testingProperty) {
+        if (testingProperty->getColor() == propertySpace->getColor()) {
+          numberOfPropsWithColor++;
+        }
+      }
+    }
+
+    // if there are two browns, return true
+    if (numberOfPropsWithColor == NUMBER_OF_BROWNS && propertySpace->getColor() == "Brown"){
+      return true;
+    } else if (numberOfPropsWithColor == NUMBER_OF_COLOR_EXCEPT_BROWN && propertySpace->getColor() != "Brown"){ // if there are 3 other color
+      return true;
+    } else { // if there is not a full color set
+      return false;
+    }
+
+}
+
 
 
 

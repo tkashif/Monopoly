@@ -75,6 +75,8 @@ class Player {
   void payForHouses(int numberOfHouses);
   void payForHotel();
 
+  bool haveFullColorSet(PropertySpace *&propertySpace, const std::vector<BuyableSpace *> &ownedProperties);
+
 
  private:
   int balance;

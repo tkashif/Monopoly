@@ -69,4 +69,7 @@ bool PropertySpace::hasHotel() {
 bool PropertySpace::wouldBeTooManyHouses(int numberToAdd) {
   return (numberToAdd + numberOfHouses > MAX_HOUSES_ALLOWED);
 }
+std::string PropertySpace::getColor() {
+  return color;
+}
 
