@@ -303,8 +303,13 @@ void Player::placeHousesOrHotelOnProperty(PropertySpace*& property) {
     } else {
       int numberOfHousesDesired;
       getInputAboutHowManyHousesDesired(numberOfHousesDesired);
-      placeHousesOnProperty(property, numberOfHousesDesired);
-      payForHouses(numberOfHousesDesired);
+
+      if (property->wouldBeTooManyHouses(numberOfHousesDesired)){
+        std::cout << "Sorry, you may only have a maximum of " << PropertySpace::MAX_HOUSES_ALLOWED << " on a single property" << std::endl;
+      } else {
+        placeHousesOnProperty(property, numberOfHousesDesired);
+        payForHouses(numberOfHousesDesired);
+      }
     }
   } else {
     if(canAffordHotel() && !(property->hasHotel())){

@@ -6,6 +6,7 @@
 
 const int PropertySpace::PRICE_OF_HOUSE = 200;
 const int PropertySpace::PRICE_OF_HOTEL = PRICE_OF_HOUSE * 5;
+const int PropertySpace::MAX_HOUSES_ALLOWED = 5;
 
 PropertySpace::PropertySpace(std::string name,
                              std::string color,
@@ -64,5 +65,8 @@ int PropertySpace::getNumberHotels() {
 }
 bool PropertySpace::hasHotel() {
   return (numberOfHotels > 0);
+}
+bool PropertySpace::wouldBeTooManyHouses(int numberToAdd) {
+  return (numberToAdd + numberOfHouses > MAX_HOUSES_ALLOWED);
 }
 

@@ -30,8 +30,10 @@ class PropertySpace : public BuyableSpace {
 
   const static int PRICE_OF_HOUSE;
   const static int PRICE_OF_HOTEL;
+  const static int MAX_HOUSES_ALLOWED;
 
   PropertySpace() = default;
+
 
   PropertySpace(std::string name, std::string color, int numberOfHouses, int numberOfHotels, int rent, int price);
 
@@ -48,6 +50,8 @@ class PropertySpace : public BuyableSpace {
   bool hasHotel();
 
   int getRent() const override;
+
+  bool wouldBeTooManyHouses(int numberToAdd);
 
  protected:
   std::string color;
