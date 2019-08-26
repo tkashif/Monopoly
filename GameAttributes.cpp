@@ -9,11 +9,13 @@
 
 std::mt19937 GameAttributes::randomNumGenerator(time(nullptr));
 
+int GameAttributes::STARTING_MONEY_AMOUNT = 1500;
+
 GameAttributes::GameAttributes(int numberOfPlayers, Board& board, Dice& dice, MiddleSpace& middle): board(board), dice(dice), middle(middle) {
   usedLetters = {};
   for (int i = 0; i < numberOfPlayers; i++){
     std::string name = getPlayerName(i);
-    players.push_back(new Player(50000, generateRandomLetter(), name, false));
+    players.push_back(new Player(STARTING_MONEY_AMOUNT, generateRandomLetter(), name, false));
   }
 
   for (int i = 0; i < board.getSpaces().size(); i++) {
