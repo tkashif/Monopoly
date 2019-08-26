@@ -9,6 +9,5 @@ JailSpace::JailSpace(std::string name) : NonBuyableSpace(name) {
 
 }
 void JailSpace::doAction(Player &player, GameAttributes &attributes) {
-  player.setInJail(false);
-  player.setJustVisitingJail(true);
+  // do nothing
 }
