@@ -156,7 +156,7 @@ Board::Board() {
   spaces.emplace_back(std::make_unique<JailSpace>("Jail"));
 
   spaces.emplace_back(std::make_unique<PropertySpace>("St. Charles Place", "Pink", 0, 0, 10, 140));
-  spaces.emplace_back(std::make_unique<UtilitySpace>("Electric Company", 0, 150));
+  spaces.emplace_back(std::make_unique<UtilitySpace>("Electric Company", 150, 0));
   spaces.emplace_back(std::make_unique<PropertySpace>("States Avenue", "Pink", 0, 0, 10, 140));
   spaces.emplace_back(std::make_unique<PropertySpace>("Virginia Avenue", "Pink", 0, 0, 12, 160));
 
@@ -176,7 +176,7 @@ Board::Board() {
 
   spaces.emplace_back(std::make_unique<PropertySpace>("Atlantic Avenue", "Yellow" , 0, 0, 22, 260));
   spaces.emplace_back(std::make_unique<PropertySpace>("Ventnor Avenue", "Yellow" , 0, 0, 22, 260));
-  spaces.emplace_back(std::make_unique<UtilitySpace>("Waterworks", 0, 150));
+  spaces.emplace_back(std::make_unique<UtilitySpace>("Waterworks", 150, 0));
   spaces.emplace_back(std::make_unique<PropertySpace>("Marvin Gardens", "Yellow" , 0, 0, 24, 280));
 
   spaces.emplace_back(std::make_unique<GoToJailSpace>("Go To Jail"));
