@@ -62,4 +62,7 @@ int PropertySpace::getNumberHouses() {
 int PropertySpace::getNumberHotels() {
   return numberOfHotels;
 }
+bool PropertySpace::hasHotel() {
+  return (numberOfHotels > 0);
+}
 

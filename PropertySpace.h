@@ -45,6 +45,8 @@ class PropertySpace : public BuyableSpace {
   int getNumberHouses();
   int getNumberHotels();
 
+  bool hasHotel();
+
   int getRent() const override;
 
  protected:
