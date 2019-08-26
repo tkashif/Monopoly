@@ -8,6 +8,8 @@
 #include "Player.h" // need to dereference
 #include "Space.h"
 
+bool Controller::firstTurn = true;
+
 Controller::Controller(GameAttributes& attributes): attributes(attributes) {
 
 }
@@ -16,8 +18,10 @@ bool Controller::gameIsOver(){
 }
 void Controller::switchPlayer(int& currentPlayerIndex, int& currentSpaceIndex) {
   currentPlayerIndex++;
+  // you have finished with the last player. switch back to first player and declare that you are no longer in the first turn
   if (currentPlayerIndex == attributes.getPlayers().size()){
     currentPlayerIndex = 0;
+    firstTurn = false;
   }
   currentSpaceIndex = attributes.getPlayers()[currentPlayerIndex]->getCurrentPosition();
 }

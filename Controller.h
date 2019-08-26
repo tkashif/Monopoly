@@ -11,6 +11,9 @@ class Player; // only &'s
 class Controller {
 
  public:
+
+  static bool firstTurn;
+
   Controller(GameAttributes& attributes);
 
   void setUpGame();

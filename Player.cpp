@@ -10,6 +10,8 @@
 #include "RailroadSpace.h" // need full type
 #include "PropertySpace.h" // need full type
 #include "Space.h" // need full type for .size()
+#include "GOSpace.h"
+#include "Controller.h"
 
 const int MAX_DOUBLES_IN_A_ROW = 3;
 
@@ -129,13 +131,20 @@ bool Player::rollDie(int& result, GameAttributes& attributes) {
 }
 void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes) {
 
+    bool passedGo = false;
+
     for (int i = 0; i < amount; i++) {
       // if you are at the end of the board vector, go back to the beginning (GO)
       if (atEndOfBoard(attributes)) {
         currentSpaceIndex = 0;
-        // TODO: **** FIGURE OUT HOW TO ADD 200 FOR PASSING GO **** - otherwise just do manually
       } else {
+        GOSpace* goSpace = dynamic_cast<GOSpace*>(attributes.getBoard().getSpaces()[currentSpaceIndex].get());
+        // if on Go
+        if (goSpace){
+          passedGo = true;
+        }
         currentSpaceIndex++; // increase where you are
+        // check if you are on GO
       }
     }
     // check if you land on go to jail
@@ -144,6 +153,8 @@ void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes) {
       currentSpaceIndex = attributes.getJailIndex();
       // signify that the player has been sent to jail and isn't just visiting
       setInJail(true);
+    } else if (passedGo && !Controller::firstTurn){ // if you passed Go and it is not the first turn
+      addToBalance(200); // add 200 to player balance
     }
 }
 
