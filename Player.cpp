@@ -282,11 +282,14 @@ void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace*> &options) 
   std::cout << std::endl;
 
   while (input != -1){
-    if (input >= 1 && input <= options.size()){
+    if (input >= 1 && input <= options.size()){ // valid input
       //PropertySpace* propertySpace = dynamic_cast<PropertySpace*>(options[input-1]); // convert to property space
       std::cout << "On this property, you currently have " << options[input-1]->getNumberHouses() << " houses and " << options[input-1]->getNumberHotels() <<
                       " hotels" << std::endl;
       placeHousesOrHotelOnProperty(options[input - 1]);
+    } else { // invalid input
+        std::cin.clear();
+        std::cin.ignore(10000, '\n');
     }
 
     std::cout << std::endl << std::endl;

@@ -97,6 +97,7 @@ CMakeFiles/Monopoly.dir/Player.cpp.o: ../Player.h
 CMakeFiles/Monopoly.dir/Player.cpp.o: ../PropertySpace.h
 CMakeFiles/Monopoly.dir/Player.cpp.o: ../RailroadSpace.h
 CMakeFiles/Monopoly.dir/Player.cpp.o: ../Space.h
+CMakeFiles/Monopoly.dir/Player.cpp.o: ../UtilitySpace.h
 
 CMakeFiles/Monopoly.dir/PropertySpace.cpp.o: ../BuyableSpace.h
 CMakeFiles/Monopoly.dir/PropertySpace.cpp.o: ../PropertySpace.cpp
