@@ -12,8 +12,10 @@
 #include "Space.h" // need full type for .size()
 #include "GOSpace.h"
 #include "Controller.h"
+#include "UtilitySpace.h"
 
 const int MAX_DOUBLES_IN_A_ROW = 3;
+const int NUMBER_OF_UTILS_ON_BOARD = 2;
 
 /*
  * class GameAttributes; // only &'s
@@ -440,6 +442,26 @@ bool Player::haveFullColorSet(PropertySpace *&propertySpace, const std::vector<B
       return false;
     }
 
+}
+bool Player::ownBothUtilities() {
+
+  int numberUtilities = 0;
+
+  auto itr = ownedProperties.begin();
+  for (;itr != ownedProperties.end(); itr++){
+    // cast to a utility space
+    UtilitySpace* utility = dynamic_cast<UtilitySpace*>(*itr);
+    // if the space is a utility
+    if (utility){
+      // incremeent number of utlities owned
+      numberUtilities++;
+    }
+    // if you are up to two utilities owned, you have all, break out of loop
+    if (numberUtilities == NUMBER_OF_UTILS_ON_BOARD){
+      break;
+    }
+  }
+  return (numberUtilities == NUMBER_OF_UTILS_ON_BOARD);
 }
 
 

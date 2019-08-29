@@ -1,0 +1,3 @@
+/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/CMakeFiles/Monopoly.dir

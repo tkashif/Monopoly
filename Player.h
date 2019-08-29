@@ -76,6 +76,7 @@ class Player {
   void payForHotel();
 
   bool haveFullColorSet(PropertySpace *&propertySpace, const std::vector<BuyableSpace *> &ownedProperties);
+  bool ownBothUtilities();
 
 
  private:

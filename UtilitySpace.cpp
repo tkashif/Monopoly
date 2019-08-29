@@ -4,6 +4,10 @@
 
 #include "UtilitySpace.h"
 #include "Dice.h" // need full type
+#include "Player.h"
+
+const int MULT_FACTOR_ONE_UTIL = 4;
+const int MULT_FACTOR_TWO_UTIL = 8;
 
 UtilitySpace::UtilitySpace(std::string name, int rent, int price) : BuyableSpace(name, rent, price) {
 
@@ -21,7 +25,11 @@ void UtilitySpace::displayRents() {
     int result = dice.roll();
     std::cout << "You rolled a " << result << std::endl;
 
-    rent = 4 * result;
+    if (owner->ownBothUtilities()){
+      rent = MULT_FACTOR_TWO_UTIL * result;
+    } else {
+      rent = MULT_FACTOR_ONE_UTIL * result;
+    }
 
     BuyableSpace::displayRents();
   }

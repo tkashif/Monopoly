@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Monopoly"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Monopoly">
+				<Option output="/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Monopoly" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 Monopoly"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Monopoly/fast">
+				<Option output="/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Monopoly" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 Monopoly/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taimurkashif/Desktop/Monopoly/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Board.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Board.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/BuyableSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/BuyableSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Controller.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Controller.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Dice.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Dice.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/FreeParkingSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/FreeParkingSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/GOSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/GOSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/GameAttributes.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/GameAttributes.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/GoToJailSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/GoToJailSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/IncomeTaxSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/IncomeTaxSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/JailSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/JailSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/LuxuryTaxSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/LuxuryTaxSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/MiddleSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/MiddleSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/NonBuyableSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/NonBuyableSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Player.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Player.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/PropertySpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/PropertySpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/RailroadSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/RailroadSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Space.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/Space.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/TaxSpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/TaxSpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/UtilitySpace.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/UtilitySpace.h">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/main.cpp">
+			<Option target="Monopoly"/>
+		</Unit>
+		<Unit filename="/Users/taimurkashif/Desktop/Monopoly/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
