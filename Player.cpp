@@ -16,6 +16,8 @@
 
 const int MAX_DOUBLES_IN_A_ROW = 3;
 const int NUMBER_OF_UTILS_ON_BOARD = 2;
+const int AMOUNT_TO_GET_OUT_OF_JAIL = 50;
+const int MAX_TURNS_IN_JAIL = 3;
 
 /*
  * class GameAttributes; // only &'s
@@ -48,10 +50,32 @@ void Player::movePiece(int amount, GameAttributes& attributes) {
 void Player::takeTurn(GameAttributes& attributes) {
   int rolledDoubleCount = 0;
   int result = 0; // initialize amount to move to 0 to start
-  bool startedInJail = inJail; // check if you started turn in jail
   bool rolledDoubleToEscapeJail = false; // check if you rolled a double, allowing you to escape jail
 
-  while (true) {
+  if (inJail) {
+    char result;
+    promptIfWantToPayOutOfJail(result);
+    if (result == 'y' || result == 'Y'){
+        subtractFromBalance(AMOUNT_TO_GET_OUT_OF_JAIL);
+        setInJail(false);
+    }
+  }
+
+  if (inJail && turnsInJail < MAX_TURNS_IN_JAIL){ // if in jail and the number of turns in jail is still less than 3
+    // increase the number of turns in jail
+    increaseTurnsInJail();
+    // output how many turns you are in jail
+    outputTurnsInJail();
+  } else if (inJail && turnsInJail == MAX_TURNS_IN_JAIL) { // if in jail and the number of turns in jail is now equivalent to max turns
+    // escape jail. then continue and roll.
+    setInJail(false);
+  }
+
+
+  // check if you started your turn (before rolling) in jail
+  bool startedInJail = inJail;
+
+    while (true) {
     // roll the die
     bool rolledDouble = rollDie(result, attributes);
     // if you rolled a double
@@ -62,6 +86,8 @@ void Player::takeTurn(GameAttributes& attributes) {
       rolledDoubleCount++;
       // if you have not rolled 3 doubles in a row (which would send you to jail)
       if (rolledDoubleCount < MAX_DOUBLES_IN_A_ROW) {
+        // since you have not rolled enough doubles to go to jail, you can set inJail to false, which will be true no matter what.
+        setInJail(false);
         continue; // go back to the top and roll again
       } else { // if you have cross MAX_DOUBLES_IN_A_ROW
         // move piece to jail place
@@ -80,22 +106,6 @@ void Player::takeTurn(GameAttributes& attributes) {
         // move the piece to the desired place
         movePiece(result, attributes);
       }
-
-
-  /*(bool rolledDouble = rollDie(result, attributes);
-
-  // if the player is in jail and rolled a double, move the piece OR if the player is not in jail, move the piece
-  if (!inJail || (inJail && rolledDouble)){
-    movePiece(result, attributes);
-  }
-
-  // as long as they keep rolling double keep turn going. Once they roll 3 doubles, put them in jail.
-  while (rolledDouble){
-    rolledDoubleCount++; // increase how many times you rolled double
-    rollDie(result, attributes);
-    movePiece(result, attributes); // should update currentPlayerindex and board (NOTE: will also add player to spot they are moving to)
-  } */
-
 
 }
 bool Player::rollDie(int& result, GameAttributes& attributes) {
@@ -465,6 +475,28 @@ bool Player::ownBothUtilities() {
     }
   }
   return (numberUtilities == NUMBER_OF_UTILS_ON_BOARD);
+}
+void Player::promptIfWantToPayOutOfJail(char &result) {
+  std::cout << "Would you like to pay $" << AMOUNT_TO_GET_OUT_OF_JAIL << " to get out of jail? (Y/N)";
+  std::cin >> result;
+  while (!(result != 'Y' || result!='y' || result !='n' || result != 'N')){
+    std::cin.clear();
+    std::cin.ignore(10000, '\n');
+    std::cout << "Would you like to pay $" << AMOUNT_TO_GET_OUT_OF_JAIL << " to get out of jail? (Y/N)";
+    std::cin >> result;
+  }
+}
+void Player::outputTurnsInJail() {
+  std::cout << "This is your " << turnsInJail;
+  if (turnsInJail == 1){
+    std::cout << "st";
+  } else if (turnsInJail == 2){
+    std::cout << "nd";
+  } else if (turnsInJail == 3){
+    std::cout << "rd";
+  }
+
+  std::cout << " turn in jail." << std::endl;
 }
 
 

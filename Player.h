@@ -78,6 +78,9 @@ class Player {
   bool haveFullColorSet(PropertySpace *&propertySpace, const std::vector<BuyableSpace *> &ownedProperties);
   bool ownBothUtilities();
 
+  void promptIfWantToPayOutOfJail(char& result);
+  void outputTurnsInJail();
+
 
  private:
   int balance;
