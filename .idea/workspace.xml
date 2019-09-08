@@ -43,15 +43,18 @@
   <component name="ChangeListManager">
     <list default="true" id="19e9dc52-b484-4ccf-98ad-81923009517c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuyableSpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BuyableSpace.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuyableSpace.h" beforeDir="false" afterPath="$PROJECT_DIR$/BuyableSpace.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Board.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Board.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/BuyableSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/BuyableSpace.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAttributes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameAttributes.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAttributes.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameAttributes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtilitySpace.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UtilitySpace.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Controller.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Controller.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/FreeParkingSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/FreeParkingSpace.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GameAttributes.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GameAttributes.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GoToJailSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GoToJailSpace.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Player.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Player.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/PropertySpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/PropertySpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/RailroadSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/RailroadSpace.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/TaxSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/TaxSpace.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Monopoly" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Monopoly" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -64,11 +67,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameAttributes.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state relative-caret-position="164">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#50#77#0" expanded="true" />
               </folding>
@@ -77,10 +80,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameAttributes.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+              <folding>
+                <element signature="e#118#135#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+            <state relative-caret-position="185">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#50#69#0" expanded="true" />
               </folding>
@@ -93,18 +108,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="386">
               <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Board.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="200" selection-start-line="200" selection-end-line="200" />
-              <folding>
-                <element signature="e#50#68#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -130,11 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BuyableSpace.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="69" column="2" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="2" />
+            <state relative-caret-position="251">
+              <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
               <folding>
                 <element signature="e#50#75#0" expanded="true" />
               </folding>
@@ -143,24 +146,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Player.h">
+        <entry file="file://$PROJECT_DIR$/UtilitySpace.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="225">
+              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
               <folding>
-                <element signature="e#102#121#0" expanded="true" />
+                <element signature="e#114#153#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+        <entry file="file://$PROJECT_DIR$/UtilitySpace.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="89">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#50#75#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -244,19 +247,19 @@
         <option value="$PROJECT_DIR$/Board.cpp" />
         <option value="$PROJECT_DIR$/Dice.h" />
         <option value="$PROJECT_DIR$/Dice.cpp" />
-        <option value="$PROJECT_DIR$/GameAttributes.h" />
         <option value="$PROJECT_DIR$/PropertySpace.h" />
         <option value="$PROJECT_DIR$/BuyableSpace.h" />
         <option value="$PROJECT_DIR$/PropertySpace.cpp" />
-        <option value="$PROJECT_DIR$/UtilitySpace.cpp" />
         <option value="$PROJECT_DIR$/Player.h" />
         <option value="$PROJECT_DIR$/Space.h" />
         <option value="$PROJECT_DIR$/Space.cpp" />
         <option value="$PROJECT_DIR$/Controller.h" />
         <option value="$PROJECT_DIR$/Controller.cpp" />
-        <option value="$PROJECT_DIR$/GameAttributes.cpp" />
         <option value="$PROJECT_DIR$/Player.cpp" />
         <option value="$PROJECT_DIR$/BuyableSpace.cpp" />
+        <option value="$PROJECT_DIR$/UtilitySpace.cpp" />
+        <option value="$PROJECT_DIR$/GameAttributes.h" />
+        <option value="$PROJECT_DIR$/GameAttributes.cpp" />
       </list>
     </option>
   </component>
@@ -346,21 +349,7 @@
       <workItem from="1566843816991" duration="6206000" />
       <workItem from="1567056914019" duration="4702000" />
       <workItem from="1567700134384" duration="831000" />
-      <workItem from="1567964491215" duration="9490000" />
-    </task>
-    <task id="LOCAL-00053" summary="only putting #include in gameattributes&#10;12:34 PM August 13th">
-      <created>1565724879636</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1565724879636</updated>
-    </task>
-    <task id="LOCAL-00054" summary="only putting #include in gotojail (did gospace on last one)&#10;12:35 PM August 13th">
-      <created>1565724963822</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1565724963822</updated>
+      <workItem from="1567964491215" duration="10092000" />
     </task>
     <task id="LOCAL-00055" summary="only putting #include in up to main&#10;12:38 PM August 13th">
       <created>1565725088318</created>
@@ -691,11 +680,25 @@
       <option name="project" value="LOCAL" />
       <updated>1567974891083</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="fixed buying when you cannot afford issue">
+      <created>1567975426144</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1567975426144</updated>
+    </task>
+    <task id="LOCAL-00103" summary="fixed not notifying player that they own nothing">
+      <created>1567975543111</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1567975543112</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120228000" />
+    <option name="totallyTimeSpent" value="120830000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -714,15 +717,15 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25060242" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5795181" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3433735" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="TeamCity" order="9" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23855421" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23855421" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49928468" weight="0.32891566" />
@@ -779,8 +782,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="before fixing jail issue&#10;8:02 PM August 15th" />
-    <MESSAGE value="verified payment from one player to another working, still have jail issues&#10;9:24 PM August 15th" />
     <MESSAGE value="added turn seperator...still having issues with placing houses. It registers but is not saving the variable some reason. My hunch is that somehwere I am copying an object or pointer instead of updating the existing one&#10;9:49 PM August 15th" />
     <MESSAGE value="fixed placing houses issue where # of houses kept resetting every turn&#10;3:14 PM August 21th" />
     <MESSAGE value="fixed various output issues. about to try to display when you go to jail vs when you are just visiting&#10;3:14 PM August 21th" />
@@ -804,7 +805,9 @@
     <MESSAGE value="fixed output jail issue by adding new removing player funciton" />
     <MESSAGE value="ran test game successfully" />
     <MESSAGE value="announcing winner correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="announcing winner correctly" />
+    <MESSAGE value="fixed buying when you cannot afford issue" />
+    <MESSAGE value="fixed not notifying player that they own nothing" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed not notifying player that they own nothing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -814,16 +817,32 @@
           <line>12</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/UtilitySpace.cpp</url>
+          <line>18</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/GameAttributes.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="ownedProperties" language="ObjectiveC" />
+        <watch expression="STARTING_MONEY_AMOUNT" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>STARTING_MONEY_AMOUNT</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>startedInJail &amp;&amp; rolledDoubleToEscapeJail</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -1019,26 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UtilitySpace.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding>
-            <element signature="e#114#153#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UtilitySpace.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="e#50#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PropertySpace.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -1089,16 +1088,6 @@
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
             <element signature="e#116#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAttributes.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding>
-            <element signature="e#118#135#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1190,16 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameAttributes.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding>
-            <element signature="e#50#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -1213,16 +1192,6 @@
           <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
           <folding>
             <element signature="e#50#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Player.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
-          <folding>
-            <element signature="e#50#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1246,10 +1215,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BuyableSpace.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="69" column="2" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="2" />
+        <state relative-caret-position="251">
+          <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
           <folding>
             <element signature="e#50#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UtilitySpace.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding>
+            <element signature="e#114#153#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UtilitySpace.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#50#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAttributes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#118#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#50#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAttributes.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#50#77#0" expanded="true" />
           </folding>
         </state>
       </provider>

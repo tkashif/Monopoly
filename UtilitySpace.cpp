@@ -15,7 +15,7 @@ UtilitySpace::UtilitySpace(std::string name, int rent, int price) : BuyableSpace
 void UtilitySpace::displayRents() {
   if (noOwner()){
     std::cout << "RENT: N/A" << std::endl;
-  } else{
+  } else if (getOwner() != occupiers.back()){
     char input;
 
     std::cout << "Please roll dice to determine rent (press any key): ";

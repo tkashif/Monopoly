@@ -18,7 +18,6 @@ class GameAttributes {
  public:
 
   static std::mt19937 randomNumGenerator;
-  static int STARTING_MONEY_AMOUNT;
 
   GameAttributes(int numberOfPlayers, Board& board, Dice& dice, MiddleSpace& middle);
 
