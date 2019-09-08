@@ -32,7 +32,7 @@ void Controller::playGame() {
   // put everyone on GO
   placePlayersOnGO();
 
-  while (!gameIsOver()){
+  while (true){
 
     displayWhosTurn(currentPlayerIndex);
 
@@ -53,9 +53,15 @@ void Controller::playGame() {
     if (attributes.getPlayers()[currentPlayerIndex]->getBalance() <= 0){
       removePlayer(*(attributes.getPlayers()[currentPlayerIndex]));
     }
-    switchPlayer(currentPlayerIndex, currentSpaceIndex);
 
-    displayTurnSeperator();
+    if (gameIsOver()){
+      displayTurnSeperator();
+      announceWinner();
+      break;
+    } else {
+      switchPlayer(currentPlayerIndex, currentSpaceIndex);
+      displayTurnSeperator();
+    }
 
   }
 }
@@ -94,4 +100,9 @@ void Controller::displayTurnSeperator() {
 }
 void Controller::displayWhosTurn(const int& currentPlayerIndex) {
   std::cout << "It is " << attributes.getPlayers()[currentPlayerIndex]->getName() << "'s turn!" << std::endl << std::endl;
+}
+void Controller::announceWinner() {
+
+  std::cout << "CONGRATULATIONS " << attributes.getPlayers()[0]->getName() << "! YOU HAVE WON MONOPOLY!";
+
 }

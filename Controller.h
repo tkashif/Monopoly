@@ -26,12 +26,10 @@ class Controller {
   void removePlayer(Player& player);
   void displayTurnSeperator();
   void displayWhosTurn(const int& currentPlayerIndex);
+  void announceWinner();
 
  private:
   GameAttributes& attributes;
-
-
-
 
 };
 
