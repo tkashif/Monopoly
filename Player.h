@@ -80,6 +80,7 @@ class Player {
 
   void promptIfWantToPayOutOfJail(char& result);
   void outputTurnsInJail();
+  void resetTurnsInJail();
 
 
  private:

@@ -69,6 +69,7 @@ void Player::takeTurn(GameAttributes& attributes) {
   } else if (inJail && turnsInJail == MAX_TURNS_IN_JAIL) { // if in jail and the number of turns in jail is now equivalent to max turns
     // escape jail. then continue and roll.
     setInJail(false);
+    resetTurnsInJail();
   }
 
 
@@ -88,6 +89,7 @@ void Player::takeTurn(GameAttributes& attributes) {
       if (rolledDoubleCount < MAX_DOUBLES_IN_A_ROW) {
         // since you have not rolled enough doubles to go to jail, you can set inJail to false, which will be true no matter what.
         setInJail(false);
+        resetTurnsInJail();
         continue; // go back to the top and roll again
       } else { // if you have cross MAX_DOUBLES_IN_A_ROW
         // move piece to jail place
@@ -497,6 +499,10 @@ void Player::outputTurnsInJail() {
   }
 
   std::cout << " turn in jail." << std::endl;
+}
+void Player::resetTurnsInJail() {
+  turnsInJail = 0;
+
 }
 
 
