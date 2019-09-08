@@ -6,31 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/taimurkashif/Desktop/Monopoly/Board.h
-vector
--
-memory
--
-Space.h
-/Users/taimurkashif/Desktop/Monopoly/Space.h
-
-/Users/taimurkashif/Desktop/Monopoly/GameAttributes.cpp
-GameAttributes.h
-/Users/taimurkashif/Desktop/Monopoly/GameAttributes.h
+/Users/taimurkashif/Desktop/Monopoly/BuyableSpace.cpp
+BuyableSpace.h
+/Users/taimurkashif/Desktop/Monopoly/BuyableSpace.h
 Player.h
 /Users/taimurkashif/Desktop/Monopoly/Player.h
-Board.h
-/Users/taimurkashif/Desktop/Monopoly/Board.h
+
+/Users/taimurkashif/Desktop/Monopoly/BuyableSpace.h
 Space.h
 /Users/taimurkashif/Desktop/Monopoly/Space.h
-
-/Users/taimurkashif/Desktop/Monopoly/GameAttributes.h
-vector
--
-iostream
--
-random
--
 
 /Users/taimurkashif/Desktop/Monopoly/Player.h
 iostream

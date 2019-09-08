@@ -40,7 +40,7 @@ class BuyableSpace : public Space {
   Player* owner;
   int rent;
 
-
+  bool landedPlayerCanAffordThis(Player &player);
 };
 
 #endif //MONOPOLY_BUYABLESPACE_H

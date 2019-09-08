@@ -51,10 +51,14 @@ void BuyableSpace::doAction(Player& player, GameAttributes& attributes) {
   if (noOwner()){
     char decision;
     displayOwnedProperties();
-    promptIfWantToBuy(decision);
-    if (decision == 'Y' || decision == 'y'){
-      assignOwner(player);
-      player.payBank(this->getPrice());
+    if (landedPlayerCanAffordThis(player)){
+      promptIfWantToBuy(decision);
+      if (decision == 'Y' || decision == 'y'){
+        assignOwner(player);
+        player.payBank(this->getPrice());
+      }
+    } else {
+      std::cout << "Sorry, you cannot afford to buy " << this->getName() << std::endl;
     }
   } else{
     player.payOwner(*this);
@@ -67,6 +71,9 @@ void BuyableSpace::displayOwnedProperties() {
 }
 int BuyableSpace::getPrice() const {
   return price;
+}
+bool BuyableSpace::landedPlayerCanAffordThis(Player &player) {
+  return player.getBalance() >= this->getPrice();
 }
 
 
