@@ -3,6 +3,7 @@
 //
 
 #include "Space.h"
+#include <algorithm>
 Space::Space(const std::string& name): name(name) {
   occupiers = {};
 
@@ -24,6 +25,9 @@ bool Space::hasOccupier() {
 }
 Player &Space::getOccupier() {
   return *(occupiers.back());
+}
+void Space::removeOccupier(Player *playerToBeRemoved) {
+  occupiers.erase(std::remove(occupiers.begin(), occupiers.end(), playerToBeRemoved), occupiers.end());
 }
 
 

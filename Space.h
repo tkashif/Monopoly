@@ -31,6 +31,7 @@ class Space {
   void addOccupier(Player& personWhoLanded);
 
   void removeFirstOccupier();
+  void removeOccupier(Player* playerToBeRemoved);
 
   bool hasOccupier();
 

@@ -123,6 +123,7 @@ CMakeFiles/Monopoly.dir/TaxSpace.cpp.o: ../TaxSpace.h
 
 CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o: ../BuyableSpace.h
 CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o: ../Dice.h
+CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o: ../Player.h
 CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o: ../Space.h
 CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o: ../UtilitySpace.cpp
 CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o: ../UtilitySpace.h

@@ -14,7 +14,7 @@
 #include "Controller.h"
 #include "UtilitySpace.h"
 
-const int MAX_DOUBLES_IN_A_ROW = 3;
+const int MAX_DOUBLES_IN_A_ROW = 1;
 const int NUMBER_OF_UTILS_ON_BOARD = 2;
 const int AMOUNT_TO_GET_OUT_OF_JAIL = 50;
 const int MAX_TURNS_IN_JAIL = 3;
@@ -240,7 +240,7 @@ void Player::takeAction(GameAttributes& attributes) {
   currentSpaceOn->doAction(*this, attributes); // passing in player in case I need to do something with player
 }
 void Player::removePieceFromCurrentSpot(GameAttributes& attributes) {
-  attributes.getBoard().getSpaces()[currentSpaceIndex]->removeFirstOccupier();
+  attributes.getBoard().getSpaces()[currentSpaceIndex]->removeOccupier(this);
 }
 void Player::setSpace(Space *space, int indexOfSpace) {
   currentSpaceOn= space;
