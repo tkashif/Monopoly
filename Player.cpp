@@ -418,8 +418,11 @@ void Player::increaseTurnsInJail() {
   turnsInJail++;
 }
 void Player::movePieceTo(int index, GameAttributes& attributes) {
+  // will take out player from occupied players on space (ALWAYS HAVE TO REMOVE FIRST ONE AS THEY WILL BE FIRST TO GO)
+  removePieceFromCurrentSpot(attributes);
   currentSpaceIndex = index;
-  currentSpaceOn = attributes.getBoard()[currentSpaceIndex].get();
+  updateCurrentSpaceOn(attributes);
+  //currentSpaceOn = attributes.getBoard()[currentSpaceIndex].get();
 }
 void Player::setJustVisitingJail(bool justVisiting) {
   justVisitingJail = justVisiting;
