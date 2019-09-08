@@ -14,7 +14,7 @@
 #include "Controller.h"
 #include "UtilitySpace.h"
 
-const int MAX_DOUBLES_IN_A_ROW = 1;
+const int MAX_DOUBLES_IN_A_ROW = 3;
 const int NUMBER_OF_UTILS_ON_BOARD = 2;
 const int AMOUNT_TO_GET_OUT_OF_JAIL = 50;
 const int MAX_TURNS_IN_JAIL = 3;

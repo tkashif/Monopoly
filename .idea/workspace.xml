@@ -44,29 +44,8 @@
     <list default="true" id="19e9dc52-b484-4ccf-98ad-81923009517c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Space.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Space.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Space.h" beforeDir="false" afterPath="$PROJECT_DIR$/Space.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Board.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Board.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/BuyableSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/BuyableSpace.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Controller.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Controller.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/FreeParkingSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/FreeParkingSpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GOSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GOSpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GameAttributes.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GameAttributes.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GoToJailSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/GoToJailSpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/IncomeTaxSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/IncomeTaxSpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/JailSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/JailSpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/LuxuryTaxSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/LuxuryTaxSpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/NonBuyableSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/NonBuyableSpace.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Player.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Player.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/PropertySpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/PropertySpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/RailroadSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/RailroadSpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Space.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/Space.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/TaxSpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/TaxSpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/UtilitySpace.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Monopoly.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Monopoly" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Monopoly" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -94,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Player.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="-2240">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="e#50#69#0" expanded="true" />
               </folding>
@@ -265,9 +244,9 @@
         <option value="$PROJECT_DIR$/PropertySpace.cpp" />
         <option value="$PROJECT_DIR$/UtilitySpace.cpp" />
         <option value="$PROJECT_DIR$/Player.h" />
-        <option value="$PROJECT_DIR$/Player.cpp" />
         <option value="$PROJECT_DIR$/Space.h" />
         <option value="$PROJECT_DIR$/Space.cpp" />
+        <option value="$PROJECT_DIR$/Player.cpp" />
       </list>
     </option>
   </component>
@@ -357,14 +336,7 @@
       <workItem from="1566843816991" duration="6206000" />
       <workItem from="1567056914019" duration="4702000" />
       <workItem from="1567700134384" duration="831000" />
-      <workItem from="1567964491215" duration="5749000" />
-    </task>
-    <task id="LOCAL-00050" summary="only putting #include in controller.cpp&#10;12:25 PM August 13th">
-      <created>1565724555663</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1565724555663</updated>
+      <workItem from="1567964491215" duration="8305000" />
     </task>
     <task id="LOCAL-00051" summary="only putting #include in freeparking.cpp&#10;12:25 PM August 13th">
       <created>1565724665445</created>
@@ -702,11 +674,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567968884232</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="fixed output jail issue by adding new removing player funciton">
+      <created>1567970400877</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1567970400877</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116487000" />
+    <option name="totallyTimeSpent" value="119043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,12 +699,12 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4578097" visible="true" weight="0.30543634" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4578097" visible="true" weight="0.17811158" />
       <window_info id="Structure" order="1" sideWeight="0.5421903" side_tool="true" weight="0.24177396" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.96385545" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -733,7 +712,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="TeamCity" order="9" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.96385545" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49928468" weight="0.32891566" />
@@ -790,7 +769,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="board not printing right, player not staying in jail, most things working &#10;6:44 PM August 14th" />
     <MESSAGE value="board printing well, have to figure out why player not staying in jail and have to work on output&#10;7:00 PM August 14th" />
     <MESSAGE value="started fixing how output looks, added paying bank when buying a property, but have not tested this feature yet&#10;7:18 PM August 14th" />
     <MESSAGE value="before fixing jail issue&#10;8:02 PM August 15th" />
@@ -815,7 +793,8 @@
     <MESSAGE value="adding houses and hotels only with color set working&#10;12:20 PM August 26th" />
     <MESSAGE value="added function to reset turns in jail once you escape" />
     <MESSAGE value="fixed issue with player piece not moving to jail on board when when rolling three doubles" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed issue with player piece not moving to jail on board when when rolling three doubles" />
+    <MESSAGE value="fixed output jail issue by adding new removing player funciton" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed output jail issue by adding new removing player funciton" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -824,11 +803,6 @@
           <url>file://$PROJECT_DIR$/GoToJailSpace.cpp</url>
           <line>12</line>
           <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Player.cpp</url>
-          <line>55</line>
-          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1262,8 +1236,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Player.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="-2240">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding>
             <element signature="e#50#69#0" expanded="true" />
           </folding>
