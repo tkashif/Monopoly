@@ -19,25 +19,9 @@ const int NUMBER_OF_UTILS_ON_BOARD = 2;
 const int AMOUNT_TO_GET_OUT_OF_JAIL = 50;
 const int MAX_TURNS_IN_JAIL = 3;
 
-/*
- * class GameAttributes; // only &'s
-class PropertySpace; // only &'s
-class Space; // only &'s and *'s
-class BuyableSpace; // only &'s
- */
-
-/*Player::Player() : balance(0), pieceLetter(), name(""), inJail(false), ownedProperties({}) currentSpaceIndex(0) {
-  balance = 0;
-  pieceLetter = ' ';
-  name = "";
-  inJail = false;
-  ownedProperties = {};
-  currentSpaceIndex = 0;
-}*/
 
 Player::Player(int balance, char pieceLetter, std::string name, bool inJail): balance(balance), pieceLetter(pieceLetter), name(name), inJail(inJail),
                                                                               currentSpaceIndex(0), turnsInJail(0){
-  //ownedProperties = {};
 }
 void Player::movePiece(int amount, GameAttributes& attributes) {
   // will take out player from occupied players on space (ALWAYS HAVE TO REMOVE FIRST ONE AS THEY WILL BE FIRST TO GO)
@@ -126,21 +110,6 @@ bool Player::rollDie(int& result, GameAttributes& attributes) {
   result += (resultDice1 + resultDice2); // add to the current result (in case there was a double rolled earlier and this is another turn)
   bool rolledDouble = (resultDice1 == resultDice2);
 
-  /*while (resultDice1 == resultDice2) {
-
-      std::cout << "Press any key to roll: ";
-      char input;
-      std::cin >> input; // eat up input
-      int resultDice1 = attributes.getDice().roll();
-      std::cout << name << " rolled a " << resultDice1 << " " << std::endl;
-
-      std::cout << "Press any key to roll: ";
-      std::cin >> input; // eat up input
-      int resultDice2 = attributes.getDice().roll();
-      std::cout << name << " rolled a " << resultDice2 << " " << std::endl;
-
-      result += resultDice1 + resultDice2;
-    }*/
   return rolledDouble;
 }
 void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes) {
@@ -173,7 +142,7 @@ void Player::updateCurrentSpaceIndex(int amount, GameAttributes& attributes) {
 }
 
 void Player::updateCurrentSpaceOn(GameAttributes& attributes) {
-  // Space * = whereever you have landed // NOT SURE IF THIS WORKS AS I AM TRYING TO COPY SPACE I AM ON TO CURRENT SPACE ON by accessing underlying dumb pointer
+  // Space * = whereever you have landed
   currentSpaceOn = (attributes.getBoard().getSpaces()[currentSpaceIndex].get());
 
   // update so that the space knows which player is on (add to occupiers vector)
@@ -194,14 +163,10 @@ void Player::displayInfoAboutSpotLandedOn(GameAttributes &attributes) {
 
   // if the space is buyable..
    BuyableSpace* buyableSpace = dynamic_cast<BuyableSpace*>(attributes.getBoard()[currentSpaceIndex].get());
-   if (buyableSpace) { // if this doesn't work just add functions to space and leave empty
+   if (buyableSpace) {
      buyableSpace->displayIfOwned();
      buyableSpace->displayPrice();
      buyableSpace->displayRents();
-     // Previously what it was with functions declared in Space.h
-     /*attributes.getBoard()[currentSpaceIndex]->displayIfOwned();
-     attributes.getBoard()[currentSpaceIndex]->displayPrice();
-     attributes.getBoard()[currentSpaceIndex]->displayRents();*/
    }
   std::cout << std::endl;
 
@@ -247,7 +212,7 @@ void Player::setSpace(Space *space, int indexOfSpace) {
   currentSpaceIndex = indexOfSpace;
 }
 void Player::addOwnedProperty(BuyableSpace &space) {
-  ownedProperties.emplace_back(&space); // not sure about this...
+  ownedProperties.emplace_back(&space);
 }
 void Player::payOwner(const BuyableSpace &space) {
   space.getOwner()->addToBalance(space.getRent());
@@ -273,11 +238,10 @@ void Player::promptAboutPlacingHouses() {
   if (!options.empty()){
     std::cout << "Would you, " << getName() << ", like to place house(s)/hotel on one of the following?: " << std::endl;
   }
-  //for (int i = 0; i < options.size(); i++){
     listHouseOptions(options);
 
     std::cout << std::endl;
-  //}
+
   if (!options.empty()) {
     selectWhichOnesToPlaceHouses(options);
   }
@@ -295,7 +259,6 @@ void Player::selectWhichOnesToPlaceHouses(std::vector<PropertySpace*> &options) 
 
   while (input != -1){
     if (input >= 1 && input <= options.size()){ // valid input
-      //PropertySpace* propertySpace = dynamic_cast<PropertySpace*>(options[input-1]); // convert to property space
       std::cout << "On this property, you currently have " << options[input-1]->getNumberHouses() << " houses and " << options[input-1]->getNumberHotels() <<
                       " hotels" << std::endl;
       placeHousesOrHotelOnProperty(options[input - 1]);
@@ -352,9 +315,6 @@ void Player::getInputAboutHouseDesired(bool& houseDesired) {
 void Player::getInputAboutHowManyHousesDesired(int &numberOfHousesDesired) {
   std::cout << "With your balance of $" << this->getBalance() << ", you can currently afford " << getAffordableNumberOfHouses() << " more houses." << std::endl;
 
-  /*int numberOfAffordableHouses;
-  getAffordableNumberOfHouses(numberOfAffordableHouses);*/
-
   std::cout << std::endl << "How many houses would you like to add? ";
   int input;
   std::cin >> input;
@@ -384,14 +344,6 @@ bool Player::canAffordHotel() {
   return (this->getBalance() - PropertySpace::PRICE_OF_HOTEL > 0);
 }
 bool Player::operator==(Player &player) {
-
-  /*int balance;
-  char pieceLetter;
-  std::vector<std::unique_ptr<BuyableSpace>> ownedProperties;
-  std::string name;
-  int currentSpaceIndex; // i.e. position on board
-  Space* currentSpaceOn;
-  bool inJail;*/
   return (balance == player.getBalance()) && (pieceLetter == player.getPieceLetter()) && (ownedProperties == player.getOwnedProperties())
           && (name == player.getName()) && (currentSpaceIndex == player.getCurrentSpaceIndex());
 }
@@ -418,11 +370,9 @@ void Player::increaseTurnsInJail() {
   turnsInJail++;
 }
 void Player::movePieceTo(int index, GameAttributes& attributes) {
-  // will take out player from occupied players on space (ALWAYS HAVE TO REMOVE FIRST ONE AS THEY WILL BE FIRST TO GO)
   removePieceFromCurrentSpot(attributes);
   currentSpaceIndex = index;
   updateCurrentSpaceOn(attributes);
-  //currentSpaceOn = attributes.getBoard()[currentSpaceIndex].get();
 }
 void Player::setJustVisitingJail(bool justVisiting) {
   justVisitingJail = justVisiting;

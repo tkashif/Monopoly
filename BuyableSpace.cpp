@@ -22,7 +22,7 @@ void BuyableSpace::displayRents() {
   std::cout << "Rent: $" << rent << std::endl;
 }
 bool BuyableSpace::noOwner() {
-  return (owner == nullptr);   //(owner->getName() == "");
+  return (owner == nullptr);
 }
 void BuyableSpace::promptIfWantToBuy(char &decision) {
   std::cout << "Would you like to buy " << this->getName() << "?" << std::endl;

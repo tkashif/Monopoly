@@ -48,8 +48,6 @@ void Controller::playGame() {
 
     attributes.getPlayers()[currentPlayerIndex]->takeAction(attributes);
 
-    //attributes.getBoard()[currentSpaceIndex]->takeAction(); ignore
-
     if (attributes.getPlayers()[currentPlayerIndex]->getBalance() <= 0){
       removePlayer(*(attributes.getPlayers()[currentPlayerIndex]));
     }

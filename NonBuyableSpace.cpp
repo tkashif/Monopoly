@@ -6,12 +6,4 @@
 NonBuyableSpace::NonBuyableSpace(std::string name) : Space(name) {
 
 }
-/*void NonBuyableSpace::displayIfOwned() {
-  // do nothing
-}
-void NonBuyableSpace::displayPrice() {
- // do nothing
-}
-void NonBuyableSpace::displayRents() {
- // do nothing
-} */
+

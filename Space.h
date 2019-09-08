@@ -17,12 +17,6 @@ class Space {
 
   Space(const std::string& name);
 
-  /*attributes.getBoard()[currentSpaceIndex].displayName();
-  attributes.getBoard()[currentSpaceIndex].displayIfOwned();
-  attributes.getBoard()[currentSpaceIndex].displayPrice();
-  attributes.getBoard()[currentSpaceIndex].displayRents();
-   */
-
   virtual ~Space() = default;
 
   virtual void displayName();
@@ -36,10 +30,6 @@ class Space {
   bool hasOccupier();
 
   Player& getOccupier();
-
-/*  virtual void displayIfOwned() = 0;
-  virtual void displayPrice() = 0;
-  virtual void displayRents() = 0; --> DONT MAKE SENSE TO HAVE HERE */
 
   std::string getName();
 
